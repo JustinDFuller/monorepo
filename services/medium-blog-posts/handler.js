@@ -1,7 +1,7 @@
-'use strict';
+import 'babel-polyfill';
+import https from 'https';
+import xml from 'xml2js';
 
-const https = require('https');
-const xml = require('xml2js');
 const parser = new xml.Parser();
 
 const getPostsPromise = () => new Promise(getPosts);
@@ -33,7 +33,7 @@ function getPosts(resolve, reject) {
   }
 }
 
-module.exports.posts = (event, context, callback) => getPostsPromise()
+export const posts = (event, context, callback) => getPostsPromise()
   .then(res => {
     const response = {
       statusCode: 200,
