@@ -28,7 +28,7 @@ function send(subject = process.env.SUBJECT, text = process.env.TEXT) {
   });
 }
 
-module.exports.sendEmail = async (event, context, callback) => {
+export const sendEmail = async (event, context, callback) => {
   const result = await send(get(event, 'body.subject'), get(event, 'body.text'));
   const response = {
     statusCode: 200,
@@ -36,10 +36,7 @@ module.exports.sendEmail = async (event, context, callback) => {
       "Access-Control-Allow-Origin" : "*",
       "Access-Control-Allow-Credentials" : true,
     },
-    body: JSON.stringify({
-      message: 'Go Serverless v1.0! Your function executed successfully!',
-      input: event,
-    }),
+    body: JSON.stringify(result),
   };
 
   callback(null, response);
