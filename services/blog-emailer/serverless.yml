@@ -7,4 +7,9 @@ provider:
 functions:
   sendEmail:
     handler: handler.sendEmail
+    environment:
+      FROM: '"Blog Email" <justindanielfuller+blogemail@gmail.com>'
+      SERVICE: gmail
+      SUBJECT: Email From Blog
+      TEXT: There was no email content.
     

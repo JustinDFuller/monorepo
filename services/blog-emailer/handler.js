@@ -1,6 +1,34 @@
-'use strict';
+import { createTransport } from 'nodemailer';;
 
-module.exports.sendEmail = (event, context, callback) => {
+const transport = createTransport({
+    service: process.env.SERVICE,
+    auth: {
+        user: process.env.USER,
+        pass: process.env.PASS,
+    },
+});
+
+function send(subject = process.env.SUBJECT, text = process.env.TEXT) {
+  const mailOptions = {
+      from: process.env.FROM,
+      to: process.env.TO,
+      subject,
+      text,
+  };
+
+  return new Promise((resolve, reject) => {
+    return transport.sendMail(mailOptions, error => {
+      if (error) {
+          console.log('Error sending mail', error);
+          return reject({ success: false, error });
+      }
+      return resolve({ success: true });
+    });
+  });
+}
+
+module.exports.sendEmail = async (event, context, callback) => {
+  const result = await send();
   const response = {
     statusCode: 200,
     headers: {
