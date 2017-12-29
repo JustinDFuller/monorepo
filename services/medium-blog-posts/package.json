@@ -10,6 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "bluebird": "^3.5.1",
+    "lodash": "^4.17.4",
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5",
     "xml2js": "^0.4.19"
   },
   "devDependencies": {
@@ -22,10 +26,10 @@
     "webpack": "^3.10.0"
   },
   "ava": {
-		"require": [
+    "require": [
       "babel-register",
-			"babel-polyfill"
+      "babel-polyfill"
     ],
     "babel": "inherit"
-	}
+  }
 }
