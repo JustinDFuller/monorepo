@@ -1,4 +1,5 @@
-import { createTransport } from 'nodemailer';;
+import { get } from 'lodash';
+import { createTransport } from 'nodemailer';
 
 const transport = createTransport({
     service: process.env.SERVICE,
@@ -28,7 +29,7 @@ function send(subject = process.env.SUBJECT, text = process.env.TEXT) {
 }
 
 module.exports.sendEmail = async (event, context, callback) => {
-  const result = await send(event.body.subject, event.body.text);
+  const result = await send(get(event, 'body.subject'), get(event, 'body.text'));
   const response = {
     statusCode: 200,
     headers: {
