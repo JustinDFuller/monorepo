@@ -1,8 +1,8 @@
 import test from 'ava';
-import { posts } from './handler';
+import { sendEmail } from './index';
 
-test.cb('It returns posts.', (t) => {
-    posts(null, null, (err, result) => {
+test.cb('It sends an email.', (t) => {
+    sendEmail(null, null, (err, result) => {
         t.is(err, null);
         t.is(typeof result.body, 'string');
         t.is(typeof JSON.parse(result.body), 'object');

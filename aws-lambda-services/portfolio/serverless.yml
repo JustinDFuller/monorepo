@@ -9,14 +9,14 @@ provider:
 
 functions:
   posts:
-    handler: posts/handler.posts
+    handler: index.posts
     events:
       - http:
           path: posts
           method: get
           cors: true
   sendEmail:
-    handler: sendEmail/handler.sendEmail
+    handler: index.sendEmail
     environment:
       FROM: '"Blog Email" <justindanielfuller+blogemail@gmail.com>'
       SERVICE: gmail
