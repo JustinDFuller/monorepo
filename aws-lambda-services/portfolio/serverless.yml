@@ -1,4 +1,4 @@
-service: blog-emailer
+service: portfolio
 
 plugins:
   - serverless-webpack
@@ -8,11 +8,17 @@ provider:
   runtime: nodejs6.10
 
 functions:
+  posts:
+    handler: posts/handler.posts
+    events:
+      - http:
+          path: posts
+          method: get
+          cors: true
   sendEmail:
-    handler: handler.sendEmail
+    handler: sendEmail/handler.sendEmail
     environment:
       FROM: '"Blog Email" <justindanielfuller+blogemail@gmail.com>'
       SERVICE: gmail
       SUBJECT: Email From Blog
       TEXT: There was no email content.
-    
