@@ -9,35 +9,40 @@ const transport = createTransport({
     },
 });
 
-function send(subject = process.env.SUBJECT, text = process.env.TEXT) {
+function send(body) {
   const mailOptions = {
       from: process.env.FROM,
       to: process.env.TO,
-      subject,
-      text,
+      subject: get(body, 'subject', process.env.SUBJECT),
+      text: get(body, 'text', process.env.TEXT),
   };
 
   return new Promise((resolve, reject) => {
     return transport.sendMail(mailOptions, error => {
       if (error) {
           console.log('Error sending mail', error);
-          return reject({ success: false, error });
+          return reject({ success: false, error, body });
       }
-      return resolve({ success: true });
+      return resolve({ success: true, body });
     });
   });
 }
 
 export const sendEmail = async (event, context, callback) => {
-  const result = await send(get(event, 'body.subject'), get(event, 'body.text'));
-  const response = {
-    statusCode: 200,
-    headers: {
-      "Access-Control-Allow-Origin" : "*",
-      "Access-Control-Allow-Credentials" : true,
-    },
-    body: JSON.stringify(result),
-  };
+  try {
+    const body = JSON.parse(get(event, 'body'));
+    const result = await send(body);
+    const response = {
+      statusCode: 200,
+      headers: {
+        "Access-Control-Allow-Origin" : "*",
+        "Access-Control-Allow-Credentials" : true,
+      },
+      body: JSON.stringify(result),
+    };
 
-  callback(null, response);
+    return callback(null, response);
+  } catch (e) {
+    return callback(e);
+  }
 };
