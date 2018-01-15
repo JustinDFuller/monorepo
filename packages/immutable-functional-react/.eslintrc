@@ -1,0 +1,13 @@
+{
+  "extends": ["airbnb", "plugin:ava/recommended"],
+  "plugins": ["ava"],
+  "rules": {
+    "ava/no-ignored-test-files": ["error", {"files": ["**/*.spec.js"]}],
+    "react/jsx-filename-extension": 0
+  },
+  "settings": {
+    "react": {
+      "pragma": "ImmutableReact"
+    }
+  }
+}

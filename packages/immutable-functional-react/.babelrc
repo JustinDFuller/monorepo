@@ -1,0 +1,16 @@
+{
+    "presets": [
+        "stage-0", ["env", {
+            "targets": {
+                "targets": {
+                    "browsers": ["last 2 versions", "IE >= 11"]
+                }
+            }
+        }]
+    ],
+    "plugins": [
+        ["transform-react-jsx", {
+            "pragma": "ImmutableReact.createElement"
+        }]
+    ]
+}
