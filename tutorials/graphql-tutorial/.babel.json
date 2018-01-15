@@ -1,0 +1,787 @@
+{
+  "{\"filename\":\"/app/server/index.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "express",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "express"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server/index.js",
+      "filenameRelative": "/app/server/index.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "index.js",
+      "sourceFileName": "index.js",
+      "sourceRoot": "/app/server",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/server",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "index"
+    },
+    "ignored": false,
+    "code": "import express from 'express';\n\nconst PORT = 4000;\n\nconst server = express();\n\nserver.get('/', function (req, res) {\n  res.send('Hello World!');\n});\n\nserver.listen(PORT, () => console.log(`GraphQL Server is now running on http://localhost:${PORT}`));\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbImV4cHJlc3MiLCJQT1JUIiwic2VydmVyIiwiZ2V0IiwicmVxIiwicmVzIiwic2VuZCIsImxpc3RlbiIsImNvbnNvbGUiLCJsb2ciXSwibWFwcGluZ3MiOiJBQUFBLE9BQU9BLE9BQVAsTUFBb0IsU0FBcEI7O0FBRUEsTUFBTUMsT0FBTyxJQUFiOztBQUVBLE1BQU1DLFNBQVNGLFNBQWY7O0FBRUFFLE9BQU9DLEdBQVAsQ0FBVyxHQUFYLEVBQWdCLFVBQVVDLEdBQVYsRUFBZUMsR0FBZixFQUFvQjtBQUNsQ0EsTUFBSUMsSUFBSixDQUFTLGNBQVQ7QUFDRCxDQUZEOztBQUlBSixPQUFPSyxNQUFQLENBQWNOLElBQWQsRUFBb0IsTUFBTU8sUUFBUUMsR0FBUixDQUFhLHFEQUFvRFIsSUFBSyxFQUF0RSxDQUExQiIsImZpbGUiOiJpbmRleC5qcyIsInNvdXJjZVJvb3QiOiIvYXBwL3NlcnZlciIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBleHByZXNzIGZyb20gJ2V4cHJlc3MnO1xuXG5jb25zdCBQT1JUID0gNDAwMDtcblxuY29uc3Qgc2VydmVyID0gZXhwcmVzcygpO1xuXG5zZXJ2ZXIuZ2V0KCcvJywgZnVuY3Rpb24gKHJlcSwgcmVzKSB7XG4gIHJlcy5zZW5kKCdIZWxsbyBXb3JsZCEnKTtcbn0pO1xuXG5zZXJ2ZXIubGlzdGVuKFBPUlQsICgpID0+IGNvbnNvbGUubG9nKGBHcmFwaFFMIFNlcnZlciBpcyBub3cgcnVubmluZyBvbiBodHRwOi8vbG9jYWxob3N0OiR7UE9SVH1gKSk7Il19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "index.js"
+      ],
+      "names": [
+        "express",
+        "PORT",
+        "server",
+        "get",
+        "req",
+        "res",
+        "send",
+        "listen",
+        "console",
+        "log"
+      ],
+      "mappings": "AAAA,OAAOA,OAAP,MAAoB,SAApB;;AAEA,MAAMC,OAAO,IAAb;;AAEA,MAAMC,SAASF,SAAf;;AAEAE,OAAOC,GAAP,CAAW,GAAX,EAAgB,UAAUC,GAAV,EAAeC,GAAf,EAAoB;AAClCA,MAAIC,IAAJ,CAAS,cAAT;AACD,CAFD;;AAIAJ,OAAOK,MAAP,CAAcN,IAAd,EAAoB,MAAMO,QAAQC,GAAR,CAAa,qDAAoDR,IAAK,EAAtE,CAA1B",
+      "file": "index.js",
+      "sourceRoot": "/app/server",
+      "sourcesContent": [
+        "import express from 'express';\n\nconst PORT = 4000;\n\nconst server = express();\n\nserver.get('/', function (req, res) {\n  res.send('Hello World!');\n});\n\nserver.listen(PORT, () => console.log(`GraphQL Server is now running on http://localhost:${PORT}`));"
+      ]
+    },
+    "mtime": 1506041313790
+  },
+  "{\"filename\":\"/app/server/index.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[{\"plugins\":[[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]]},{\"presets\":[{\"presets\":[{\"presets\":[{\"plugins\":[null,null,null,null,null]}],\"plugins\":[null,null,null]}],\"plugins\":[null,null]}],\"plugins\":[[[],null],[[],null]]}],\"plugins\":[[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":true,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "express",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "express"
+              }
+            ]
+          },
+          {
+            "source": "path",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "path"
+              }
+            ]
+          },
+          {
+            "source": "graphql-server-express",
+            "imported": [
+              "graphqlExpress",
+              "graphiqlExpress"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "graphqlExpress",
+                "local": "graphqlExpress"
+              },
+              {
+                "kind": "named",
+                "imported": "graphiqlExpress",
+                "local": "graphiqlExpress"
+              }
+            ]
+          },
+          {
+            "source": "body-parser",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "bodyParser"
+              }
+            ]
+          },
+          {
+            "source": "./schema",
+            "imported": [
+              "schema"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "schema",
+                "local": "schema"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server/index.js",
+      "filenameRelative": "/app/server/index.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [
+        {
+          "plugins": [
+            [
+              [],
+              {
+                "loose": false,
+                "spec": false
+              }
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              {
+                "spec": false
+              }
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              {
+                "loose": false
+              }
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              {
+                "loose": false
+              }
+            ],
+            [
+              [],
+              {
+                "loose": false
+              }
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              {
+                "loose": false
+              }
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              {
+                "loose": false
+              }
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              {
+                "loose": false
+              }
+            ],
+            [
+              [],
+              {
+                "async": false,
+                "asyncGenerators": false
+              }
+            ]
+          ]
+        },
+        {
+          "presets": [
+            {
+              "presets": [
+                {
+                  "presets": [
+                    {
+                      "plugins": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                      ]
+                    }
+                  ],
+                  "plugins": [
+                    null,
+                    null,
+                    null
+                  ]
+                }
+              ],
+              "plugins": [
+                null,
+                null
+              ]
+            }
+          ],
+          "plugins": [
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              null
+            ]
+          ]
+        }
+      ],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "index.js",
+      "sourceFileName": "index.js",
+      "sourceRoot": "/app/server",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/server",
+      "moduleIds": false,
+      "passPerPreset": true,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "index"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _express = require('express');\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _path = require('path');\n\nvar _path2 = _interopRequireDefault(_path);\n\nvar _graphqlServerExpress = require('graphql-server-express');\n\nvar _bodyParser = require('body-parser');\n\nvar _bodyParser2 = _interopRequireDefault(_bodyParser);\n\nvar _schema = require('./schema');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar PORT = process.env.PORT || 4000;\n\nvar server = (0, _express2.default)();\n\nserver.use('/static', _express2.default.static(_path2.default.resolve('build/static')));\n\nserver.get('/', function (req, res) {\n  res.sendFile(_path2.default.resolve('build/index.html'));\n});\n\nserver.use('/graphql', _bodyParser2.default.json(), (0, _graphqlServerExpress.graphqlExpress)({\n  schema: _schema.schema\n}));\n\nserver.use('/graphiql', (0, _graphqlServerExpress.graphiqlExpress)({\n  endpointURL: '/graphql'\n}));\n\nserver.listen(PORT, function () {\n  return console.log('GraphQL Server is now running on http://localhost:' + PORT);\n});\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbIlBPUlQiLCJwcm9jZXNzIiwiZW52Iiwic2VydmVyIiwidXNlIiwic3RhdGljIiwicmVzb2x2ZSIsImdldCIsInJlcSIsInJlcyIsInNlbmRGaWxlIiwianNvbiIsInNjaGVtYSIsImVuZHBvaW50VVJMIiwibGlzdGVuIiwiY29uc29sZSIsImxvZyJdLCJtYXBwaW5ncyI6Ijs7QUFBQTs7OztBQUNBOzs7O0FBQ0E7O0FBSUE7Ozs7QUFDQTs7OztBQUVBLElBQU1BLE9BQU9DLFFBQVFDLEdBQVIsQ0FBWUYsSUFBWixJQUFvQixJQUFqQzs7QUFFQSxJQUFNRyxTQUFTLHdCQUFmOztBQUVBQSxPQUFPQyxHQUFQLENBQVcsU0FBWCxFQUFzQixrQkFBUUMsTUFBUixDQUFlLGVBQUtDLE9BQUwsQ0FBYSxjQUFiLENBQWYsQ0FBdEI7O0FBRUFILE9BQU9JLEdBQVAsQ0FBVyxHQUFYLEVBQWdCLFVBQVVDLEdBQVYsRUFBZUMsR0FBZixFQUFvQjtBQUNsQ0EsTUFBSUMsUUFBSixDQUFhLGVBQUtKLE9BQUwsQ0FBYSxrQkFBYixDQUFiO0FBQ0QsQ0FGRDs7QUFJQUgsT0FBT0MsR0FBUCxDQUFXLFVBQVgsRUFBdUIscUJBQVdPLElBQVgsRUFBdkIsRUFBMEMsMENBQWU7QUFDdkRDO0FBRHVELENBQWYsQ0FBMUM7O0FBSUFULE9BQU9DLEdBQVAsQ0FBVyxXQUFYLEVBQXdCLDJDQUFnQjtBQUN0Q1MsZUFBYTtBQUR5QixDQUFoQixDQUF4Qjs7QUFJQVYsT0FBT1csTUFBUCxDQUFjZCxJQUFkLEVBQW9CO0FBQUEsU0FBTWUsUUFBUUMsR0FBUix3REFBaUVoQixJQUFqRSxDQUFOO0FBQUEsQ0FBcEIiLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiL2FwcC9zZXJ2ZXIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgZXhwcmVzcyBmcm9tICdleHByZXNzJztcbmltcG9ydCBwYXRoIGZyb20gJ3BhdGgnO1xuaW1wb3J0IHsgXG4gIGdyYXBocWxFeHByZXNzLFxuICBncmFwaGlxbEV4cHJlc3MsXG59IGZyb20gJ2dyYXBocWwtc2VydmVyLWV4cHJlc3MnO1xuaW1wb3J0IGJvZHlQYXJzZXIgZnJvbSAnYm9keS1wYXJzZXInO1xuaW1wb3J0IHsgc2NoZW1hIH0gZnJvbSAnLi9zY2hlbWEnO1xuXG5jb25zdCBQT1JUID0gcHJvY2Vzcy5lbnYuUE9SVCB8fCA0MDAwO1xuXG5jb25zdCBzZXJ2ZXIgPSBleHByZXNzKCk7XG5cbnNlcnZlci51c2UoJy9zdGF0aWMnLCBleHByZXNzLnN0YXRpYyhwYXRoLnJlc29sdmUoJ2J1aWxkL3N0YXRpYycpKSk7XG5cbnNlcnZlci5nZXQoJy8nLCBmdW5jdGlvbiAocmVxLCByZXMpIHtcbiAgcmVzLnNlbmRGaWxlKHBhdGgucmVzb2x2ZSgnYnVpbGQvaW5kZXguaHRtbCcpKTtcbn0pO1xuXG5zZXJ2ZXIudXNlKCcvZ3JhcGhxbCcsIGJvZHlQYXJzZXIuanNvbigpLCBncmFwaHFsRXhwcmVzcyh7XG4gIHNjaGVtYVxufSkpO1xuXG5zZXJ2ZXIudXNlKCcvZ3JhcGhpcWwnLCBncmFwaGlxbEV4cHJlc3Moe1xuICBlbmRwb2ludFVSTDogJy9ncmFwaHFsJ1xufSkpO1xuXG5zZXJ2ZXIubGlzdGVuKFBPUlQsICgpID0+IGNvbnNvbGUubG9nKGBHcmFwaFFMIFNlcnZlciBpcyBub3cgcnVubmluZyBvbiBodHRwOi8vbG9jYWxob3N0OiR7UE9SVH1gKSk7Il19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "index.js"
+      ],
+      "names": [
+        "PORT",
+        "process",
+        "env",
+        "server",
+        "use",
+        "static",
+        "resolve",
+        "get",
+        "req",
+        "res",
+        "sendFile",
+        "json",
+        "schema",
+        "endpointURL",
+        "listen",
+        "console",
+        "log"
+      ],
+      "mappings": ";;AAAA;;;;AACA;;;;AACA;;AAIA;;;;AACA;;;;AAEA,IAAMA,OAAOC,QAAQC,GAAR,CAAYF,IAAZ,IAAoB,IAAjC;;AAEA,IAAMG,SAAS,wBAAf;;AAEAA,OAAOC,GAAP,CAAW,SAAX,EAAsB,kBAAQC,MAAR,CAAe,eAAKC,OAAL,CAAa,cAAb,CAAf,CAAtB;;AAEAH,OAAOI,GAAP,CAAW,GAAX,EAAgB,UAAUC,GAAV,EAAeC,GAAf,EAAoB;AAClCA,MAAIC,QAAJ,CAAa,eAAKJ,OAAL,CAAa,kBAAb,CAAb;AACD,CAFD;;AAIAH,OAAOC,GAAP,CAAW,UAAX,EAAuB,qBAAWO,IAAX,EAAvB,EAA0C,0CAAe;AACvDC;AADuD,CAAf,CAA1C;;AAIAT,OAAOC,GAAP,CAAW,WAAX,EAAwB,2CAAgB;AACtCS,eAAa;AADyB,CAAhB,CAAxB;;AAIAV,OAAOW,MAAP,CAAcd,IAAd,EAAoB;AAAA,SAAMe,QAAQC,GAAR,wDAAiEhB,IAAjE,CAAN;AAAA,CAApB",
+      "file": "index.js",
+      "sourceRoot": "/app/server",
+      "sourcesContent": [
+        "import express from 'express';\nimport path from 'path';\nimport { \n  graphqlExpress,\n  graphiqlExpress,\n} from 'graphql-server-express';\nimport bodyParser from 'body-parser';\nimport { schema } from './schema';\n\nconst PORT = process.env.PORT || 4000;\n\nconst server = express();\n\nserver.use('/static', express.static(path.resolve('build/static')));\n\nserver.get('/', function (req, res) {\n  res.sendFile(path.resolve('build/index.html'));\n});\n\nserver.use('/graphql', bodyParser.json(), graphqlExpress({\n  schema\n}));\n\nserver.use('/graphiql', graphiqlExpress({\n  endpointURL: '/graphql'\n}));\n\nserver.listen(PORT, () => console.log(`GraphQL Server is now running on http://localhost:${PORT}`));"
+      ]
+    },
+    "mtime": 1506043608404
+  },
+  "{\"filename\":\"/app/server/schema.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[{\"plugins\":[[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]]},{\"presets\":[{\"presets\":[{\"presets\":[{\"plugins\":[null,null,null,null,null]}],\"plugins\":[null,null,null]}],\"plugins\":[null,null]}],\"plugins\":[[[],null],[[],null]]}],\"plugins\":[[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":true,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "graphql-tools",
+            "imported": [
+              "makeExecutableSchema",
+              "addMockFunctionsToSchema"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "makeExecutableSchema",
+                "local": "makeExecutableSchema"
+              },
+              {
+                "kind": "named",
+                "imported": "addMockFunctionsToSchema",
+                "local": "addMockFunctionsToSchema"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [
+            "schema"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "schema",
+              "exported": "schema"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server/schema.js",
+      "filenameRelative": "/app/server/schema.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [
+        {
+          "plugins": [
+            [
+              [],
+              {
+                "loose": false,
+                "spec": false
+              }
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              {
+                "spec": false
+              }
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              {
+                "loose": false
+              }
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              {
+                "loose": false
+              }
+            ],
+            [
+              [],
+              {
+                "loose": false
+              }
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              {
+                "loose": false
+              }
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              {
+                "loose": false
+              }
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              {
+                "loose": false
+              }
+            ],
+            [
+              [],
+              {
+                "async": false,
+                "asyncGenerators": false
+              }
+            ]
+          ]
+        },
+        {
+          "presets": [
+            {
+              "presets": [
+                {
+                  "presets": [
+                    {
+                      "plugins": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                      ]
+                    }
+                  ],
+                  "plugins": [
+                    null,
+                    null,
+                    null
+                  ]
+                }
+              ],
+              "plugins": [
+                null,
+                null
+              ]
+            }
+          ],
+          "plugins": [
+            [
+              [],
+              null
+            ],
+            [
+              [],
+              null
+            ]
+          ]
+        }
+      ],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "schema.js",
+      "sourceFileName": "schema.js",
+      "sourceRoot": "/app/server",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/server",
+      "moduleIds": false,
+      "passPerPreset": true,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "schema"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n   value: true\n});\nexports.schema = undefined;\n\nvar _graphqlTools = require('graphql-tools');\n\nvar typeDefs = '\\ntype Channel {\\n   id: ID!\\n   name: String\\n}\\n\\n# This type specifies the entry points into our API. In this case\\n# there is only one - \"channels\" - which returns a list of channels.\\ntype Query {\\n   channels: [Channel]    # \"[]\" means this is a list of channels\\n}\\n';\n\nvar schema = (0, _graphqlTools.makeExecutableSchema)({ typeDefs: typeDefs });\n\nexports.schema = schema;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNjaGVtYS5qcyJdLCJuYW1lcyI6WyJ0eXBlRGVmcyIsInNjaGVtYSJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFBOztBQUtBLElBQU1BLDhSQUFOOztBQWFBLElBQU1DLFNBQVMsd0NBQXFCLEVBQUVELGtCQUFGLEVBQXJCLENBQWY7O1FBRVNDLE0sR0FBQUEsTSIsImZpbGUiOiJzY2hlbWEuanMiLCJzb3VyY2VSb290IjoiL2FwcC9zZXJ2ZXIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge1xuICBtYWtlRXhlY3V0YWJsZVNjaGVtYSxcbiAgYWRkTW9ja0Z1bmN0aW9uc1RvU2NoZW1hLFxufSBmcm9tICdncmFwaHFsLXRvb2xzJztcblxuY29uc3QgdHlwZURlZnMgPSBgXG50eXBlIENoYW5uZWwge1xuICAgaWQ6IElEIVxuICAgbmFtZTogU3RyaW5nXG59XG5cbiMgVGhpcyB0eXBlIHNwZWNpZmllcyB0aGUgZW50cnkgcG9pbnRzIGludG8gb3VyIEFQSS4gSW4gdGhpcyBjYXNlXG4jIHRoZXJlIGlzIG9ubHkgb25lIC0gXCJjaGFubmVsc1wiIC0gd2hpY2ggcmV0dXJucyBhIGxpc3Qgb2YgY2hhbm5lbHMuXG50eXBlIFF1ZXJ5IHtcbiAgIGNoYW5uZWxzOiBbQ2hhbm5lbF0gICAgIyBcIltdXCIgbWVhbnMgdGhpcyBpcyBhIGxpc3Qgb2YgY2hhbm5lbHNcbn1cbmA7XG5cbmNvbnN0IHNjaGVtYSA9IG1ha2VFeGVjdXRhYmxlU2NoZW1hKHsgdHlwZURlZnMgfSk7XG5cbmV4cG9ydCB7IHNjaGVtYSB9O1xuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "schema.js"
+      ],
+      "names": [
+        "typeDefs",
+        "schema"
+      ],
+      "mappings": ";;;;;;;AAAA;;AAKA,IAAMA,8RAAN;;AAaA,IAAMC,SAAS,wCAAqB,EAAED,kBAAF,EAArB,CAAf;;QAESC,M,GAAAA,M",
+      "file": "schema.js",
+      "sourceRoot": "/app/server",
+      "sourcesContent": [
+        "import {\n  makeExecutableSchema,\n  addMockFunctionsToSchema,\n} from 'graphql-tools';\n\nconst typeDefs = `\ntype Channel {\n   id: ID!\n   name: String\n}\n\n# This type specifies the entry points into our API. In this case\n# there is only one - \"channels\" - which returns a list of channels.\ntype Query {\n   channels: [Channel]    # \"[]\" means this is a list of channels\n}\n`;\n\nconst schema = makeExecutableSchema({ typeDefs });\n\nexport { schema };\n"
+      ]
+    },
+    "mtime": 1506042977859
+  }
+}

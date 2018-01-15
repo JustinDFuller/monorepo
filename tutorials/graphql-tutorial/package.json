@@ -1,0 +1,34 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "apollo-client": "^1.9.2",
+    "apollo-test-utils": "^0.1.1",
+    "false": "0.0.4",
+    "graphql": "^0.9.6",
+    "graphql-tag": "^1.3.1",
+    "graphql-tools": "^0.10.0",
+    "react": "^15.4.2",
+    "react-apollo": "^0.13.1",
+    "react-dom": "^15.4.2",
+    "concurrently": "^3.5.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "nodemon": "^1.12.1",
+    "graphql-server-express": "^1.1.2",
+    "body-parser": "^1.18.1"
+  },
+  "proxy": "https://prong-rowboat.glitch.me",
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "server": "nodemon ./server --exec babel-node -e js",
+    "start": "npm run build && npm run server",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
