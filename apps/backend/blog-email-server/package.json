@@ -1,0 +1,23 @@
+{
+  "name": "blog-email-server",
+  "version": "1.0.0",
+  "description": "Email micro service for my blog/personal site.",
+  "main": "src/index.js",
+  "repository": "git@github.com:JustinDFuller/blog-email-server.git",
+  "author": "Justin Fuller <justindanielfuller@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "compression": "^1.6.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.1",
+    "forever": "^0.15.3",
+    "helmet": "^3.4.0",
+    "nodemailer": "^3.1.3",
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "start": "forever src/index.js",
+    "dev": "nodemon src/index.js"
+  }
+}

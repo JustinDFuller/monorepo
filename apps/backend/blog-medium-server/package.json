@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "start": "forever app/index.js",
+    "dev": "nodemon app/index.js"
+  },
+  "dependencies": {
+    "apicache": "^0.8.3",
+    "compression": "^1.6.2",
+    "express": "^4.14.1",
+    "forever": "^0.15.3",
+    "helmet": "^3.4.0",
+    "xml2js": "^0.4.17"
+  }
+}

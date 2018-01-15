@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #464646;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+form {
+  display: block;
+  background: #eee;
+  padding: 10px;
+  
+  input,
+  select {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+  }
+  
+  select {
+    cursor: pointer;
+  }
+  
+  label + input {
+    margin-top: 2px;
+  }
+}
+
+.editor {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  margin: 20px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}

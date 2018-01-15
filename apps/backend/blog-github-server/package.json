@@ -1,0 +1,22 @@
+{
+  "name": "blog-github-server",
+  "version": "1.0.0",
+  "description": "Micro service to get Github info for my interactive resume.",
+  "main": "src/index.js",
+  "repository": "git@github.com:JustinDFuller/blog-github-server.git",
+  "author": "Justin Fuller <justindanielfuller@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "apicache": "^0.8.3",
+    "compression": "^1.6.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.1",
+    "forever": "^0.15.3",
+    "helmet": "^3.4.1",
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "start": "forever app/index.js",
+    "dev": "nodemon app/index.js"
+  }
+}

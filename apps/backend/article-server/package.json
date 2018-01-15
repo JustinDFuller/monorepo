@@ -1,0 +1,22 @@
+{
+  "name": "article-server",
+  "version": "1.0.0",
+  "description": "Article server for app that shows two opposing articles at the same time.",
+  "main": "index.js",
+  "repository": "https://github.com/JustinDFuller/article-server.git",
+  "author": "Justin Fuller <justindanielfuller@gmail.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "eslint": "3.15.0",
+    "eslint-config-airbnb": "14.1.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "4.0.0",
+    "eslint-plugin-react": "6.10.0",
+    "mongodb": "^2.2.24",
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "start": "nodemon src",
+    "db": "C:/Program Files/MongoDB/Server/3.4/bin/mongod.exe"
+  }
+}
