@@ -1,0 +1,28 @@
+{
+    "name": "VideoPlayer",
+    "version": "1.0.0",
+    "description": "Node.js video player streaming from amazon s3",
+    "main": "index.js",
+    "repository": {
+        "url": "https://github.com/JustinDFuller/VideoPlayer.git",
+        "type": "git"
+    },
+    "author": "Justin Fuller <justindanielfuller@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "app-root-path": "^2.0.1",
+        "aws-sdk": "^2.7.20",
+        "dotenv": "^2.0.0",
+        "express": "^4.14.0",
+        "lodash": "^4.17.4",
+        "pm2": "^2.3.0",
+        "s3-download-stream": "^0.0.5"
+    },
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js"
+    },
+    "devDependencies": {
+        "nodemon": "^1.11.0"
+    }
+}

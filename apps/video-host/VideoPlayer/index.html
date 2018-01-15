@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Video Streaming</title>
+</head>
+
+<body>
+    <div class='videoPlayer'>
+        <div class='videoContainer'>
+            <video controls poster="church_video.webp" width="100%" height="100%">
+        	<source src="church_video.mp4" type="video/mp4">
+        	<source src="church_video.webm" type="video/webm">
+        	<source src="church_video.ogv" type="video/ogg">
+        	<img alt="Unable to play video." src="church_video.webp" width="640" height="360" title="No video playback capabilities, please download the video below">
+        </video>
+        </div>
+        <div class='videoControls'>
+
+            <!-- Play/Pause -->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" class='icon play' onClick='play();'>
+            <path d="M8,5.14V19.14L19,12.14L8,5.14Z"/>
+          </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" class='icon pause startHidden' onClick='pause();'>
+            <path d="M14,19H18V5H14M6,19H10V5H6V19Z" />
+          </svg>
+
+            <!-- Volume Controls -->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" class='icon volumeHigh' onClick='toggleMute();'>
+            <path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z" />
+          </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" class='icon volumeMuted startHidden' onClick='toggleMute();'>
+            <path d="M12,4L9.91,6.09L12,8.18M4.27,3L3,4.27L7.73,9H3V15H7L12,20V13.27L16.25,17.53C15.58,18.04 14.83,18.46 14,18.7V20.77C15.38,20.45 16.63,19.82 17.68,18.96L19.73,21L21,19.73L12,10.73M19,12C19,12.94 18.8,13.82 18.46,14.64L19.97,16.15C20.62,14.91 21,13.5 21,12C21,7.72 18,4.14 14,3.23V5.29C16.89,6.15 19,8.83 19,12M16.5,12C16.5,10.23 15.5,8.71 14,7.97V10.18L16.45,12.63C16.5,12.43 16.5,12.21 16.5,12Z" />
+          </svg>
+
+            <div class='progress'>
+                <div class='buffered'></div>
+                <div class='progressBar'></div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" class='icon fullScreen' onClick='toggleFullScreen();'>
+            <path d="M5,5H10V7H7V10H5V5M14,5H19V10H17V7H14V5M17,14H19V19H14V17H17V14M10,17V19H5V14H7V17H10Z" />
+          </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" class='icon fullScreenExit startHidden' onClick='toggleFullScreen();'>
+            <path d="M14,14H19V16H16V19H14V14M5,14H10V19H8V16H5V14M8,5H10V10H5V8H8V5M19,8V10H14V5H16V8H19Z" />
+          </svg>
+        </div>
+        <div class='loading-container'>
+            <svg class="loading" viewBox="25 25 50 50">
+          <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+        </svg>
+        </div>
+    </div>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .videoPlayer {
+            background: black;
+            width: 100%;
+            height: 100%;
+            z-index: 2147483647;
+            overflow: hidden;
+        }
+        
+        .videoContainer {
+            width: 100%;
+            height: 95%;
+            padding-top: 5%;
+        }
+        
+        .videoControls {
+            height: 5%;
+            width: 100%;
+            padding: 1% 2% 0;
+        }
+        
+        .icon {
+            cursor: pointer;
+        }
+        
+        .icon path {
+            fill: white;
+        }
+        
+        .startHidden {
+            display: none;
+        }
+        
+        .fullScreen,
+        .fullScreenExit {
+            float: right;
+        }
+        
+        .videoContainer video::-webkit-media-controls {
+            display: none !important;
+        }
+        
+        .loading-container {
+            height: 20%;
+            width: 20%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        
+        .loading {
+            -webkit-animation: rotate 2s linear infinite;
+            animation: rotate 2s linear infinite;
+            height: 100%;
+            -webkit-transform-origin: center center;
+            transform-origin: center center;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        
+        .loading .path {
+            stroke-dasharray: 1, 200;
+            stroke-dashoffset: 0;
+            -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+            animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+            stroke-linecap: round;
+        }
+        
+        @-webkit-keyframes rotate {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes rotate {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        
+        @-webkit-keyframes dash {
+            0% {
+                stroke-dasharray: 1, 200;
+                stroke-dashoffset: 0;
+            }
+            50% {
+                stroke-dasharray: 89, 200;
+                stroke-dashoffset: -35px;
+            }
+            100% {
+                stroke-dasharray: 89, 200;
+                stroke-dashoffset: -124px;
+            }
+        }
+        
+        @keyframes dash {
+            0% {
+                stroke-dasharray: 1, 200;
+                stroke-dashoffset: 0;
+            }
+            50% {
+                stroke-dasharray: 89, 200;
+                stroke-dashoffset: -35px;
+            }
+            100% {
+                stroke-dasharray: 89, 200;
+                stroke-dashoffset: -124px;
+            }
+        }
+        
+        @-webkit-keyframes color {
+            100%,
+            0% {
+                stroke: #d62d20;
+            }
+            40% {
+                stroke: #0057e7;
+            }
+            66% {
+                stroke: #008744;
+            }
+            80%,
+            90% {
+                stroke: #ffa700;
+            }
+        }
+        
+        @keyframes color {
+            100%,
+            0% {
+                stroke: #d62d20;
+            }
+            40% {
+                stroke: #0057e7;
+            }
+            66% {
+                stroke: #008744;
+            }
+            80%,
+            90% {
+                stroke: #ffa700;
+            }
+        }
+        
+        .progress {
+            width: 85%;
+            height: 5px;
+            background: #222;
+            border-radius: 2px;
+            display: inline-block;
+            position: Relative;
+            top: -9px;
+            overflow: hidden;
+        }
+        
+        .progressBar {
+            height: 100%;
+            width: 0;
+            background: #981c1c;
+            transition: width 700ms linear;
+            position: absolute;
+            top: 0;
+        }
+        
+        .buffered {
+            height: 100%;
+            width: 50%;
+            background: #524a4a;
+            transition: width 700ms linear;
+        }
+    </style>
+
+    <script>
+        var playElement = getByClass('play');
+        var pauseElement = getByClass('pause');
+        var fullScreenElement = getByClass('fullScreen');
+        var fullScreenExitElement = getByClass('fullScreenExit');
+        var videoContainer = getByClass('videoPlayer');
+        var loadingContainer = getByClass('loading-container');
+        var progressBar = getByClass('progressBar');
+        var buffered = getByClass('buffered');
+        var volumeHigh = getByClass('volumeHigh');
+        var volumeMuted = getByClass('volumeMuted');
+
+        var video = document.getElementsByTagName('video')[0];
+        video.onplay = onplay;
+        video.onisplaying = onplay;
+        video.onpause = onpause;
+        video.oncanplay = oncanplay;
+        video.onprogress = onprogress;
+        video.onerror = onerror;
+        video.onabort = onerror;
+        video.onsuspent = onerror;
+        video.onwaiting = onloading;
+        video.onsuspend = onloading;
+        video.stalled = onloading;
+        video.ontimeupdate = ontimeupdate;
+
+        function play() {
+            console.log('play');
+            video.play();
+        }
+
+        function pause() {
+            console.log('pause');
+            video.pause();
+        }
+
+        function getByClass(className) {
+            return document.getElementsByClassName(className)[0];
+        }
+
+        function toggleFullScreen() {
+            if (!isFullScreen()) {
+                requestFullscreen();
+                fullScreenElement.style.display = 'none';
+                fullScreenExitElement.style.display = 'inline-block';
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                    fullScreenElement.style.display = 'inline-block';
+                    fullScreenExitElement.style.display = 'none';
+                }
+            }
+        }
+
+        function isFullScreen() {
+            return Document.webkitFullscreenElement ||
+                Document.mozFullScreenElement ||
+                Document.msFullscreenElement ||
+                Document.fullscreenElement;
+        }
+
+        function requestFullscreen() {
+            console.log('requestFullscreen');
+            var done = videoContainer.requestFullscreen && videoContainer.requestFullscreen();
+            done = done || videoContainer.webkitRequestFullscreen && videoContainer.webkitRequestFullscreen();
+            done = done || videoContainer.mozRequestFullScreen && videoContainer.mozRequestFullScreen();
+            done = done || videoContainer.msRequestFullscreen && videoContainer.msRequestFullscreen();
+        }
+
+        function onplay() {
+            console.log('onplay');
+            playElement.style.display = 'none';
+            pauseElement.style.display = 'inline-block';
+        }
+
+        function onpause() {
+            console.log('onpause');
+            playElement.style.display = 'inline-block';
+            pauseElement.style.display = 'none';
+        }
+
+        function oncanplay() {
+            console.log('oncanplay');
+            loadingContainer.style.display = 'none';
+
+            if (!video.paused || !video.played.length) {
+                console.log('play');
+                video.play();
+            }
+        }
+
+        function onloading() {
+            if (video.paused) {
+                console.log('loading');
+                loadingContainer.style.display = 'inline-block';
+            }
+        }
+
+        function ontimeupdate() {
+            var currentTime = video.currentTime;
+            var duration = video.duration;
+            var played = (currentTime / duration) * 100;
+            var bufferedAmount = video.buffered.end(0);
+            var loaded = (bufferedAmount / duration) * 100;
+            progressBar.style.width = played + '%';
+            buffered.style.width = loaded + '%';
+        }
+
+        function toggleMute() {
+            video.muted = !video.muted;
+
+            if (video.muted) {
+                volumeHigh.style.display = 'none';
+                volumeMuted.style.display = 'inline-block';
+            } else {
+                volumeHigh.style.display = 'inline-block';
+                volumeMuted.style.display = 'none';
+            }
+        }
+
+        function onerror(error) {
+            console.error('Error while playing video', error.srcElement.error);
+        }
+    </script>
+</body>
+
+</html>

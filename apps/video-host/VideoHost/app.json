@@ -1,0 +1,20 @@
+{
+  "name": "VideoHost",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+    "web": {
+      "size": "free"
+    }
+  },
+  "addons": [
+    "deployhooks"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
