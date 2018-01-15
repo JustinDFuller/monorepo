@@ -1,0 +1,15 @@
+export default {
+  white: '#fff',
+  offwhite: '#f9f9f9',
+  gray: '#ddd',
+  black: '#323232',
+  primary: '#4adcba',
+  secondary: '#4a6cdc',
+  accent: '#dc674a',
+  error: '#d60a2a',
+  serif: 'Georgia',
+  sanSerif: 'Helvetica Neue',
+  fontSizeReading: 18,
+  lineHeightReading: 26,
+  fontSizeTitle: 24,
+};
