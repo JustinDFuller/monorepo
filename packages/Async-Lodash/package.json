@@ -1,0 +1,38 @@
+{
+  "name": "async-lodash",
+  "version": "1.0.9",
+  "description": "Lodash wrapped to work with Promises",
+  "keywords": [
+    "javascript",
+    "async",
+    "promise",
+    "lodash"
+  ],
+  "bugs": "https://github.com/JustinDFuller/Async-Lodash/issues",
+  "homepage": "https://github.com/JustinDFuller/Async-Lodash",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.test.js && node utils.test.js",
+    "bundle": "rollup -c",
+    "babel": "babel asynclodash.bundle.js --out-file asynclodash.es5.js --source-maps",
+    "prepack": "prepack asynclodash.es5.js --out asynclodash.prepack.js",
+    "uglify": "uglifyjs -c -m -o asynclodash.min.js asynclodash.es5.js --source-map",
+    "clean": "rimraf asynclodash.es5.js asynclodash.es5.js.map asynclodash.bundle.js",
+    "build": "npm run bundle && npm run babel && npm run prepack && npm run uglify && npm run clean"
+  },
+  "author": "Justin Fuller <justindanielfuller@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "rollup-plugin-commonjs": "^8.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "prepack": "^0.2.4",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.43.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "uglify-js": "^3.0.23"
+  }
+}
