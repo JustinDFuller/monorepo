@@ -1,0 +1,3660 @@
+{
+  "{\"filename\":\"/app/server.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "torrent-search-api",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "TorrentSearchApi"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server.js",
+      "filenameRelative": "/app/server.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "server.js",
+      "sourceFileName": "server.js",
+      "sourceRoot": "/app",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "server"
+    },
+    "ignored": false,
+    "code": "import TorrentSearchApi from 'torrent-search-api';\n\nconst searchClient = new TorrentSearchApi();\n\nsearchClient.search('1080', 'Movies', 20).then(torrents => {\n    console.log(torrents);\n}).catch(err => {\n    console.log(err);\n});\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlcnZlci5qcyJdLCJuYW1lcyI6WyJUb3JyZW50U2VhcmNoQXBpIiwic2VhcmNoQ2xpZW50Iiwic2VhcmNoIiwidGhlbiIsInRvcnJlbnRzIiwiY29uc29sZSIsImxvZyIsImNhdGNoIiwiZXJyIl0sIm1hcHBpbmdzIjoiQUFBQSxPQUFPQSxnQkFBUCxNQUE2QixvQkFBN0I7O0FBRUEsTUFBTUMsZUFBZSxJQUFJRCxnQkFBSixFQUFyQjs7QUFFQUMsYUFBYUMsTUFBYixDQUFvQixNQUFwQixFQUE0QixRQUE1QixFQUFzQyxFQUF0QyxFQUNNQyxJQUROLENBQ1dDLFlBQVk7QUFDZEMsWUFBUUMsR0FBUixDQUFZRixRQUFaO0FBQ0gsQ0FITixFQUlNRyxLQUpOLENBSVlDLE9BQU87QUFDVkgsWUFBUUMsR0FBUixDQUFZRSxHQUFaO0FBQ0gsQ0FOTiIsImZpbGUiOiJzZXJ2ZXIuanMiLCJzb3VyY2VSb290IjoiL2FwcCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBUb3JyZW50U2VhcmNoQXBpIGZyb20gJ3RvcnJlbnQtc2VhcmNoLWFwaSc7XG5cbmNvbnN0IHNlYXJjaENsaWVudCA9IG5ldyBUb3JyZW50U2VhcmNoQXBpKCk7XG5cbnNlYXJjaENsaWVudC5zZWFyY2goJzEwODAnLCAnTW92aWVzJywgMjApXG4gICAgIC50aGVuKHRvcnJlbnRzID0+IHtcbiAgICAgICAgIGNvbnNvbGUubG9nKHRvcnJlbnRzKTtcbiAgICAgfSlcbiAgICAgLmNhdGNoKGVyciA9PiB7XG4gICAgICAgICBjb25zb2xlLmxvZyhlcnIpO1xuICAgICB9KTsiXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "server.js"
+      ],
+      "names": [
+        "TorrentSearchApi",
+        "searchClient",
+        "search",
+        "then",
+        "torrents",
+        "console",
+        "log",
+        "catch",
+        "err"
+      ],
+      "mappings": "AAAA,OAAOA,gBAAP,MAA6B,oBAA7B;;AAEA,MAAMC,eAAe,IAAID,gBAAJ,EAArB;;AAEAC,aAAaC,MAAb,CAAoB,MAApB,EAA4B,QAA5B,EAAsC,EAAtC,EACMC,IADN,CACWC,YAAY;AACdC,YAAQC,GAAR,CAAYF,QAAZ;AACH,CAHN,EAIMG,KAJN,CAIYC,OAAO;AACVH,YAAQC,GAAR,CAAYE,GAAZ;AACH,CANN",
+      "file": "server.js",
+      "sourceRoot": "/app",
+      "sourcesContent": [
+        "import TorrentSearchApi from 'torrent-search-api';\n\nconst searchClient = new TorrentSearchApi();\n\nsearchClient.search('1080', 'Movies', 20)\n     .then(torrents => {\n         console.log(torrents);\n     })\n     .catch(err => {\n         console.log(err);\n     });"
+      ]
+    },
+    "mtime": 1506298958923
+  },
+  "{\"filename\":\"/app/server.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "torrent-search-api",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "TorrentSearchApi"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server.js",
+      "filenameRelative": "/app/server.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "server.js",
+      "sourceFileName": "server.js",
+      "sourceRoot": "/app",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "server"
+    },
+    "ignored": false,
+    "code": "import TorrentSearchApi from 'torrent-search-api';\n\nconst searchClient = new TorrentSearchApi();\n\nsearchClient.search('1080', 'Movies', 20).then(torrents => {\n    console.log(torrents);\n}).catch(err => {\n    console.log(err);\n});\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlcnZlci5qcyJdLCJuYW1lcyI6WyJUb3JyZW50U2VhcmNoQXBpIiwic2VhcmNoQ2xpZW50Iiwic2VhcmNoIiwidGhlbiIsInRvcnJlbnRzIiwiY29uc29sZSIsImxvZyIsImNhdGNoIiwiZXJyIl0sIm1hcHBpbmdzIjoiQUFBQSxPQUFPQSxnQkFBUCxNQUE2QixvQkFBN0I7O0FBRUEsTUFBTUMsZUFBZSxJQUFJRCxnQkFBSixFQUFyQjs7QUFFQUMsYUFBYUMsTUFBYixDQUFvQixNQUFwQixFQUE0QixRQUE1QixFQUFzQyxFQUF0QyxFQUNNQyxJQUROLENBQ1dDLFlBQVk7QUFDZEMsWUFBUUMsR0FBUixDQUFZRixRQUFaO0FBQ0gsQ0FITixFQUlNRyxLQUpOLENBSVlDLE9BQU87QUFDVkgsWUFBUUMsR0FBUixDQUFZRSxHQUFaO0FBQ0gsQ0FOTiIsImZpbGUiOiJzZXJ2ZXIuanMiLCJzb3VyY2VSb290IjoiL2FwcCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBUb3JyZW50U2VhcmNoQXBpIGZyb20gJ3RvcnJlbnQtc2VhcmNoLWFwaSc7XG5cbmNvbnN0IHNlYXJjaENsaWVudCA9IG5ldyBUb3JyZW50U2VhcmNoQXBpKCk7XG5cbnNlYXJjaENsaWVudC5zZWFyY2goJzEwODAnLCAnTW92aWVzJywgMjApXG4gICAgIC50aGVuKHRvcnJlbnRzID0+IHtcbiAgICAgICAgIGNvbnNvbGUubG9nKHRvcnJlbnRzKTtcbiAgICAgfSlcbiAgICAgLmNhdGNoKGVyciA9PiB7XG4gICAgICAgICBjb25zb2xlLmxvZyhlcnIpO1xuICAgICB9KTsiXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "server.js"
+      ],
+      "names": [
+        "TorrentSearchApi",
+        "searchClient",
+        "search",
+        "then",
+        "torrents",
+        "console",
+        "log",
+        "catch",
+        "err"
+      ],
+      "mappings": "AAAA,OAAOA,gBAAP,MAA6B,oBAA7B;;AAEA,MAAMC,eAAe,IAAID,gBAAJ,EAArB;;AAEAC,aAAaC,MAAb,CAAoB,MAApB,EAA4B,QAA5B,EAAsC,EAAtC,EACMC,IADN,CACWC,YAAY;AACdC,YAAQC,GAAR,CAAYF,QAAZ;AACH,CAHN,EAIMG,KAJN,CAIYC,OAAO;AACVH,YAAQC,GAAR,CAAYE,GAAZ;AACH,CANN",
+      "file": "server.js",
+      "sourceRoot": "/app",
+      "sourcesContent": [
+        "import TorrentSearchApi from 'torrent-search-api';\n\nconst searchClient = new TorrentSearchApi();\n\nsearchClient.search('1080', 'Movies', 20)\n     .then(torrents => {\n         console.log(torrents);\n     })\n     .catch(err => {\n         console.log(err);\n     });"
+      ]
+    },
+    "mtime": 1506298958923
+  },
+  "{\"filename\":\"/app/server.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [
+        "asyncToGenerator",
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "lodash",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "_"
+              }
+            ]
+          },
+          {
+            "source": "express",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "express"
+              }
+            ]
+          },
+          {
+            "source": "./torrent",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "torrent"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server.js",
+      "filenameRelative": "/app/server.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "server.js",
+      "sourceFileName": "server.js",
+      "sourceRoot": "/app",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "server"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _lodash = require('lodash');\n\nvar _lodash2 = _interopRequireDefault(_lodash);\n\nvar _express = require('express');\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _torrent = require('./torrent');\n\nvar _torrent2 = _interopRequireDefault(_torrent);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); }); }; }\n\nvar app = (0, _express2.default)();\n\napp.get('/categories', function (req, res) {\n  return res.json(_torrent2.default.categories);\n});\n\napp.get('/search', function () {\n  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(req, res) {\n    var _req$query, keyword, topic, results;\n\n    return regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _req$query = req.query, keyword = _req$query.keyword, topic = _req$query.topic;\n            _context.prev = 1;\n            _context.next = 4;\n            return _torrent2.default.search(keyword, topic);\n\n          case 4:\n            results = _context.sent;\n\n            res.json(_lodash2.default.compact(results));\n            _context.next = 11;\n            break;\n\n          case 8:\n            _context.prev = 8;\n            _context.t0 = _context['catch'](1);\n\n            res.json({});\n\n          case 11:\n          case 'end':\n            return _context.stop();\n        }\n      }\n    }, _callee, undefined, [[1, 8]]);\n  }));\n\n  return function (_x, _x2) {\n    return _ref.apply(this, arguments);\n  };\n}()\n// https://torrent.glitch.me/search?keyword=ricky%20and%20morty&topic=TV\n);\n\napp.listen(process.env.PORT, function () {\n  console.log('App listening on port ' + process.env.PORT);\n});\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlcnZlci5qcyJdLCJuYW1lcyI6WyJhcHAiLCJnZXQiLCJyZXEiLCJyZXMiLCJqc29uIiwiY2F0ZWdvcmllcyIsInF1ZXJ5Iiwia2V5d29yZCIsInRvcGljIiwic2VhcmNoIiwicmVzdWx0cyIsImNvbXBhY3QiLCJsaXN0ZW4iLCJwcm9jZXNzIiwiZW52IiwiUE9SVCIsImNvbnNvbGUiLCJsb2ciXSwibWFwcGluZ3MiOiI7O0FBQUE7Ozs7QUFDQTs7OztBQUNBOzs7Ozs7OztBQUVBLElBQU1BLE1BQU0sd0JBQVo7O0FBRUFBLElBQUlDLEdBQUosQ0FBUSxhQUFSLEVBQXVCLFVBQUNDLEdBQUQsRUFBTUMsR0FBTjtBQUFBLFNBQWNBLElBQUlDLElBQUosQ0FBUyxrQkFBUUMsVUFBakIsQ0FBZDtBQUFBLENBQXZCOztBQUVBTCxJQUFJQyxHQUFKLENBQVEsU0FBUjtBQUFBLHFFQUFtQixpQkFBT0MsR0FBUCxFQUFZQyxHQUFaO0FBQUE7O0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSx5QkFJYkQsSUFBSUksS0FKUyxFQUVmQyxPQUZlLGNBRWZBLE9BRmUsRUFHZkMsS0FIZSxjQUdmQSxLQUhlO0FBQUE7QUFBQTtBQUFBLG1CQU1PLGtCQUFRQyxNQUFSLENBQWVGLE9BQWYsRUFBd0JDLEtBQXhCLENBTlA7O0FBQUE7QUFNVEUsbUJBTlM7O0FBT2ZQLGdCQUFJQyxJQUFKLENBQVMsaUJBQUVPLE9BQUYsQ0FBVUQsT0FBVixDQUFUO0FBUGU7QUFBQTs7QUFBQTtBQUFBO0FBQUE7O0FBU2ZQLGdCQUFJQyxJQUFKLENBQVMsRUFBVDs7QUFUZTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxHQUFuQjs7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQVdFO0FBWEY7O0FBY0FKLElBQUlZLE1BQUosQ0FBV0MsUUFBUUMsR0FBUixDQUFZQyxJQUF2QixFQUE2QixZQUFNO0FBQ2pDQyxVQUFRQyxHQUFSLENBQVksMkJBQTJCSixRQUFRQyxHQUFSLENBQVlDLElBQW5EO0FBQ0QsQ0FGRCIsImZpbGUiOiJzZXJ2ZXIuanMiLCJzb3VyY2VSb290IjoiL2FwcCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBfIGZyb20gJ2xvZGFzaCc7XG5pbXBvcnQgZXhwcmVzcyBmcm9tICdleHByZXNzJztcbmltcG9ydCB0b3JyZW50IGZyb20gJy4vdG9ycmVudCc7XG5cbmNvbnN0IGFwcCA9IGV4cHJlc3MoKTtcblxuYXBwLmdldCgnL2NhdGVnb3JpZXMnLCAocmVxLCByZXMpID0+IHJlcy5qc29uKHRvcnJlbnQuY2F0ZWdvcmllcykpXG5cbmFwcC5nZXQoJy9zZWFyY2gnLCBhc3luYyAocmVxLCByZXMpID0+IHtcbiAgY29uc3QgeyBcbiAgICBrZXl3b3JkLFxuICAgIHRvcGljLFxuICB9ID0gcmVxLnF1ZXJ5O1xuICB0cnkge1xuICAgIGNvbnN0IHJlc3VsdHMgPSBhd2FpdCB0b3JyZW50LnNlYXJjaChrZXl3b3JkLCB0b3BpYyk7XG4gICAgcmVzLmpzb24oXy5jb21wYWN0KHJlc3VsdHMpKTtcbiAgfSBjYXRjaCAoZSkge1xuICAgIHJlcy5qc29uKHt9KTtcbiAgfVxuICAvLyBodHRwczovL3RvcnJlbnQuZ2xpdGNoLm1lL3NlYXJjaD9rZXl3b3JkPXJpY2t5JTIwYW5kJTIwbW9ydHkmdG9waWM9VFZcbn0pO1xuXG5hcHAubGlzdGVuKHByb2Nlc3MuZW52LlBPUlQsICgpID0+IHtcbiAgY29uc29sZS5sb2coJ0FwcCBsaXN0ZW5pbmcgb24gcG9ydCAnICsgcHJvY2Vzcy5lbnYuUE9SVCk7XG59KTsiXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "server.js"
+      ],
+      "names": [
+        "app",
+        "get",
+        "req",
+        "res",
+        "json",
+        "categories",
+        "query",
+        "keyword",
+        "topic",
+        "search",
+        "results",
+        "compact",
+        "listen",
+        "process",
+        "env",
+        "PORT",
+        "console",
+        "log"
+      ],
+      "mappings": ";;AAAA;;;;AACA;;;;AACA;;;;;;;;AAEA,IAAMA,MAAM,wBAAZ;;AAEAA,IAAIC,GAAJ,CAAQ,aAAR,EAAuB,UAACC,GAAD,EAAMC,GAAN;AAAA,SAAcA,IAAIC,IAAJ,CAAS,kBAAQC,UAAjB,CAAd;AAAA,CAAvB;;AAEAL,IAAIC,GAAJ,CAAQ,SAAR;AAAA,qEAAmB,iBAAOC,GAAP,EAAYC,GAAZ;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA,yBAIbD,IAAII,KAJS,EAEfC,OAFe,cAEfA,OAFe,EAGfC,KAHe,cAGfA,KAHe;AAAA;AAAA;AAAA,mBAMO,kBAAQC,MAAR,CAAeF,OAAf,EAAwBC,KAAxB,CANP;;AAAA;AAMTE,mBANS;;AAOfP,gBAAIC,IAAJ,CAAS,iBAAEO,OAAF,CAAUD,OAAV,CAAT;AAPe;AAAA;;AAAA;AAAA;AAAA;;AASfP,gBAAIC,IAAJ,CAAS,EAAT;;AATe;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,GAAnB;;AAAA;AAAA;AAAA;AAAA;AAWE;AAXF;;AAcAJ,IAAIY,MAAJ,CAAWC,QAAQC,GAAR,CAAYC,IAAvB,EAA6B,YAAM;AACjCC,UAAQC,GAAR,CAAY,2BAA2BJ,QAAQC,GAAR,CAAYC,IAAnD;AACD,CAFD",
+      "file": "server.js",
+      "sourceRoot": "/app",
+      "sourcesContent": [
+        "import _ from 'lodash';\nimport express from 'express';\nimport torrent from './torrent';\n\nconst app = express();\n\napp.get('/categories', (req, res) => res.json(torrent.categories))\n\napp.get('/search', async (req, res) => {\n  const { \n    keyword,\n    topic,\n  } = req.query;\n  try {\n    const results = await torrent.search(keyword, topic);\n    res.json(_.compact(results));\n  } catch (e) {\n    res.json({});\n  }\n  // https://torrent.glitch.me/search?keyword=ricky%20and%20morty&topic=TV\n});\n\napp.listen(process.env.PORT, () => {\n  console.log('App listening on port ' + process.env.PORT);\n});"
+      ]
+    },
+    "mtime": 1506384281452
+  },
+  "{\"filename\":\"/app/torrent.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "lodash/fp",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "fp"
+              }
+            ]
+          },
+          {
+            "source": "lodash",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "_"
+              }
+            ]
+          },
+          {
+            "source": "torrent-search-api",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "TorrentSearchApi"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/torrent.js",
+      "filenameRelative": "/app/torrent.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "torrent.js",
+      "sourceFileName": "torrent.js",
+      "sourceRoot": "/app",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "torrent"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _fp = require('lodash/fp');\n\nvar _fp2 = _interopRequireDefault(_fp);\n\nvar _lodash = require('lodash');\n\nvar _lodash2 = _interopRequireDefault(_lodash);\n\nvar _torrentSearchApi = require('torrent-search-api');\n\nvar _torrentSearchApi2 = _interopRequireDefault(_torrentSearchApi);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar filter = ['xxx', 'porn'];\n\nvar notIncludes = _fp2.default.negate(_fp2.default.includes);\nvar searchClient = new _torrentSearchApi2.default();\n\nvar enablePublic = _fp2.default.compose(_fp2.default.forEach(function (p) {\n  return searchClient.enableProvider(p);\n}), _fp2.default.map(_fp2.default.get('name')), _fp2.default.filter(_fp2.default.get('public')));\n\nenablePublic(searchClient.getProviders());\n\nvar getCategories = _fp2.default.compose(_fp2.default.filter(function (c) {\n  return notIncludes(_lodash2.default.lowerCase(c), filter);\n}), _fp2.default.sortedUniqBy(_fp2.default.lowerCase), _fp2.default.sortBy(_fp2.default.lowerCase), _fp2.default.flatten, _fp2.default.map(_fp2.default.get('categories')));\n\nvar categories = getCategories(searchClient.getActiveProviders());\n\nfunction search(keyword, topic) {\n  return searchClient.search(keyword, topic, 20);\n}\n\nexports.default = {\n  categories: categories,\n  search: search\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRvcnJlbnQuanMiXSwibmFtZXMiOlsiZmlsdGVyIiwibm90SW5jbHVkZXMiLCJuZWdhdGUiLCJpbmNsdWRlcyIsInNlYXJjaENsaWVudCIsImVuYWJsZVB1YmxpYyIsImNvbXBvc2UiLCJmb3JFYWNoIiwiZW5hYmxlUHJvdmlkZXIiLCJwIiwibWFwIiwiZ2V0IiwiZ2V0UHJvdmlkZXJzIiwiZ2V0Q2F0ZWdvcmllcyIsImxvd2VyQ2FzZSIsImMiLCJzb3J0ZWRVbmlxQnkiLCJzb3J0QnkiLCJmbGF0dGVuIiwiY2F0ZWdvcmllcyIsImdldEFjdGl2ZVByb3ZpZGVycyIsInNlYXJjaCIsImtleXdvcmQiLCJ0b3BpYyJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUE7Ozs7QUFDQTs7OztBQUNBOzs7Ozs7QUFFQSxJQUFNQSxTQUFTLENBQUMsS0FBRCxFQUFRLE1BQVIsQ0FBZjs7QUFFQSxJQUFNQyxjQUFjLGFBQUdDLE1BQUgsQ0FBVSxhQUFHQyxRQUFiLENBQXBCO0FBQ0EsSUFBTUMsZUFBZSxnQ0FBckI7O0FBRUEsSUFBTUMsZUFBZSxhQUFHQyxPQUFILENBQ25CLGFBQUdDLE9BQUgsQ0FBVztBQUFBLFNBQUtILGFBQWFJLGNBQWIsQ0FBNEJDLENBQTVCLENBQUw7QUFBQSxDQUFYLENBRG1CLEVBRW5CLGFBQUdDLEdBQUgsQ0FBTyxhQUFHQyxHQUFILENBQU8sTUFBUCxDQUFQLENBRm1CLEVBR25CLGFBQUdYLE1BQUgsQ0FBVSxhQUFHVyxHQUFILENBQU8sUUFBUCxDQUFWLENBSG1CLENBQXJCOztBQU1BTixhQUFhRCxhQUFhUSxZQUFiLEVBQWI7O0FBRUEsSUFBTUMsZ0JBQWdCLGFBQUdQLE9BQUgsQ0FDcEIsYUFBR04sTUFBSCxDQUFVO0FBQUEsU0FBS0MsWUFBWSxpQkFBRWEsU0FBRixDQUFZQyxDQUFaLENBQVosRUFBNEJmLE1BQTVCLENBQUw7QUFBQSxDQUFWLENBRG9CLEVBRXBCLGFBQUdnQixZQUFILENBQWdCLGFBQUdGLFNBQW5CLENBRm9CLEVBR3BCLGFBQUdHLE1BQUgsQ0FBVSxhQUFHSCxTQUFiLENBSG9CLEVBSXBCLGFBQUdJLE9BSmlCLEVBS3BCLGFBQUdSLEdBQUgsQ0FBTyxhQUFHQyxHQUFILENBQU8sWUFBUCxDQUFQLENBTG9CLENBQXRCOztBQVFBLElBQU1RLGFBQWFOLGNBQWNULGFBQWFnQixrQkFBYixFQUFkLENBQW5COztBQUVBLFNBQVNDLE1BQVQsQ0FBZ0JDLE9BQWhCLEVBQXlCQyxLQUF6QixFQUFnQztBQUM5QixTQUFPbkIsYUFBYWlCLE1BQWIsQ0FBb0JDLE9BQXBCLEVBQTZCQyxLQUE3QixFQUFvQyxFQUFwQyxDQUFQO0FBQ0Q7O2tCQUVjO0FBQ2JKLHdCQURhO0FBRWJFO0FBRmEsQyIsImZpbGUiOiJ0b3JyZW50LmpzIiwic291cmNlUm9vdCI6Ii9hcHAiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgZnAgZnJvbSAnbG9kYXNoL2ZwJztcbmltcG9ydCBfIGZyb20gJ2xvZGFzaCc7XG5pbXBvcnQgVG9ycmVudFNlYXJjaEFwaSBmcm9tICd0b3JyZW50LXNlYXJjaC1hcGknO1xuXG5jb25zdCBmaWx0ZXIgPSBbJ3h4eCcsICdwb3JuJ107XG5cbmNvbnN0IG5vdEluY2x1ZGVzID0gZnAubmVnYXRlKGZwLmluY2x1ZGVzKTtcbmNvbnN0IHNlYXJjaENsaWVudCA9IG5ldyBUb3JyZW50U2VhcmNoQXBpKCk7XG5cbmNvbnN0IGVuYWJsZVB1YmxpYyA9IGZwLmNvbXBvc2UoXG4gIGZwLmZvckVhY2gocCA9PiBzZWFyY2hDbGllbnQuZW5hYmxlUHJvdmlkZXIocCkpLFxuICBmcC5tYXAoZnAuZ2V0KCduYW1lJykpLFxuICBmcC5maWx0ZXIoZnAuZ2V0KCdwdWJsaWMnKSksXG4pO1xuXG5lbmFibGVQdWJsaWMoc2VhcmNoQ2xpZW50LmdldFByb3ZpZGVycygpKTtcblxuY29uc3QgZ2V0Q2F0ZWdvcmllcyA9IGZwLmNvbXBvc2UoXG4gIGZwLmZpbHRlcihjID0+IG5vdEluY2x1ZGVzKF8ubG93ZXJDYXNlKGMpLCBmaWx0ZXIpKSxcbiAgZnAuc29ydGVkVW5pcUJ5KGZwLmxvd2VyQ2FzZSksXG4gIGZwLnNvcnRCeShmcC5sb3dlckNhc2UpLFxuICBmcC5mbGF0dGVuLFxuICBmcC5tYXAoZnAuZ2V0KCdjYXRlZ29yaWVzJykpLFxuKTtcblxuY29uc3QgY2F0ZWdvcmllcyA9IGdldENhdGVnb3JpZXMoc2VhcmNoQ2xpZW50LmdldEFjdGl2ZVByb3ZpZGVycygpKTtcblxuZnVuY3Rpb24gc2VhcmNoKGtleXdvcmQsIHRvcGljKSB7XG4gIHJldHVybiBzZWFyY2hDbGllbnQuc2VhcmNoKGtleXdvcmQsIHRvcGljLCAyMCk7XG59XG5cbmV4cG9ydCBkZWZhdWx0IHtcbiAgY2F0ZWdvcmllcyxcbiAgc2VhcmNoLFxufSJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "torrent.js"
+      ],
+      "names": [
+        "filter",
+        "notIncludes",
+        "negate",
+        "includes",
+        "searchClient",
+        "enablePublic",
+        "compose",
+        "forEach",
+        "enableProvider",
+        "p",
+        "map",
+        "get",
+        "getProviders",
+        "getCategories",
+        "lowerCase",
+        "c",
+        "sortedUniqBy",
+        "sortBy",
+        "flatten",
+        "categories",
+        "getActiveProviders",
+        "search",
+        "keyword",
+        "topic"
+      ],
+      "mappings": ";;;;;;AAAA;;;;AACA;;;;AACA;;;;;;AAEA,IAAMA,SAAS,CAAC,KAAD,EAAQ,MAAR,CAAf;;AAEA,IAAMC,cAAc,aAAGC,MAAH,CAAU,aAAGC,QAAb,CAApB;AACA,IAAMC,eAAe,gCAArB;;AAEA,IAAMC,eAAe,aAAGC,OAAH,CACnB,aAAGC,OAAH,CAAW;AAAA,SAAKH,aAAaI,cAAb,CAA4BC,CAA5B,CAAL;AAAA,CAAX,CADmB,EAEnB,aAAGC,GAAH,CAAO,aAAGC,GAAH,CAAO,MAAP,CAAP,CAFmB,EAGnB,aAAGX,MAAH,CAAU,aAAGW,GAAH,CAAO,QAAP,CAAV,CAHmB,CAArB;;AAMAN,aAAaD,aAAaQ,YAAb,EAAb;;AAEA,IAAMC,gBAAgB,aAAGP,OAAH,CACpB,aAAGN,MAAH,CAAU;AAAA,SAAKC,YAAY,iBAAEa,SAAF,CAAYC,CAAZ,CAAZ,EAA4Bf,MAA5B,CAAL;AAAA,CAAV,CADoB,EAEpB,aAAGgB,YAAH,CAAgB,aAAGF,SAAnB,CAFoB,EAGpB,aAAGG,MAAH,CAAU,aAAGH,SAAb,CAHoB,EAIpB,aAAGI,OAJiB,EAKpB,aAAGR,GAAH,CAAO,aAAGC,GAAH,CAAO,YAAP,CAAP,CALoB,CAAtB;;AAQA,IAAMQ,aAAaN,cAAcT,aAAagB,kBAAb,EAAd,CAAnB;;AAEA,SAASC,MAAT,CAAgBC,OAAhB,EAAyBC,KAAzB,EAAgC;AAC9B,SAAOnB,aAAaiB,MAAb,CAAoBC,OAApB,EAA6BC,KAA7B,EAAoC,EAApC,CAAP;AACD;;kBAEc;AACbJ,wBADa;AAEbE;AAFa,C",
+      "file": "torrent.js",
+      "sourceRoot": "/app",
+      "sourcesContent": [
+        "import fp from 'lodash/fp';\nimport _ from 'lodash';\nimport TorrentSearchApi from 'torrent-search-api';\n\nconst filter = ['xxx', 'porn'];\n\nconst notIncludes = fp.negate(fp.includes);\nconst searchClient = new TorrentSearchApi();\n\nconst enablePublic = fp.compose(\n  fp.forEach(p => searchClient.enableProvider(p)),\n  fp.map(fp.get('name')),\n  fp.filter(fp.get('public')),\n);\n\nenablePublic(searchClient.getProviders());\n\nconst getCategories = fp.compose(\n  fp.filter(c => notIncludes(_.lowerCase(c), filter)),\n  fp.sortedUniqBy(fp.lowerCase),\n  fp.sortBy(fp.lowerCase),\n  fp.flatten,\n  fp.map(fp.get('categories')),\n);\n\nconst categories = getCategories(searchClient.getActiveProviders());\n\nfunction search(keyword, topic) {\n  return searchClient.search(keyword, topic, 20);\n}\n\nexport default {\n  categories,\n  search,\n}"
+      ]
+    },
+    "mtime": 1506384006670
+  },
+  "{\"filename\":\"/app/server.js\",\"env\":{\"development\":{\"plugins\":[]}},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [
+        "asyncToGenerator",
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "lodash",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "_"
+              }
+            ]
+          },
+          {
+            "source": "path",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "path"
+              }
+            ]
+          },
+          {
+            "source": "express",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "express"
+              }
+            ]
+          },
+          {
+            "source": "./torrent",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "torrent"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server.js",
+      "filenameRelative": "/app/server.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "server.js",
+      "sourceFileName": "server.js",
+      "sourceRoot": "/app",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "server"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _lodash = require('lodash');\n\nvar _lodash2 = _interopRequireDefault(_lodash);\n\nvar _path = require('path');\n\nvar _path2 = _interopRequireDefault(_path);\n\nvar _express = require('express');\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _torrent = require('./torrent');\n\nvar _torrent2 = _interopRequireDefault(_torrent);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); }); }; }\n\nvar app = (0, _express2.default)();\n\napp.use(_express2.default.static('dist'));\n\napp.get('/categories', function (req, res) {\n  return res.json(_torrent2.default.categories);\n});\n\napp.get('/search', function () {\n  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(req, res) {\n    var _req$query, keyword, topic, results;\n\n    return regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _req$query = req.query, keyword = _req$query.keyword, topic = _req$query.topic;\n            _context.prev = 1;\n            _context.next = 4;\n            return _torrent2.default.search(keyword, topic);\n\n          case 4:\n            results = _context.sent;\n\n            res.json(_lodash2.default.compact(results));\n            _context.next = 11;\n            break;\n\n          case 8:\n            _context.prev = 8;\n            _context.t0 = _context['catch'](1);\n\n            res.json({});\n\n          case 11:\n          case 'end':\n            return _context.stop();\n        }\n      }\n    }, _callee, undefined, [[1, 8]]);\n  }));\n\n  return function (_x, _x2) {\n    return _ref.apply(this, arguments);\n  };\n}()\n// https://torrent.glitch.me/search?keyword=ricky%20and%20morty&topic=TV\n);\n\napp.get('/', function (req, res) {\n  return res.sendFile(_path2.default.resolve('./views/index.html'));\n});\n\napp.listen(process.env.PORT, function () {\n  console.log('App listening on port ' + process.env.PORT);\n});\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlcnZlci5qcyJdLCJuYW1lcyI6WyJhcHAiLCJ1c2UiLCJzdGF0aWMiLCJnZXQiLCJyZXEiLCJyZXMiLCJqc29uIiwiY2F0ZWdvcmllcyIsInF1ZXJ5Iiwia2V5d29yZCIsInRvcGljIiwic2VhcmNoIiwicmVzdWx0cyIsImNvbXBhY3QiLCJzZW5kRmlsZSIsInJlc29sdmUiLCJsaXN0ZW4iLCJwcm9jZXNzIiwiZW52IiwiUE9SVCIsImNvbnNvbGUiLCJsb2ciXSwibWFwcGluZ3MiOiI7O0FBQUE7Ozs7QUFDQTs7OztBQUNBOzs7O0FBQ0E7Ozs7Ozs7O0FBRUEsSUFBTUEsTUFBTSx3QkFBWjs7QUFFQUEsSUFBSUMsR0FBSixDQUFRLGtCQUFRQyxNQUFSLENBQWUsTUFBZixDQUFSOztBQUVBRixJQUFJRyxHQUFKLENBQVEsYUFBUixFQUF1QixVQUFDQyxHQUFELEVBQU1DLEdBQU47QUFBQSxTQUFjQSxJQUFJQyxJQUFKLENBQVMsa0JBQVFDLFVBQWpCLENBQWQ7QUFBQSxDQUF2Qjs7QUFFQVAsSUFBSUcsR0FBSixDQUFRLFNBQVI7QUFBQSxxRUFBbUIsaUJBQU9DLEdBQVAsRUFBWUMsR0FBWjtBQUFBOztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEseUJBSWJELElBQUlJLEtBSlMsRUFFZkMsT0FGZSxjQUVmQSxPQUZlLEVBR2ZDLEtBSGUsY0FHZkEsS0FIZTtBQUFBO0FBQUE7QUFBQSxtQkFNTyxrQkFBUUMsTUFBUixDQUFlRixPQUFmLEVBQXdCQyxLQUF4QixDQU5QOztBQUFBO0FBTVRFLG1CQU5TOztBQU9mUCxnQkFBSUMsSUFBSixDQUFTLGlCQUFFTyxPQUFGLENBQVVELE9BQVYsQ0FBVDtBQVBlO0FBQUE7O0FBQUE7QUFBQTtBQUFBOztBQVNmUCxnQkFBSUMsSUFBSixDQUFTLEVBQVQ7O0FBVGU7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsR0FBbkI7O0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFXRTtBQVhGOztBQWNBTixJQUFJRyxHQUFKLENBQVEsR0FBUixFQUFhLFVBQUNDLEdBQUQsRUFBTUMsR0FBTjtBQUFBLFNBQWNBLElBQUlTLFFBQUosQ0FBYSxlQUFLQyxPQUFMLENBQWEsb0JBQWIsQ0FBYixDQUFkO0FBQUEsQ0FBYjs7QUFFQWYsSUFBSWdCLE1BQUosQ0FBV0MsUUFBUUMsR0FBUixDQUFZQyxJQUF2QixFQUE2QixZQUFNO0FBQ2pDQyxVQUFRQyxHQUFSLENBQVksMkJBQTJCSixRQUFRQyxHQUFSLENBQVlDLElBQW5EO0FBQ0QsQ0FGRCIsImZpbGUiOiJzZXJ2ZXIuanMiLCJzb3VyY2VSb290IjoiL2FwcCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBfIGZyb20gJ2xvZGFzaCc7XG5pbXBvcnQgcGF0aCBmcm9tICdwYXRoJztcbmltcG9ydCBleHByZXNzIGZyb20gJ2V4cHJlc3MnO1xuaW1wb3J0IHRvcnJlbnQgZnJvbSAnLi90b3JyZW50JztcblxuY29uc3QgYXBwID0gZXhwcmVzcygpO1xuXG5hcHAudXNlKGV4cHJlc3Muc3RhdGljKCdkaXN0JykpO1xuXG5hcHAuZ2V0KCcvY2F0ZWdvcmllcycsIChyZXEsIHJlcykgPT4gcmVzLmpzb24odG9ycmVudC5jYXRlZ29yaWVzKSlcblxuYXBwLmdldCgnL3NlYXJjaCcsIGFzeW5jIChyZXEsIHJlcykgPT4ge1xuICBjb25zdCB7IFxuICAgIGtleXdvcmQsXG4gICAgdG9waWMsXG4gIH0gPSByZXEucXVlcnk7XG4gIHRyeSB7XG4gICAgY29uc3QgcmVzdWx0cyA9IGF3YWl0IHRvcnJlbnQuc2VhcmNoKGtleXdvcmQsIHRvcGljKTtcbiAgICByZXMuanNvbihfLmNvbXBhY3QocmVzdWx0cykpO1xuICB9IGNhdGNoIChlKSB7XG4gICAgcmVzLmpzb24oe30pO1xuICB9XG4gIC8vIGh0dHBzOi8vdG9ycmVudC5nbGl0Y2gubWUvc2VhcmNoP2tleXdvcmQ9cmlja3klMjBhbmQlMjBtb3J0eSZ0b3BpYz1UVlxufSk7XG5cbmFwcC5nZXQoJy8nLCAocmVxLCByZXMpID0+IHJlcy5zZW5kRmlsZShwYXRoLnJlc29sdmUoJy4vdmlld3MvaW5kZXguaHRtbCcpKSk7XG5cbmFwcC5saXN0ZW4ocHJvY2Vzcy5lbnYuUE9SVCwgKCkgPT4ge1xuICBjb25zb2xlLmxvZygnQXBwIGxpc3RlbmluZyBvbiBwb3J0ICcgKyBwcm9jZXNzLmVudi5QT1JUKTtcbn0pOyJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "server.js"
+      ],
+      "names": [
+        "app",
+        "use",
+        "static",
+        "get",
+        "req",
+        "res",
+        "json",
+        "categories",
+        "query",
+        "keyword",
+        "topic",
+        "search",
+        "results",
+        "compact",
+        "sendFile",
+        "resolve",
+        "listen",
+        "process",
+        "env",
+        "PORT",
+        "console",
+        "log"
+      ],
+      "mappings": ";;AAAA;;;;AACA;;;;AACA;;;;AACA;;;;;;;;AAEA,IAAMA,MAAM,wBAAZ;;AAEAA,IAAIC,GAAJ,CAAQ,kBAAQC,MAAR,CAAe,MAAf,CAAR;;AAEAF,IAAIG,GAAJ,CAAQ,aAAR,EAAuB,UAACC,GAAD,EAAMC,GAAN;AAAA,SAAcA,IAAIC,IAAJ,CAAS,kBAAQC,UAAjB,CAAd;AAAA,CAAvB;;AAEAP,IAAIG,GAAJ,CAAQ,SAAR;AAAA,qEAAmB,iBAAOC,GAAP,EAAYC,GAAZ;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA,yBAIbD,IAAII,KAJS,EAEfC,OAFe,cAEfA,OAFe,EAGfC,KAHe,cAGfA,KAHe;AAAA;AAAA;AAAA,mBAMO,kBAAQC,MAAR,CAAeF,OAAf,EAAwBC,KAAxB,CANP;;AAAA;AAMTE,mBANS;;AAOfP,gBAAIC,IAAJ,CAAS,iBAAEO,OAAF,CAAUD,OAAV,CAAT;AAPe;AAAA;;AAAA;AAAA;AAAA;;AASfP,gBAAIC,IAAJ,CAAS,EAAT;;AATe;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,GAAnB;;AAAA;AAAA;AAAA;AAAA;AAWE;AAXF;;AAcAN,IAAIG,GAAJ,CAAQ,GAAR,EAAa,UAACC,GAAD,EAAMC,GAAN;AAAA,SAAcA,IAAIS,QAAJ,CAAa,eAAKC,OAAL,CAAa,oBAAb,CAAb,CAAd;AAAA,CAAb;;AAEAf,IAAIgB,MAAJ,CAAWC,QAAQC,GAAR,CAAYC,IAAvB,EAA6B,YAAM;AACjCC,UAAQC,GAAR,CAAY,2BAA2BJ,QAAQC,GAAR,CAAYC,IAAnD;AACD,CAFD",
+      "file": "server.js",
+      "sourceRoot": "/app",
+      "sourcesContent": [
+        "import _ from 'lodash';\nimport path from 'path';\nimport express from 'express';\nimport torrent from './torrent';\n\nconst app = express();\n\napp.use(express.static('dist'));\n\napp.get('/categories', (req, res) => res.json(torrent.categories))\n\napp.get('/search', async (req, res) => {\n  const { \n    keyword,\n    topic,\n  } = req.query;\n  try {\n    const results = await torrent.search(keyword, topic);\n    res.json(_.compact(results));\n  } catch (e) {\n    res.json({});\n  }\n  // https://torrent.glitch.me/search?keyword=ricky%20and%20morty&topic=TV\n});\n\napp.get('/', (req, res) => res.sendFile(path.resolve('./views/index.html')));\n\napp.listen(process.env.PORT, () => {\n  console.log('App listening on port ' + process.env.PORT);\n});"
+      ]
+    },
+    "mtime": 1506784010055
+  },
+  "{\"filename\":\"/app/torrent.js\",\"env\":{\"development\":{\"plugins\":[]}},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "lodash/fp",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "fp"
+              }
+            ]
+          },
+          {
+            "source": "lodash",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "_"
+              }
+            ]
+          },
+          {
+            "source": "torrent-search-api",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "TorrentSearchApi"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/torrent.js",
+      "filenameRelative": "/app/torrent.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "torrent.js",
+      "sourceFileName": "torrent.js",
+      "sourceRoot": "/app",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "torrent"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _fp = require('lodash/fp');\n\nvar _fp2 = _interopRequireDefault(_fp);\n\nvar _lodash = require('lodash');\n\nvar _lodash2 = _interopRequireDefault(_lodash);\n\nvar _torrentSearchApi = require('torrent-search-api');\n\nvar _torrentSearchApi2 = _interopRequireDefault(_torrentSearchApi);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar filter = ['xxx', 'porn'];\n\nvar notIncludes = _fp2.default.negate(_fp2.default.includes);\nvar searchClient = new _torrentSearchApi2.default();\n\nvar enablePublic = _fp2.default.compose(_fp2.default.forEach(function (p) {\n  return searchClient.enableProvider(p);\n}), _fp2.default.map(_fp2.default.get('name')), _fp2.default.filter(_fp2.default.get('public')));\n\nenablePublic(searchClient.getProviders());\n\nvar getCategories = _fp2.default.compose(_fp2.default.filter(function (c) {\n  return notIncludes(_lodash2.default.lowerCase(c), filter);\n}), _fp2.default.sortedUniqBy(_fp2.default.lowerCase), _fp2.default.sortBy(_fp2.default.lowerCase), _fp2.default.flatten, _fp2.default.map(_fp2.default.get('categories')));\n\nvar categories = getCategories(searchClient.getActiveProviders());\n\nfunction search(keyword, topic) {\n  return searchClient.search(keyword, topic, 20);\n}\n\nexports.default = {\n  categories: categories,\n  search: search\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRvcnJlbnQuanMiXSwibmFtZXMiOlsiZmlsdGVyIiwibm90SW5jbHVkZXMiLCJuZWdhdGUiLCJpbmNsdWRlcyIsInNlYXJjaENsaWVudCIsImVuYWJsZVB1YmxpYyIsImNvbXBvc2UiLCJmb3JFYWNoIiwiZW5hYmxlUHJvdmlkZXIiLCJwIiwibWFwIiwiZ2V0IiwiZ2V0UHJvdmlkZXJzIiwiZ2V0Q2F0ZWdvcmllcyIsImxvd2VyQ2FzZSIsImMiLCJzb3J0ZWRVbmlxQnkiLCJzb3J0QnkiLCJmbGF0dGVuIiwiY2F0ZWdvcmllcyIsImdldEFjdGl2ZVByb3ZpZGVycyIsInNlYXJjaCIsImtleXdvcmQiLCJ0b3BpYyJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUE7Ozs7QUFDQTs7OztBQUNBOzs7Ozs7QUFFQSxJQUFNQSxTQUFTLENBQUMsS0FBRCxFQUFRLE1BQVIsQ0FBZjs7QUFFQSxJQUFNQyxjQUFjLGFBQUdDLE1BQUgsQ0FBVSxhQUFHQyxRQUFiLENBQXBCO0FBQ0EsSUFBTUMsZUFBZSxnQ0FBckI7O0FBRUEsSUFBTUMsZUFBZSxhQUFHQyxPQUFILENBQ25CLGFBQUdDLE9BQUgsQ0FBVztBQUFBLFNBQUtILGFBQWFJLGNBQWIsQ0FBNEJDLENBQTVCLENBQUw7QUFBQSxDQUFYLENBRG1CLEVBRW5CLGFBQUdDLEdBQUgsQ0FBTyxhQUFHQyxHQUFILENBQU8sTUFBUCxDQUFQLENBRm1CLEVBR25CLGFBQUdYLE1BQUgsQ0FBVSxhQUFHVyxHQUFILENBQU8sUUFBUCxDQUFWLENBSG1CLENBQXJCOztBQU1BTixhQUFhRCxhQUFhUSxZQUFiLEVBQWI7O0FBRUEsSUFBTUMsZ0JBQWdCLGFBQUdQLE9BQUgsQ0FDcEIsYUFBR04sTUFBSCxDQUFVO0FBQUEsU0FBS0MsWUFBWSxpQkFBRWEsU0FBRixDQUFZQyxDQUFaLENBQVosRUFBNEJmLE1BQTVCLENBQUw7QUFBQSxDQUFWLENBRG9CLEVBRXBCLGFBQUdnQixZQUFILENBQWdCLGFBQUdGLFNBQW5CLENBRm9CLEVBR3BCLGFBQUdHLE1BQUgsQ0FBVSxhQUFHSCxTQUFiLENBSG9CLEVBSXBCLGFBQUdJLE9BSmlCLEVBS3BCLGFBQUdSLEdBQUgsQ0FBTyxhQUFHQyxHQUFILENBQU8sWUFBUCxDQUFQLENBTG9CLENBQXRCOztBQVFBLElBQU1RLGFBQWFOLGNBQWNULGFBQWFnQixrQkFBYixFQUFkLENBQW5COztBQUVBLFNBQVNDLE1BQVQsQ0FBZ0JDLE9BQWhCLEVBQXlCQyxLQUF6QixFQUFnQztBQUM5QixTQUFPbkIsYUFBYWlCLE1BQWIsQ0FBb0JDLE9BQXBCLEVBQTZCQyxLQUE3QixFQUFvQyxFQUFwQyxDQUFQO0FBQ0Q7O2tCQUVjO0FBQ2JKLHdCQURhO0FBRWJFO0FBRmEsQyIsImZpbGUiOiJ0b3JyZW50LmpzIiwic291cmNlUm9vdCI6Ii9hcHAiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgZnAgZnJvbSAnbG9kYXNoL2ZwJztcbmltcG9ydCBfIGZyb20gJ2xvZGFzaCc7XG5pbXBvcnQgVG9ycmVudFNlYXJjaEFwaSBmcm9tICd0b3JyZW50LXNlYXJjaC1hcGknO1xuXG5jb25zdCBmaWx0ZXIgPSBbJ3h4eCcsICdwb3JuJ107XG5cbmNvbnN0IG5vdEluY2x1ZGVzID0gZnAubmVnYXRlKGZwLmluY2x1ZGVzKTtcbmNvbnN0IHNlYXJjaENsaWVudCA9IG5ldyBUb3JyZW50U2VhcmNoQXBpKCk7XG5cbmNvbnN0IGVuYWJsZVB1YmxpYyA9IGZwLmNvbXBvc2UoXG4gIGZwLmZvckVhY2gocCA9PiBzZWFyY2hDbGllbnQuZW5hYmxlUHJvdmlkZXIocCkpLFxuICBmcC5tYXAoZnAuZ2V0KCduYW1lJykpLFxuICBmcC5maWx0ZXIoZnAuZ2V0KCdwdWJsaWMnKSksXG4pO1xuXG5lbmFibGVQdWJsaWMoc2VhcmNoQ2xpZW50LmdldFByb3ZpZGVycygpKTtcblxuY29uc3QgZ2V0Q2F0ZWdvcmllcyA9IGZwLmNvbXBvc2UoXG4gIGZwLmZpbHRlcihjID0+IG5vdEluY2x1ZGVzKF8ubG93ZXJDYXNlKGMpLCBmaWx0ZXIpKSxcbiAgZnAuc29ydGVkVW5pcUJ5KGZwLmxvd2VyQ2FzZSksXG4gIGZwLnNvcnRCeShmcC5sb3dlckNhc2UpLFxuICBmcC5mbGF0dGVuLFxuICBmcC5tYXAoZnAuZ2V0KCdjYXRlZ29yaWVzJykpLFxuKTtcblxuY29uc3QgY2F0ZWdvcmllcyA9IGdldENhdGVnb3JpZXMoc2VhcmNoQ2xpZW50LmdldEFjdGl2ZVByb3ZpZGVycygpKTtcblxuZnVuY3Rpb24gc2VhcmNoKGtleXdvcmQsIHRvcGljKSB7XG4gIHJldHVybiBzZWFyY2hDbGllbnQuc2VhcmNoKGtleXdvcmQsIHRvcGljLCAyMCk7XG59XG5cbmV4cG9ydCBkZWZhdWx0IHtcbiAgY2F0ZWdvcmllcyxcbiAgc2VhcmNoLFxufSJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "torrent.js"
+      ],
+      "names": [
+        "filter",
+        "notIncludes",
+        "negate",
+        "includes",
+        "searchClient",
+        "enablePublic",
+        "compose",
+        "forEach",
+        "enableProvider",
+        "p",
+        "map",
+        "get",
+        "getProviders",
+        "getCategories",
+        "lowerCase",
+        "c",
+        "sortedUniqBy",
+        "sortBy",
+        "flatten",
+        "categories",
+        "getActiveProviders",
+        "search",
+        "keyword",
+        "topic"
+      ],
+      "mappings": ";;;;;;AAAA;;;;AACA;;;;AACA;;;;;;AAEA,IAAMA,SAAS,CAAC,KAAD,EAAQ,MAAR,CAAf;;AAEA,IAAMC,cAAc,aAAGC,MAAH,CAAU,aAAGC,QAAb,CAApB;AACA,IAAMC,eAAe,gCAArB;;AAEA,IAAMC,eAAe,aAAGC,OAAH,CACnB,aAAGC,OAAH,CAAW;AAAA,SAAKH,aAAaI,cAAb,CAA4BC,CAA5B,CAAL;AAAA,CAAX,CADmB,EAEnB,aAAGC,GAAH,CAAO,aAAGC,GAAH,CAAO,MAAP,CAAP,CAFmB,EAGnB,aAAGX,MAAH,CAAU,aAAGW,GAAH,CAAO,QAAP,CAAV,CAHmB,CAArB;;AAMAN,aAAaD,aAAaQ,YAAb,EAAb;;AAEA,IAAMC,gBAAgB,aAAGP,OAAH,CACpB,aAAGN,MAAH,CAAU;AAAA,SAAKC,YAAY,iBAAEa,SAAF,CAAYC,CAAZ,CAAZ,EAA4Bf,MAA5B,CAAL;AAAA,CAAV,CADoB,EAEpB,aAAGgB,YAAH,CAAgB,aAAGF,SAAnB,CAFoB,EAGpB,aAAGG,MAAH,CAAU,aAAGH,SAAb,CAHoB,EAIpB,aAAGI,OAJiB,EAKpB,aAAGR,GAAH,CAAO,aAAGC,GAAH,CAAO,YAAP,CAAP,CALoB,CAAtB;;AAQA,IAAMQ,aAAaN,cAAcT,aAAagB,kBAAb,EAAd,CAAnB;;AAEA,SAASC,MAAT,CAAgBC,OAAhB,EAAyBC,KAAzB,EAAgC;AAC9B,SAAOnB,aAAaiB,MAAb,CAAoBC,OAApB,EAA6BC,KAA7B,EAAoC,EAApC,CAAP;AACD;;kBAEc;AACbJ,wBADa;AAEbE;AAFa,C",
+      "file": "torrent.js",
+      "sourceRoot": "/app",
+      "sourcesContent": [
+        "import fp from 'lodash/fp';\nimport _ from 'lodash';\nimport TorrentSearchApi from 'torrent-search-api';\n\nconst filter = ['xxx', 'porn'];\n\nconst notIncludes = fp.negate(fp.includes);\nconst searchClient = new TorrentSearchApi();\n\nconst enablePublic = fp.compose(\n  fp.forEach(p => searchClient.enableProvider(p)),\n  fp.map(fp.get('name')),\n  fp.filter(fp.get('public')),\n);\n\nenablePublic(searchClient.getProviders());\n\nconst getCategories = fp.compose(\n  fp.filter(c => notIncludes(_.lowerCase(c), filter)),\n  fp.sortedUniqBy(fp.lowerCase),\n  fp.sortBy(fp.lowerCase),\n  fp.flatten,\n  fp.map(fp.get('categories')),\n);\n\nconst categories = getCategories(searchClient.getActiveProviders());\n\nfunction search(keyword, topic) {\n  return searchClient.search(keyword, topic, 20);\n}\n\nexport default {\n  categories,\n  search,\n}"
+      ]
+    },
+    "mtime": 1506784010063
+  },
+  "{\"filename\":\"/app/server.js\",\"env\":{\"development\":{\"plugins\":[]}},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [
+        "asyncToGenerator",
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "lodash",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "_"
+              }
+            ]
+          },
+          {
+            "source": "path",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "path"
+              }
+            ]
+          },
+          {
+            "source": "express",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "express"
+              }
+            ]
+          },
+          {
+            "source": "./torrent",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "torrent"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server.js",
+      "filenameRelative": "/app/server.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "server.js",
+      "sourceFileName": "server.js",
+      "sourceRoot": "/app",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "server"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _lodash = require('lodash');\n\nvar _lodash2 = _interopRequireDefault(_lodash);\n\nvar _path = require('path');\n\nvar _path2 = _interopRequireDefault(_path);\n\nvar _express = require('express');\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _torrent = require('./torrent');\n\nvar _torrent2 = _interopRequireDefault(_torrent);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); }); }; }\n\nvar app = (0, _express2.default)();\n\napp.use(_express2.default.static('dist'));\n\napp.get('/categories', function (req, res) {\n  return res.json(_torrent2.default.categories);\n});\n\napp.get('/search', function () {\n  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(req, res) {\n    var _req$query, keyword, topic, results;\n\n    return regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _req$query = req.query, keyword = _req$query.keyword, topic = _req$query.topic;\n            _context.prev = 1;\n            _context.next = 4;\n            return _torrent2.default.search(keyword, topic);\n\n          case 4:\n            results = _context.sent;\n\n            res.json(_lodash2.default.compact(results));\n            _context.next = 11;\n            break;\n\n          case 8:\n            _context.prev = 8;\n            _context.t0 = _context['catch'](1);\n\n            res.json({});\n\n          case 11:\n          case 'end':\n            return _context.stop();\n        }\n      }\n    }, _callee, undefined, [[1, 8]]);\n  }));\n\n  return function (_x, _x2) {\n    return _ref.apply(this, arguments);\n  };\n}()\n// https://torrent.glitch.me/search?keyword=ricky%20and%20morty&topic=TV\n);\n\napp.get('/', function (req, res) {\n  return res.sendFile(_path2.default.resolve('./views/index.html'));\n});\n\napp.listen(process.env.PORT, function () {\n  console.log('App listening on port ' + process.env.PORT);\n});\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlcnZlci5qcyJdLCJuYW1lcyI6WyJhcHAiLCJ1c2UiLCJzdGF0aWMiLCJnZXQiLCJyZXEiLCJyZXMiLCJqc29uIiwiY2F0ZWdvcmllcyIsInF1ZXJ5Iiwia2V5d29yZCIsInRvcGljIiwic2VhcmNoIiwicmVzdWx0cyIsImNvbXBhY3QiLCJzZW5kRmlsZSIsInJlc29sdmUiLCJsaXN0ZW4iLCJwcm9jZXNzIiwiZW52IiwiUE9SVCIsImNvbnNvbGUiLCJsb2ciXSwibWFwcGluZ3MiOiI7O0FBQUE7Ozs7QUFDQTs7OztBQUNBOzs7O0FBQ0E7Ozs7Ozs7O0FBRUEsSUFBTUEsTUFBTSx3QkFBWjs7QUFFQUEsSUFBSUMsR0FBSixDQUFRLGtCQUFRQyxNQUFSLENBQWUsTUFBZixDQUFSOztBQUVBRixJQUFJRyxHQUFKLENBQVEsYUFBUixFQUF1QixVQUFDQyxHQUFELEVBQU1DLEdBQU47QUFBQSxTQUFjQSxJQUFJQyxJQUFKLENBQVMsa0JBQVFDLFVBQWpCLENBQWQ7QUFBQSxDQUF2Qjs7QUFFQVAsSUFBSUcsR0FBSixDQUFRLFNBQVI7QUFBQSxxRUFBbUIsaUJBQU9DLEdBQVAsRUFBWUMsR0FBWjtBQUFBOztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEseUJBSWJELElBQUlJLEtBSlMsRUFFZkMsT0FGZSxjQUVmQSxPQUZlLEVBR2ZDLEtBSGUsY0FHZkEsS0FIZTtBQUFBO0FBQUE7QUFBQSxtQkFNTyxrQkFBUUMsTUFBUixDQUFlRixPQUFmLEVBQXdCQyxLQUF4QixDQU5QOztBQUFBO0FBTVRFLG1CQU5TOztBQU9mUCxnQkFBSUMsSUFBSixDQUFTLGlCQUFFTyxPQUFGLENBQVVELE9BQVYsQ0FBVDtBQVBlO0FBQUE7O0FBQUE7QUFBQTtBQUFBOztBQVNmUCxnQkFBSUMsSUFBSixDQUFTLEVBQVQ7O0FBVGU7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsR0FBbkI7O0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFXRTtBQVhGOztBQWNBTixJQUFJRyxHQUFKLENBQVEsR0FBUixFQUFhLFVBQUNDLEdBQUQsRUFBTUMsR0FBTjtBQUFBLFNBQWNBLElBQUlTLFFBQUosQ0FBYSxlQUFLQyxPQUFMLENBQWEsb0JBQWIsQ0FBYixDQUFkO0FBQUEsQ0FBYjs7QUFFQWYsSUFBSWdCLE1BQUosQ0FBV0MsUUFBUUMsR0FBUixDQUFZQyxJQUF2QixFQUE2QixZQUFNO0FBQ2pDQyxVQUFRQyxHQUFSLENBQVksMkJBQTJCSixRQUFRQyxHQUFSLENBQVlDLElBQW5EO0FBQ0QsQ0FGRCIsImZpbGUiOiJzZXJ2ZXIuanMiLCJzb3VyY2VSb290IjoiL2FwcCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBfIGZyb20gJ2xvZGFzaCc7XG5pbXBvcnQgcGF0aCBmcm9tICdwYXRoJztcbmltcG9ydCBleHByZXNzIGZyb20gJ2V4cHJlc3MnO1xuaW1wb3J0IHRvcnJlbnQgZnJvbSAnLi90b3JyZW50JztcblxuY29uc3QgYXBwID0gZXhwcmVzcygpO1xuXG5hcHAudXNlKGV4cHJlc3Muc3RhdGljKCdkaXN0JykpO1xuXG5hcHAuZ2V0KCcvY2F0ZWdvcmllcycsIChyZXEsIHJlcykgPT4gcmVzLmpzb24odG9ycmVudC5jYXRlZ29yaWVzKSlcblxuYXBwLmdldCgnL3NlYXJjaCcsIGFzeW5jIChyZXEsIHJlcykgPT4ge1xuICBjb25zdCB7IFxuICAgIGtleXdvcmQsXG4gICAgdG9waWMsXG4gIH0gPSByZXEucXVlcnk7XG4gIHRyeSB7XG4gICAgY29uc3QgcmVzdWx0cyA9IGF3YWl0IHRvcnJlbnQuc2VhcmNoKGtleXdvcmQsIHRvcGljKTtcbiAgICByZXMuanNvbihfLmNvbXBhY3QocmVzdWx0cykpO1xuICB9IGNhdGNoIChlKSB7XG4gICAgcmVzLmpzb24oe30pO1xuICB9XG4gIC8vIGh0dHBzOi8vdG9ycmVudC5nbGl0Y2gubWUvc2VhcmNoP2tleXdvcmQ9cmlja3klMjBhbmQlMjBtb3J0eSZ0b3BpYz1UVlxufSk7XG5cbmFwcC5nZXQoJy8nLCAocmVxLCByZXMpID0+IHJlcy5zZW5kRmlsZShwYXRoLnJlc29sdmUoJy4vdmlld3MvaW5kZXguaHRtbCcpKSk7XG5cbmFwcC5saXN0ZW4ocHJvY2Vzcy5lbnYuUE9SVCwgKCkgPT4ge1xuICBjb25zb2xlLmxvZygnQXBwIGxpc3RlbmluZyBvbiBwb3J0ICcgKyBwcm9jZXNzLmVudi5QT1JUKTtcbn0pOyJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "server.js"
+      ],
+      "names": [
+        "app",
+        "use",
+        "static",
+        "get",
+        "req",
+        "res",
+        "json",
+        "categories",
+        "query",
+        "keyword",
+        "topic",
+        "search",
+        "results",
+        "compact",
+        "sendFile",
+        "resolve",
+        "listen",
+        "process",
+        "env",
+        "PORT",
+        "console",
+        "log"
+      ],
+      "mappings": ";;AAAA;;;;AACA;;;;AACA;;;;AACA;;;;;;;;AAEA,IAAMA,MAAM,wBAAZ;;AAEAA,IAAIC,GAAJ,CAAQ,kBAAQC,MAAR,CAAe,MAAf,CAAR;;AAEAF,IAAIG,GAAJ,CAAQ,aAAR,EAAuB,UAACC,GAAD,EAAMC,GAAN;AAAA,SAAcA,IAAIC,IAAJ,CAAS,kBAAQC,UAAjB,CAAd;AAAA,CAAvB;;AAEAP,IAAIG,GAAJ,CAAQ,SAAR;AAAA,qEAAmB,iBAAOC,GAAP,EAAYC,GAAZ;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA,yBAIbD,IAAII,KAJS,EAEfC,OAFe,cAEfA,OAFe,EAGfC,KAHe,cAGfA,KAHe;AAAA;AAAA;AAAA,mBAMO,kBAAQC,MAAR,CAAeF,OAAf,EAAwBC,KAAxB,CANP;;AAAA;AAMTE,mBANS;;AAOfP,gBAAIC,IAAJ,CAAS,iBAAEO,OAAF,CAAUD,OAAV,CAAT;AAPe;AAAA;;AAAA;AAAA;AAAA;;AASfP,gBAAIC,IAAJ,CAAS,EAAT;;AATe;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,GAAnB;;AAAA;AAAA;AAAA;AAAA;AAWE;AAXF;;AAcAN,IAAIG,GAAJ,CAAQ,GAAR,EAAa,UAACC,GAAD,EAAMC,GAAN;AAAA,SAAcA,IAAIS,QAAJ,CAAa,eAAKC,OAAL,CAAa,oBAAb,CAAb,CAAd;AAAA,CAAb;;AAEAf,IAAIgB,MAAJ,CAAWC,QAAQC,GAAR,CAAYC,IAAvB,EAA6B,YAAM;AACjCC,UAAQC,GAAR,CAAY,2BAA2BJ,QAAQC,GAAR,CAAYC,IAAnD;AACD,CAFD",
+      "file": "server.js",
+      "sourceRoot": "/app",
+      "sourcesContent": [
+        "import _ from 'lodash';\nimport path from 'path';\nimport express from 'express';\nimport torrent from './torrent';\n\nconst app = express();\n\napp.use(express.static('dist'));\n\napp.get('/categories', (req, res) => res.json(torrent.categories))\n\napp.get('/search', async (req, res) => {\n  const { \n    keyword,\n    topic,\n  } = req.query;\n  try {\n    const results = await torrent.search(keyword, topic);\n    res.json(_.compact(results));\n  } catch (e) {\n    res.json({});\n  }\n  // https://torrent.glitch.me/search?keyword=ricky%20and%20morty&topic=TV\n});\n\napp.get('/', (req, res) => res.sendFile(path.resolve('./views/index.html')));\n\napp.listen(process.env.PORT, () => {\n  console.log('App listening on port ' + process.env.PORT);\n});"
+      ]
+    },
+    "mtime": 1506784010055
+  },
+  "{\"filename\":\"/app/torrent.js\",\"env\":{\"development\":{\"plugins\":[]}},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "lodash/fp",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "fp"
+              }
+            ]
+          },
+          {
+            "source": "lodash",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "_"
+              }
+            ]
+          },
+          {
+            "source": "torrent-search-api",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "TorrentSearchApi"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/torrent.js",
+      "filenameRelative": "/app/torrent.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "torrent.js",
+      "sourceFileName": "torrent.js",
+      "sourceRoot": "/app",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "torrent"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _fp = require('lodash/fp');\n\nvar _fp2 = _interopRequireDefault(_fp);\n\nvar _lodash = require('lodash');\n\nvar _lodash2 = _interopRequireDefault(_lodash);\n\nvar _torrentSearchApi = require('torrent-search-api');\n\nvar _torrentSearchApi2 = _interopRequireDefault(_torrentSearchApi);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar filter = ['xxx', 'porn'];\n\nvar notIncludes = _fp2.default.negate(_fp2.default.includes);\nvar searchClient = new _torrentSearchApi2.default();\n\nvar enablePublic = _fp2.default.compose(_fp2.default.forEach(function (p) {\n  return searchClient.enableProvider(p);\n}), _fp2.default.map(_fp2.default.get('name')), _fp2.default.filter(_fp2.default.get('public')));\n\nenablePublic(searchClient.getProviders());\n\nvar getCategories = _fp2.default.compose(_fp2.default.filter(function (c) {\n  return notIncludes(_lodash2.default.lowerCase(c), filter);\n}), _fp2.default.sortedUniqBy(_fp2.default.lowerCase), _fp2.default.sortBy(_fp2.default.lowerCase), _fp2.default.flatten, _fp2.default.map(_fp2.default.get('categories')));\n\nvar categories = getCategories(searchClient.getActiveProviders());\n\nfunction search(keyword, topic) {\n  return searchClient.search(keyword, topic, 20);\n}\n\nexports.default = {\n  categories: categories,\n  search: search\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRvcnJlbnQuanMiXSwibmFtZXMiOlsiZmlsdGVyIiwibm90SW5jbHVkZXMiLCJuZWdhdGUiLCJpbmNsdWRlcyIsInNlYXJjaENsaWVudCIsImVuYWJsZVB1YmxpYyIsImNvbXBvc2UiLCJmb3JFYWNoIiwiZW5hYmxlUHJvdmlkZXIiLCJwIiwibWFwIiwiZ2V0IiwiZ2V0UHJvdmlkZXJzIiwiZ2V0Q2F0ZWdvcmllcyIsImxvd2VyQ2FzZSIsImMiLCJzb3J0ZWRVbmlxQnkiLCJzb3J0QnkiLCJmbGF0dGVuIiwiY2F0ZWdvcmllcyIsImdldEFjdGl2ZVByb3ZpZGVycyIsInNlYXJjaCIsImtleXdvcmQiLCJ0b3BpYyJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUE7Ozs7QUFDQTs7OztBQUNBOzs7Ozs7QUFFQSxJQUFNQSxTQUFTLENBQUMsS0FBRCxFQUFRLE1BQVIsQ0FBZjs7QUFFQSxJQUFNQyxjQUFjLGFBQUdDLE1BQUgsQ0FBVSxhQUFHQyxRQUFiLENBQXBCO0FBQ0EsSUFBTUMsZUFBZSxnQ0FBckI7O0FBRUEsSUFBTUMsZUFBZSxhQUFHQyxPQUFILENBQ25CLGFBQUdDLE9BQUgsQ0FBVztBQUFBLFNBQUtILGFBQWFJLGNBQWIsQ0FBNEJDLENBQTVCLENBQUw7QUFBQSxDQUFYLENBRG1CLEVBRW5CLGFBQUdDLEdBQUgsQ0FBTyxhQUFHQyxHQUFILENBQU8sTUFBUCxDQUFQLENBRm1CLEVBR25CLGFBQUdYLE1BQUgsQ0FBVSxhQUFHVyxHQUFILENBQU8sUUFBUCxDQUFWLENBSG1CLENBQXJCOztBQU1BTixhQUFhRCxhQUFhUSxZQUFiLEVBQWI7O0FBRUEsSUFBTUMsZ0JBQWdCLGFBQUdQLE9BQUgsQ0FDcEIsYUFBR04sTUFBSCxDQUFVO0FBQUEsU0FBS0MsWUFBWSxpQkFBRWEsU0FBRixDQUFZQyxDQUFaLENBQVosRUFBNEJmLE1BQTVCLENBQUw7QUFBQSxDQUFWLENBRG9CLEVBRXBCLGFBQUdnQixZQUFILENBQWdCLGFBQUdGLFNBQW5CLENBRm9CLEVBR3BCLGFBQUdHLE1BQUgsQ0FBVSxhQUFHSCxTQUFiLENBSG9CLEVBSXBCLGFBQUdJLE9BSmlCLEVBS3BCLGFBQUdSLEdBQUgsQ0FBTyxhQUFHQyxHQUFILENBQU8sWUFBUCxDQUFQLENBTG9CLENBQXRCOztBQVFBLElBQU1RLGFBQWFOLGNBQWNULGFBQWFnQixrQkFBYixFQUFkLENBQW5COztBQUVBLFNBQVNDLE1BQVQsQ0FBZ0JDLE9BQWhCLEVBQXlCQyxLQUF6QixFQUFnQztBQUM5QixTQUFPbkIsYUFBYWlCLE1BQWIsQ0FBb0JDLE9BQXBCLEVBQTZCQyxLQUE3QixFQUFvQyxFQUFwQyxDQUFQO0FBQ0Q7O2tCQUVjO0FBQ2JKLHdCQURhO0FBRWJFO0FBRmEsQyIsImZpbGUiOiJ0b3JyZW50LmpzIiwic291cmNlUm9vdCI6Ii9hcHAiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgZnAgZnJvbSAnbG9kYXNoL2ZwJztcbmltcG9ydCBfIGZyb20gJ2xvZGFzaCc7XG5pbXBvcnQgVG9ycmVudFNlYXJjaEFwaSBmcm9tICd0b3JyZW50LXNlYXJjaC1hcGknO1xuXG5jb25zdCBmaWx0ZXIgPSBbJ3h4eCcsICdwb3JuJ107XG5cbmNvbnN0IG5vdEluY2x1ZGVzID0gZnAubmVnYXRlKGZwLmluY2x1ZGVzKTtcbmNvbnN0IHNlYXJjaENsaWVudCA9IG5ldyBUb3JyZW50U2VhcmNoQXBpKCk7XG5cbmNvbnN0IGVuYWJsZVB1YmxpYyA9IGZwLmNvbXBvc2UoXG4gIGZwLmZvckVhY2gocCA9PiBzZWFyY2hDbGllbnQuZW5hYmxlUHJvdmlkZXIocCkpLFxuICBmcC5tYXAoZnAuZ2V0KCduYW1lJykpLFxuICBmcC5maWx0ZXIoZnAuZ2V0KCdwdWJsaWMnKSksXG4pO1xuXG5lbmFibGVQdWJsaWMoc2VhcmNoQ2xpZW50LmdldFByb3ZpZGVycygpKTtcblxuY29uc3QgZ2V0Q2F0ZWdvcmllcyA9IGZwLmNvbXBvc2UoXG4gIGZwLmZpbHRlcihjID0+IG5vdEluY2x1ZGVzKF8ubG93ZXJDYXNlKGMpLCBmaWx0ZXIpKSxcbiAgZnAuc29ydGVkVW5pcUJ5KGZwLmxvd2VyQ2FzZSksXG4gIGZwLnNvcnRCeShmcC5sb3dlckNhc2UpLFxuICBmcC5mbGF0dGVuLFxuICBmcC5tYXAoZnAuZ2V0KCdjYXRlZ29yaWVzJykpLFxuKTtcblxuY29uc3QgY2F0ZWdvcmllcyA9IGdldENhdGVnb3JpZXMoc2VhcmNoQ2xpZW50LmdldEFjdGl2ZVByb3ZpZGVycygpKTtcblxuZnVuY3Rpb24gc2VhcmNoKGtleXdvcmQsIHRvcGljKSB7XG4gIHJldHVybiBzZWFyY2hDbGllbnQuc2VhcmNoKGtleXdvcmQsIHRvcGljLCAyMCk7XG59XG5cbmV4cG9ydCBkZWZhdWx0IHtcbiAgY2F0ZWdvcmllcyxcbiAgc2VhcmNoLFxufSJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "torrent.js"
+      ],
+      "names": [
+        "filter",
+        "notIncludes",
+        "negate",
+        "includes",
+        "searchClient",
+        "enablePublic",
+        "compose",
+        "forEach",
+        "enableProvider",
+        "p",
+        "map",
+        "get",
+        "getProviders",
+        "getCategories",
+        "lowerCase",
+        "c",
+        "sortedUniqBy",
+        "sortBy",
+        "flatten",
+        "categories",
+        "getActiveProviders",
+        "search",
+        "keyword",
+        "topic"
+      ],
+      "mappings": ";;;;;;AAAA;;;;AACA;;;;AACA;;;;;;AAEA,IAAMA,SAAS,CAAC,KAAD,EAAQ,MAAR,CAAf;;AAEA,IAAMC,cAAc,aAAGC,MAAH,CAAU,aAAGC,QAAb,CAApB;AACA,IAAMC,eAAe,gCAArB;;AAEA,IAAMC,eAAe,aAAGC,OAAH,CACnB,aAAGC,OAAH,CAAW;AAAA,SAAKH,aAAaI,cAAb,CAA4BC,CAA5B,CAAL;AAAA,CAAX,CADmB,EAEnB,aAAGC,GAAH,CAAO,aAAGC,GAAH,CAAO,MAAP,CAAP,CAFmB,EAGnB,aAAGX,MAAH,CAAU,aAAGW,GAAH,CAAO,QAAP,CAAV,CAHmB,CAArB;;AAMAN,aAAaD,aAAaQ,YAAb,EAAb;;AAEA,IAAMC,gBAAgB,aAAGP,OAAH,CACpB,aAAGN,MAAH,CAAU;AAAA,SAAKC,YAAY,iBAAEa,SAAF,CAAYC,CAAZ,CAAZ,EAA4Bf,MAA5B,CAAL;AAAA,CAAV,CADoB,EAEpB,aAAGgB,YAAH,CAAgB,aAAGF,SAAnB,CAFoB,EAGpB,aAAGG,MAAH,CAAU,aAAGH,SAAb,CAHoB,EAIpB,aAAGI,OAJiB,EAKpB,aAAGR,GAAH,CAAO,aAAGC,GAAH,CAAO,YAAP,CAAP,CALoB,CAAtB;;AAQA,IAAMQ,aAAaN,cAAcT,aAAagB,kBAAb,EAAd,CAAnB;;AAEA,SAASC,MAAT,CAAgBC,OAAhB,EAAyBC,KAAzB,EAAgC;AAC9B,SAAOnB,aAAaiB,MAAb,CAAoBC,OAApB,EAA6BC,KAA7B,EAAoC,EAApC,CAAP;AACD;;kBAEc;AACbJ,wBADa;AAEbE;AAFa,C",
+      "file": "torrent.js",
+      "sourceRoot": "/app",
+      "sourcesContent": [
+        "import fp from 'lodash/fp';\nimport _ from 'lodash';\nimport TorrentSearchApi from 'torrent-search-api';\n\nconst filter = ['xxx', 'porn'];\n\nconst notIncludes = fp.negate(fp.includes);\nconst searchClient = new TorrentSearchApi();\n\nconst enablePublic = fp.compose(\n  fp.forEach(p => searchClient.enableProvider(p)),\n  fp.map(fp.get('name')),\n  fp.filter(fp.get('public')),\n);\n\nenablePublic(searchClient.getProviders());\n\nconst getCategories = fp.compose(\n  fp.filter(c => notIncludes(_.lowerCase(c), filter)),\n  fp.sortedUniqBy(fp.lowerCase),\n  fp.sortBy(fp.lowerCase),\n  fp.flatten,\n  fp.map(fp.get('categories')),\n);\n\nconst categories = getCategories(searchClient.getActiveProviders());\n\nfunction search(keyword, topic) {\n  return searchClient.search(keyword, topic, 20);\n}\n\nexport default {\n  categories,\n  search,\n}"
+      ]
+    },
+    "mtime": 1506784010063
+  },
+  "{\"filename\":\"/app/server.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}],[[],{\"spec\":false,\"loose\":false}],[[],{\"spec\":false,\"loose\":false}],[[],{\"spec\":false,\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [
+        "asyncToGenerator",
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "lodash",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "_"
+              }
+            ]
+          },
+          {
+            "source": "path",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "path"
+              }
+            ]
+          },
+          {
+            "source": "express",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "express"
+              }
+            ]
+          },
+          {
+            "source": "./torrent",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "torrent"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server.js",
+      "filenameRelative": "/app/server.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "spec": false,
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "spec": false,
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "spec": false,
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "server.js",
+      "sourceFileName": "server.js",
+      "sourceRoot": "/app",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "server"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _lodash = require('lodash');\n\nvar _lodash2 = _interopRequireDefault(_lodash);\n\nvar _path = require('path');\n\nvar _path2 = _interopRequireDefault(_path);\n\nvar _express = require('express');\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _torrent = require('./torrent');\n\nvar _torrent2 = _interopRequireDefault(_torrent);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); }); }; }\n\nconst app = (0, _express2.default)();\n\napp.use(_express2.default.static('dist'));\n\napp.get('/categories', (req, res) => res.json(_torrent2.default.categories));\n\napp.get('/search', (() => {\n  var _ref = _asyncToGenerator(function* (req, res) {\n    const {\n      keyword,\n      topic\n    } = req.query;\n    try {\n      const results = yield _torrent2.default.search(keyword, topic);\n      res.json(_lodash2.default.compact(results));\n    } catch (e) {\n      res.json({});\n    }\n    // https://torrent.glitch.me/search?keyword=ricky%20and%20morty&topic=TV\n  });\n\n  return function (_x, _x2) {\n    return _ref.apply(this, arguments);\n  };\n})());\n\napp.get('/', (req, res) => res.sendFile(_path2.default.resolve('./views/index.html')));\n\napp.listen(process.env.PORT, () => {\n  console.log('App listening on port ' + process.env.PORT);\n});\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlcnZlci5qcyJdLCJuYW1lcyI6WyJhcHAiLCJ1c2UiLCJzdGF0aWMiLCJnZXQiLCJyZXEiLCJyZXMiLCJqc29uIiwiY2F0ZWdvcmllcyIsImtleXdvcmQiLCJ0b3BpYyIsInF1ZXJ5IiwicmVzdWx0cyIsInNlYXJjaCIsImNvbXBhY3QiLCJlIiwic2VuZEZpbGUiLCJyZXNvbHZlIiwibGlzdGVuIiwicHJvY2VzcyIsImVudiIsIlBPUlQiLCJjb25zb2xlIiwibG9nIl0sIm1hcHBpbmdzIjoiOztBQUFBOzs7O0FBQ0E7Ozs7QUFDQTs7OztBQUNBOzs7Ozs7OztBQUVBLE1BQU1BLE1BQU0sd0JBQVo7O0FBRUFBLElBQUlDLEdBQUosQ0FBUSxrQkFBUUMsTUFBUixDQUFlLE1BQWYsQ0FBUjs7QUFFQUYsSUFBSUcsR0FBSixDQUFRLGFBQVIsRUFBdUIsQ0FBQ0MsR0FBRCxFQUFNQyxHQUFOLEtBQWNBLElBQUlDLElBQUosQ0FBUyxrQkFBUUMsVUFBakIsQ0FBckM7O0FBRUFQLElBQUlHLEdBQUosQ0FBUSxTQUFSO0FBQUEsK0JBQW1CLFdBQU9DLEdBQVAsRUFBWUMsR0FBWixFQUFvQjtBQUNyQyxVQUFNO0FBQ0pHLGFBREk7QUFFSkM7QUFGSSxRQUdGTCxJQUFJTSxLQUhSO0FBSUEsUUFBSTtBQUNGLFlBQU1DLFVBQVUsTUFBTSxrQkFBUUMsTUFBUixDQUFlSixPQUFmLEVBQXdCQyxLQUF4QixDQUF0QjtBQUNBSixVQUFJQyxJQUFKLENBQVMsaUJBQUVPLE9BQUYsQ0FBVUYsT0FBVixDQUFUO0FBQ0QsS0FIRCxDQUdFLE9BQU9HLENBQVAsRUFBVTtBQUNWVCxVQUFJQyxJQUFKLENBQVMsRUFBVDtBQUNEO0FBQ0Q7QUFDRCxHQVpEOztBQUFBO0FBQUE7QUFBQTtBQUFBOztBQWNBTixJQUFJRyxHQUFKLENBQVEsR0FBUixFQUFhLENBQUNDLEdBQUQsRUFBTUMsR0FBTixLQUFjQSxJQUFJVSxRQUFKLENBQWEsZUFBS0MsT0FBTCxDQUFhLG9CQUFiLENBQWIsQ0FBM0I7O0FBRUFoQixJQUFJaUIsTUFBSixDQUFXQyxRQUFRQyxHQUFSLENBQVlDLElBQXZCLEVBQTZCLE1BQU07QUFDakNDLFVBQVFDLEdBQVIsQ0FBWSwyQkFBMkJKLFFBQVFDLEdBQVIsQ0FBWUMsSUFBbkQ7QUFDRCxDQUZEIiwiZmlsZSI6InNlcnZlci5qcyIsInNvdXJjZVJvb3QiOiIvYXBwIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IF8gZnJvbSAnbG9kYXNoJztcbmltcG9ydCBwYXRoIGZyb20gJ3BhdGgnO1xuaW1wb3J0IGV4cHJlc3MgZnJvbSAnZXhwcmVzcyc7XG5pbXBvcnQgdG9ycmVudCBmcm9tICcuL3RvcnJlbnQnO1xuXG5jb25zdCBhcHAgPSBleHByZXNzKCk7XG5cbmFwcC51c2UoZXhwcmVzcy5zdGF0aWMoJ2Rpc3QnKSk7XG5cbmFwcC5nZXQoJy9jYXRlZ29yaWVzJywgKHJlcSwgcmVzKSA9PiByZXMuanNvbih0b3JyZW50LmNhdGVnb3JpZXMpKVxuXG5hcHAuZ2V0KCcvc2VhcmNoJywgYXN5bmMgKHJlcSwgcmVzKSA9PiB7XG4gIGNvbnN0IHsgXG4gICAga2V5d29yZCxcbiAgICB0b3BpYyxcbiAgfSA9IHJlcS5xdWVyeTtcbiAgdHJ5IHtcbiAgICBjb25zdCByZXN1bHRzID0gYXdhaXQgdG9ycmVudC5zZWFyY2goa2V5d29yZCwgdG9waWMpO1xuICAgIHJlcy5qc29uKF8uY29tcGFjdChyZXN1bHRzKSk7XG4gIH0gY2F0Y2ggKGUpIHtcbiAgICByZXMuanNvbih7fSk7XG4gIH1cbiAgLy8gaHR0cHM6Ly90b3JyZW50LmdsaXRjaC5tZS9zZWFyY2g/a2V5d29yZD1yaWNreSUyMGFuZCUyMG1vcnR5JnRvcGljPVRWXG59KTtcblxuYXBwLmdldCgnLycsIChyZXEsIHJlcykgPT4gcmVzLnNlbmRGaWxlKHBhdGgucmVzb2x2ZSgnLi92aWV3cy9pbmRleC5odG1sJykpKTtcblxuYXBwLmxpc3Rlbihwcm9jZXNzLmVudi5QT1JULCAoKSA9PiB7XG4gIGNvbnNvbGUubG9nKCdBcHAgbGlzdGVuaW5nIG9uIHBvcnQgJyArIHByb2Nlc3MuZW52LlBPUlQpO1xufSk7Il19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "server.js"
+      ],
+      "names": [
+        "app",
+        "use",
+        "static",
+        "get",
+        "req",
+        "res",
+        "json",
+        "categories",
+        "keyword",
+        "topic",
+        "query",
+        "results",
+        "search",
+        "compact",
+        "e",
+        "sendFile",
+        "resolve",
+        "listen",
+        "process",
+        "env",
+        "PORT",
+        "console",
+        "log"
+      ],
+      "mappings": ";;AAAA;;;;AACA;;;;AACA;;;;AACA;;;;;;;;AAEA,MAAMA,MAAM,wBAAZ;;AAEAA,IAAIC,GAAJ,CAAQ,kBAAQC,MAAR,CAAe,MAAf,CAAR;;AAEAF,IAAIG,GAAJ,CAAQ,aAAR,EAAuB,CAACC,GAAD,EAAMC,GAAN,KAAcA,IAAIC,IAAJ,CAAS,kBAAQC,UAAjB,CAArC;;AAEAP,IAAIG,GAAJ,CAAQ,SAAR;AAAA,+BAAmB,WAAOC,GAAP,EAAYC,GAAZ,EAAoB;AACrC,UAAM;AACJG,aADI;AAEJC;AAFI,QAGFL,IAAIM,KAHR;AAIA,QAAI;AACF,YAAMC,UAAU,MAAM,kBAAQC,MAAR,CAAeJ,OAAf,EAAwBC,KAAxB,CAAtB;AACAJ,UAAIC,IAAJ,CAAS,iBAAEO,OAAF,CAAUF,OAAV,CAAT;AACD,KAHD,CAGE,OAAOG,CAAP,EAAU;AACVT,UAAIC,IAAJ,CAAS,EAAT;AACD;AACD;AACD,GAZD;;AAAA;AAAA;AAAA;AAAA;;AAcAN,IAAIG,GAAJ,CAAQ,GAAR,EAAa,CAACC,GAAD,EAAMC,GAAN,KAAcA,IAAIU,QAAJ,CAAa,eAAKC,OAAL,CAAa,oBAAb,CAAb,CAA3B;;AAEAhB,IAAIiB,MAAJ,CAAWC,QAAQC,GAAR,CAAYC,IAAvB,EAA6B,MAAM;AACjCC,UAAQC,GAAR,CAAY,2BAA2BJ,QAAQC,GAAR,CAAYC,IAAnD;AACD,CAFD",
+      "file": "server.js",
+      "sourceRoot": "/app",
+      "sourcesContent": [
+        "import _ from 'lodash';\nimport path from 'path';\nimport express from 'express';\nimport torrent from './torrent';\n\nconst app = express();\n\napp.use(express.static('dist'));\n\napp.get('/categories', (req, res) => res.json(torrent.categories))\n\napp.get('/search', async (req, res) => {\n  const { \n    keyword,\n    topic,\n  } = req.query;\n  try {\n    const results = await torrent.search(keyword, topic);\n    res.json(_.compact(results));\n  } catch (e) {\n    res.json({});\n  }\n  // https://torrent.glitch.me/search?keyword=ricky%20and%20morty&topic=TV\n});\n\napp.get('/', (req, res) => res.sendFile(path.resolve('./views/index.html')));\n\napp.listen(process.env.PORT, () => {\n  console.log('App listening on port ' + process.env.PORT);\n});"
+      ]
+    },
+    "mtime": 1506784010055
+  },
+  "{\"filename\":\"/app/torrent.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}],[[],{\"spec\":false,\"loose\":false}],[[],{\"spec\":false,\"loose\":false}],[[],{\"spec\":false,\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "lodash/fp",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "fp"
+              }
+            ]
+          },
+          {
+            "source": "lodash",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "_"
+              }
+            ]
+          },
+          {
+            "source": "torrent-search-api",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "TorrentSearchApi"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/torrent.js",
+      "filenameRelative": "/app/torrent.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "spec": false,
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "spec": false,
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "spec": false,
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "torrent.js",
+      "sourceFileName": "torrent.js",
+      "sourceRoot": "/app",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "torrent"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _fp = require('lodash/fp');\n\nvar _fp2 = _interopRequireDefault(_fp);\n\nvar _lodash = require('lodash');\n\nvar _lodash2 = _interopRequireDefault(_lodash);\n\nvar _torrentSearchApi = require('torrent-search-api');\n\nvar _torrentSearchApi2 = _interopRequireDefault(_torrentSearchApi);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconst filter = ['xxx', 'porn'];\n\nconst notIncludes = _fp2.default.negate(_fp2.default.includes);\nconst searchClient = new _torrentSearchApi2.default();\n\nconst enablePublic = _fp2.default.compose(_fp2.default.forEach(p => searchClient.enableProvider(p)), _fp2.default.map(_fp2.default.get('name')), _fp2.default.filter(_fp2.default.get('public')));\n\nenablePublic(searchClient.getProviders());\n\nconst getCategories = _fp2.default.compose(_fp2.default.filter(c => notIncludes(_lodash2.default.lowerCase(c), filter)), _fp2.default.sortedUniqBy(_fp2.default.lowerCase), _fp2.default.sortBy(_fp2.default.lowerCase), _fp2.default.flatten, _fp2.default.map(_fp2.default.get('categories')));\n\nconst categories = getCategories(searchClient.getActiveProviders());\n\nfunction search(keyword, topic) {\n  return searchClient.search(keyword, topic, 20);\n}\n\nexports.default = {\n  categories,\n  search\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRvcnJlbnQuanMiXSwibmFtZXMiOlsiZmlsdGVyIiwibm90SW5jbHVkZXMiLCJuZWdhdGUiLCJpbmNsdWRlcyIsInNlYXJjaENsaWVudCIsImVuYWJsZVB1YmxpYyIsImNvbXBvc2UiLCJmb3JFYWNoIiwicCIsImVuYWJsZVByb3ZpZGVyIiwibWFwIiwiZ2V0IiwiZ2V0UHJvdmlkZXJzIiwiZ2V0Q2F0ZWdvcmllcyIsImMiLCJsb3dlckNhc2UiLCJzb3J0ZWRVbmlxQnkiLCJzb3J0QnkiLCJmbGF0dGVuIiwiY2F0ZWdvcmllcyIsImdldEFjdGl2ZVByb3ZpZGVycyIsInNlYXJjaCIsImtleXdvcmQiLCJ0b3BpYyJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUE7Ozs7QUFDQTs7OztBQUNBOzs7Ozs7QUFFQSxNQUFNQSxTQUFTLENBQUMsS0FBRCxFQUFRLE1BQVIsQ0FBZjs7QUFFQSxNQUFNQyxjQUFjLGFBQUdDLE1BQUgsQ0FBVSxhQUFHQyxRQUFiLENBQXBCO0FBQ0EsTUFBTUMsZUFBZSxnQ0FBckI7O0FBRUEsTUFBTUMsZUFBZSxhQUFHQyxPQUFILENBQ25CLGFBQUdDLE9BQUgsQ0FBV0MsS0FBS0osYUFBYUssY0FBYixDQUE0QkQsQ0FBNUIsQ0FBaEIsQ0FEbUIsRUFFbkIsYUFBR0UsR0FBSCxDQUFPLGFBQUdDLEdBQUgsQ0FBTyxNQUFQLENBQVAsQ0FGbUIsRUFHbkIsYUFBR1gsTUFBSCxDQUFVLGFBQUdXLEdBQUgsQ0FBTyxRQUFQLENBQVYsQ0FIbUIsQ0FBckI7O0FBTUFOLGFBQWFELGFBQWFRLFlBQWIsRUFBYjs7QUFFQSxNQUFNQyxnQkFBZ0IsYUFBR1AsT0FBSCxDQUNwQixhQUFHTixNQUFILENBQVVjLEtBQUtiLFlBQVksaUJBQUVjLFNBQUYsQ0FBWUQsQ0FBWixDQUFaLEVBQTRCZCxNQUE1QixDQUFmLENBRG9CLEVBRXBCLGFBQUdnQixZQUFILENBQWdCLGFBQUdELFNBQW5CLENBRm9CLEVBR3BCLGFBQUdFLE1BQUgsQ0FBVSxhQUFHRixTQUFiLENBSG9CLEVBSXBCLGFBQUdHLE9BSmlCLEVBS3BCLGFBQUdSLEdBQUgsQ0FBTyxhQUFHQyxHQUFILENBQU8sWUFBUCxDQUFQLENBTG9CLENBQXRCOztBQVFBLE1BQU1RLGFBQWFOLGNBQWNULGFBQWFnQixrQkFBYixFQUFkLENBQW5COztBQUVBLFNBQVNDLE1BQVQsQ0FBZ0JDLE9BQWhCLEVBQXlCQyxLQUF6QixFQUFnQztBQUM5QixTQUFPbkIsYUFBYWlCLE1BQWIsQ0FBb0JDLE9BQXBCLEVBQTZCQyxLQUE3QixFQUFvQyxFQUFwQyxDQUFQO0FBQ0Q7O2tCQUVjO0FBQ2JKLFlBRGE7QUFFYkU7QUFGYSxDIiwiZmlsZSI6InRvcnJlbnQuanMiLCJzb3VyY2VSb290IjoiL2FwcCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBmcCBmcm9tICdsb2Rhc2gvZnAnO1xuaW1wb3J0IF8gZnJvbSAnbG9kYXNoJztcbmltcG9ydCBUb3JyZW50U2VhcmNoQXBpIGZyb20gJ3RvcnJlbnQtc2VhcmNoLWFwaSc7XG5cbmNvbnN0IGZpbHRlciA9IFsneHh4JywgJ3Bvcm4nXTtcblxuY29uc3Qgbm90SW5jbHVkZXMgPSBmcC5uZWdhdGUoZnAuaW5jbHVkZXMpO1xuY29uc3Qgc2VhcmNoQ2xpZW50ID0gbmV3IFRvcnJlbnRTZWFyY2hBcGkoKTtcblxuY29uc3QgZW5hYmxlUHVibGljID0gZnAuY29tcG9zZShcbiAgZnAuZm9yRWFjaChwID0+IHNlYXJjaENsaWVudC5lbmFibGVQcm92aWRlcihwKSksXG4gIGZwLm1hcChmcC5nZXQoJ25hbWUnKSksXG4gIGZwLmZpbHRlcihmcC5nZXQoJ3B1YmxpYycpKSxcbik7XG5cbmVuYWJsZVB1YmxpYyhzZWFyY2hDbGllbnQuZ2V0UHJvdmlkZXJzKCkpO1xuXG5jb25zdCBnZXRDYXRlZ29yaWVzID0gZnAuY29tcG9zZShcbiAgZnAuZmlsdGVyKGMgPT4gbm90SW5jbHVkZXMoXy5sb3dlckNhc2UoYyksIGZpbHRlcikpLFxuICBmcC5zb3J0ZWRVbmlxQnkoZnAubG93ZXJDYXNlKSxcbiAgZnAuc29ydEJ5KGZwLmxvd2VyQ2FzZSksXG4gIGZwLmZsYXR0ZW4sXG4gIGZwLm1hcChmcC5nZXQoJ2NhdGVnb3JpZXMnKSksXG4pO1xuXG5jb25zdCBjYXRlZ29yaWVzID0gZ2V0Q2F0ZWdvcmllcyhzZWFyY2hDbGllbnQuZ2V0QWN0aXZlUHJvdmlkZXJzKCkpO1xuXG5mdW5jdGlvbiBzZWFyY2goa2V5d29yZCwgdG9waWMpIHtcbiAgcmV0dXJuIHNlYXJjaENsaWVudC5zZWFyY2goa2V5d29yZCwgdG9waWMsIDIwKTtcbn1cblxuZXhwb3J0IGRlZmF1bHQge1xuICBjYXRlZ29yaWVzLFxuICBzZWFyY2gsXG59Il19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "torrent.js"
+      ],
+      "names": [
+        "filter",
+        "notIncludes",
+        "negate",
+        "includes",
+        "searchClient",
+        "enablePublic",
+        "compose",
+        "forEach",
+        "p",
+        "enableProvider",
+        "map",
+        "get",
+        "getProviders",
+        "getCategories",
+        "c",
+        "lowerCase",
+        "sortedUniqBy",
+        "sortBy",
+        "flatten",
+        "categories",
+        "getActiveProviders",
+        "search",
+        "keyword",
+        "topic"
+      ],
+      "mappings": ";;;;;;AAAA;;;;AACA;;;;AACA;;;;;;AAEA,MAAMA,SAAS,CAAC,KAAD,EAAQ,MAAR,CAAf;;AAEA,MAAMC,cAAc,aAAGC,MAAH,CAAU,aAAGC,QAAb,CAApB;AACA,MAAMC,eAAe,gCAArB;;AAEA,MAAMC,eAAe,aAAGC,OAAH,CACnB,aAAGC,OAAH,CAAWC,KAAKJ,aAAaK,cAAb,CAA4BD,CAA5B,CAAhB,CADmB,EAEnB,aAAGE,GAAH,CAAO,aAAGC,GAAH,CAAO,MAAP,CAAP,CAFmB,EAGnB,aAAGX,MAAH,CAAU,aAAGW,GAAH,CAAO,QAAP,CAAV,CAHmB,CAArB;;AAMAN,aAAaD,aAAaQ,YAAb,EAAb;;AAEA,MAAMC,gBAAgB,aAAGP,OAAH,CACpB,aAAGN,MAAH,CAAUc,KAAKb,YAAY,iBAAEc,SAAF,CAAYD,CAAZ,CAAZ,EAA4Bd,MAA5B,CAAf,CADoB,EAEpB,aAAGgB,YAAH,CAAgB,aAAGD,SAAnB,CAFoB,EAGpB,aAAGE,MAAH,CAAU,aAAGF,SAAb,CAHoB,EAIpB,aAAGG,OAJiB,EAKpB,aAAGR,GAAH,CAAO,aAAGC,GAAH,CAAO,YAAP,CAAP,CALoB,CAAtB;;AAQA,MAAMQ,aAAaN,cAAcT,aAAagB,kBAAb,EAAd,CAAnB;;AAEA,SAASC,MAAT,CAAgBC,OAAhB,EAAyBC,KAAzB,EAAgC;AAC9B,SAAOnB,aAAaiB,MAAb,CAAoBC,OAApB,EAA6BC,KAA7B,EAAoC,EAApC,CAAP;AACD;;kBAEc;AACbJ,YADa;AAEbE;AAFa,C",
+      "file": "torrent.js",
+      "sourceRoot": "/app",
+      "sourcesContent": [
+        "import fp from 'lodash/fp';\nimport _ from 'lodash';\nimport TorrentSearchApi from 'torrent-search-api';\n\nconst filter = ['xxx', 'porn'];\n\nconst notIncludes = fp.negate(fp.includes);\nconst searchClient = new TorrentSearchApi();\n\nconst enablePublic = fp.compose(\n  fp.forEach(p => searchClient.enableProvider(p)),\n  fp.map(fp.get('name')),\n  fp.filter(fp.get('public')),\n);\n\nenablePublic(searchClient.getProviders());\n\nconst getCategories = fp.compose(\n  fp.filter(c => notIncludes(_.lowerCase(c), filter)),\n  fp.sortedUniqBy(fp.lowerCase),\n  fp.sortBy(fp.lowerCase),\n  fp.flatten,\n  fp.map(fp.get('categories')),\n);\n\nconst categories = getCategories(searchClient.getActiveProviders());\n\nfunction search(keyword, topic) {\n  return searchClient.search(keyword, topic, 20);\n}\n\nexport default {\n  categories,\n  search,\n}"
+      ]
+    },
+    "mtime": 1506784010063
+  },
+  "{\"filename\":\"/app/server.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}],[[],{\"spec\":false,\"loose\":false}],[[],{\"spec\":false,\"loose\":false}],[[],{\"spec\":false,\"loose\":false}],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [
+        "asyncToGenerator",
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "lodash",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "_"
+              }
+            ]
+          },
+          {
+            "source": "path",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "path"
+              }
+            ]
+          },
+          {
+            "source": "express",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "express"
+              }
+            ]
+          },
+          {
+            "source": "helmet",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "helmet"
+              }
+            ]
+          },
+          {
+            "source": "compression",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "compression"
+              }
+            ]
+          },
+          {
+            "source": "./torrent",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "torrent"
+              }
+            ]
+          },
+          {
+            "source": "babel-polyfill",
+            "imported": [],
+            "specifiers": []
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server.js",
+      "filenameRelative": "/app/server.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "spec": false,
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "spec": false,
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "spec": false,
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "server.js",
+      "sourceFileName": "server.js",
+      "sourceRoot": "/app",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "server"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _lodash = require('lodash');\n\nvar _lodash2 = _interopRequireDefault(_lodash);\n\nvar _path = require('path');\n\nvar _path2 = _interopRequireDefault(_path);\n\nvar _express = require('express');\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _helmet = require('helmet');\n\nvar _helmet2 = _interopRequireDefault(_helmet);\n\nvar _compression = require('compression');\n\nvar _compression2 = _interopRequireDefault(_compression);\n\nvar _torrent = require('./torrent');\n\nvar _torrent2 = _interopRequireDefault(_torrent);\n\nrequire('babel-polyfill');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); }); }; }\n\nconst app = (0, _express2.default)();\napp.use((0, _helmet2.default)());\napp.use((0, _compression2.default)());\napp.use(_express2.default.static('dist'));\n\napp.get('/categories', (req, res) => res.json(_torrent2.default.categories));\n\napp.get('/search', (() => {\n  var _ref = _asyncToGenerator(function* (req, res) {\n    const {\n      keyword,\n      topic\n    } = req.query;\n    try {\n      const results = yield _torrent2.default.search(keyword, topic);\n      res.json(_lodash2.default.compact(results));\n    } catch (e) {\n      res.json({});\n    }\n    // https://torrent.glitch.me/search?keyword=ricky%20and%20morty&topic=TV\n  });\n\n  return function (_x, _x2) {\n    return _ref.apply(this, arguments);\n  };\n})());\n\napp.get('/', (req, res) => res.sendFile(_path2.default.resolve('./views/index.html')));\n\napp.listen(process.env.PORT, () => {\n  console.log('App listening on port ' + process.env.PORT);\n});\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlcnZlci5qcyJdLCJuYW1lcyI6WyJhcHAiLCJ1c2UiLCJzdGF0aWMiLCJnZXQiLCJyZXEiLCJyZXMiLCJqc29uIiwiY2F0ZWdvcmllcyIsImtleXdvcmQiLCJ0b3BpYyIsInF1ZXJ5IiwicmVzdWx0cyIsInNlYXJjaCIsImNvbXBhY3QiLCJlIiwic2VuZEZpbGUiLCJyZXNvbHZlIiwibGlzdGVuIiwicHJvY2VzcyIsImVudiIsIlBPUlQiLCJjb25zb2xlIiwibG9nIl0sIm1hcHBpbmdzIjoiOztBQUFBOzs7O0FBQ0E7Ozs7QUFDQTs7OztBQUNBOzs7O0FBQ0E7Ozs7QUFDQTs7OztBQUNBOzs7Ozs7QUFFQSxNQUFNQSxNQUFNLHdCQUFaO0FBQ0FBLElBQUlDLEdBQUosQ0FBUSx1QkFBUjtBQUNBRCxJQUFJQyxHQUFKLENBQVEsNEJBQVI7QUFDQUQsSUFBSUMsR0FBSixDQUFRLGtCQUFRQyxNQUFSLENBQWUsTUFBZixDQUFSOztBQUVBRixJQUFJRyxHQUFKLENBQVEsYUFBUixFQUF1QixDQUFDQyxHQUFELEVBQU1DLEdBQU4sS0FBY0EsSUFBSUMsSUFBSixDQUFTLGtCQUFRQyxVQUFqQixDQUFyQzs7QUFFQVAsSUFBSUcsR0FBSixDQUFRLFNBQVI7QUFBQSwrQkFBbUIsV0FBT0MsR0FBUCxFQUFZQyxHQUFaLEVBQW9CO0FBQ3JDLFVBQU07QUFDSkcsYUFESTtBQUVKQztBQUZJLFFBR0ZMLElBQUlNLEtBSFI7QUFJQSxRQUFJO0FBQ0YsWUFBTUMsVUFBVSxNQUFNLGtCQUFRQyxNQUFSLENBQWVKLE9BQWYsRUFBd0JDLEtBQXhCLENBQXRCO0FBQ0FKLFVBQUlDLElBQUosQ0FBUyxpQkFBRU8sT0FBRixDQUFVRixPQUFWLENBQVQ7QUFDRCxLQUhELENBR0UsT0FBT0csQ0FBUCxFQUFVO0FBQ1ZULFVBQUlDLElBQUosQ0FBUyxFQUFUO0FBQ0Q7QUFDRDtBQUNELEdBWkQ7O0FBQUE7QUFBQTtBQUFBO0FBQUE7O0FBY0FOLElBQUlHLEdBQUosQ0FBUSxHQUFSLEVBQWEsQ0FBQ0MsR0FBRCxFQUFNQyxHQUFOLEtBQWNBLElBQUlVLFFBQUosQ0FBYSxlQUFLQyxPQUFMLENBQWEsb0JBQWIsQ0FBYixDQUEzQjs7QUFFQWhCLElBQUlpQixNQUFKLENBQVdDLFFBQVFDLEdBQVIsQ0FBWUMsSUFBdkIsRUFBNkIsTUFBTTtBQUNqQ0MsVUFBUUMsR0FBUixDQUFZLDJCQUEyQkosUUFBUUMsR0FBUixDQUFZQyxJQUFuRDtBQUNELENBRkQiLCJmaWxlIjoic2VydmVyLmpzIiwic291cmNlUm9vdCI6Ii9hcHAiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgXyBmcm9tICdsb2Rhc2gnO1xuaW1wb3J0IHBhdGggZnJvbSAncGF0aCc7XG5pbXBvcnQgZXhwcmVzcyBmcm9tICdleHByZXNzJztcbmltcG9ydCBoZWxtZXQgZnJvbSAnaGVsbWV0JztcbmltcG9ydCBjb21wcmVzc2lvbiBmcm9tICdjb21wcmVzc2lvbic7XG5pbXBvcnQgdG9ycmVudCBmcm9tICcuL3RvcnJlbnQnO1xuaW1wb3J0ICdiYWJlbC1wb2x5ZmlsbCc7XG5cbmNvbnN0IGFwcCA9IGV4cHJlc3MoKTtcbmFwcC51c2UoaGVsbWV0KCkpO1xuYXBwLnVzZShjb21wcmVzc2lvbigpKTtcbmFwcC51c2UoZXhwcmVzcy5zdGF0aWMoJ2Rpc3QnKSk7XG5cbmFwcC5nZXQoJy9jYXRlZ29yaWVzJywgKHJlcSwgcmVzKSA9PiByZXMuanNvbih0b3JyZW50LmNhdGVnb3JpZXMpKVxuXG5hcHAuZ2V0KCcvc2VhcmNoJywgYXN5bmMgKHJlcSwgcmVzKSA9PiB7XG4gIGNvbnN0IHsgXG4gICAga2V5d29yZCxcbiAgICB0b3BpYyxcbiAgfSA9IHJlcS5xdWVyeTtcbiAgdHJ5IHtcbiAgICBjb25zdCByZXN1bHRzID0gYXdhaXQgdG9ycmVudC5zZWFyY2goa2V5d29yZCwgdG9waWMpO1xuICAgIHJlcy5qc29uKF8uY29tcGFjdChyZXN1bHRzKSk7XG4gIH0gY2F0Y2ggKGUpIHtcbiAgICByZXMuanNvbih7fSk7XG4gIH1cbiAgLy8gaHR0cHM6Ly90b3JyZW50LmdsaXRjaC5tZS9zZWFyY2g/a2V5d29yZD1yaWNreSUyMGFuZCUyMG1vcnR5JnRvcGljPVRWXG59KTtcblxuYXBwLmdldCgnLycsIChyZXEsIHJlcykgPT4gcmVzLnNlbmRGaWxlKHBhdGgucmVzb2x2ZSgnLi92aWV3cy9pbmRleC5odG1sJykpKTtcblxuYXBwLmxpc3Rlbihwcm9jZXNzLmVudi5QT1JULCAoKSA9PiB7XG4gIGNvbnNvbGUubG9nKCdBcHAgbGlzdGVuaW5nIG9uIHBvcnQgJyArIHByb2Nlc3MuZW52LlBPUlQpO1xufSk7Il19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "server.js"
+      ],
+      "names": [
+        "app",
+        "use",
+        "static",
+        "get",
+        "req",
+        "res",
+        "json",
+        "categories",
+        "keyword",
+        "topic",
+        "query",
+        "results",
+        "search",
+        "compact",
+        "e",
+        "sendFile",
+        "resolve",
+        "listen",
+        "process",
+        "env",
+        "PORT",
+        "console",
+        "log"
+      ],
+      "mappings": ";;AAAA;;;;AACA;;;;AACA;;;;AACA;;;;AACA;;;;AACA;;;;AACA;;;;;;AAEA,MAAMA,MAAM,wBAAZ;AACAA,IAAIC,GAAJ,CAAQ,uBAAR;AACAD,IAAIC,GAAJ,CAAQ,4BAAR;AACAD,IAAIC,GAAJ,CAAQ,kBAAQC,MAAR,CAAe,MAAf,CAAR;;AAEAF,IAAIG,GAAJ,CAAQ,aAAR,EAAuB,CAACC,GAAD,EAAMC,GAAN,KAAcA,IAAIC,IAAJ,CAAS,kBAAQC,UAAjB,CAArC;;AAEAP,IAAIG,GAAJ,CAAQ,SAAR;AAAA,+BAAmB,WAAOC,GAAP,EAAYC,GAAZ,EAAoB;AACrC,UAAM;AACJG,aADI;AAEJC;AAFI,QAGFL,IAAIM,KAHR;AAIA,QAAI;AACF,YAAMC,UAAU,MAAM,kBAAQC,MAAR,CAAeJ,OAAf,EAAwBC,KAAxB,CAAtB;AACAJ,UAAIC,IAAJ,CAAS,iBAAEO,OAAF,CAAUF,OAAV,CAAT;AACD,KAHD,CAGE,OAAOG,CAAP,EAAU;AACVT,UAAIC,IAAJ,CAAS,EAAT;AACD;AACD;AACD,GAZD;;AAAA;AAAA;AAAA;AAAA;;AAcAN,IAAIG,GAAJ,CAAQ,GAAR,EAAa,CAACC,GAAD,EAAMC,GAAN,KAAcA,IAAIU,QAAJ,CAAa,eAAKC,OAAL,CAAa,oBAAb,CAAb,CAA3B;;AAEAhB,IAAIiB,MAAJ,CAAWC,QAAQC,GAAR,CAAYC,IAAvB,EAA6B,MAAM;AACjCC,UAAQC,GAAR,CAAY,2BAA2BJ,QAAQC,GAAR,CAAYC,IAAnD;AACD,CAFD",
+      "file": "server.js",
+      "sourceRoot": "/app",
+      "sourcesContent": [
+        "import _ from 'lodash';\nimport path from 'path';\nimport express from 'express';\nimport helmet from 'helmet';\nimport compression from 'compression';\nimport torrent from './torrent';\nimport 'babel-polyfill';\n\nconst app = express();\napp.use(helmet());\napp.use(compression());\napp.use(express.static('dist'));\n\napp.get('/categories', (req, res) => res.json(torrent.categories))\n\napp.get('/search', async (req, res) => {\n  const { \n    keyword,\n    topic,\n  } = req.query;\n  try {\n    const results = await torrent.search(keyword, topic);\n    res.json(_.compact(results));\n  } catch (e) {\n    res.json({});\n  }\n  // https://torrent.glitch.me/search?keyword=ricky%20and%20morty&topic=TV\n});\n\napp.get('/', (req, res) => res.sendFile(path.resolve('./views/index.html')));\n\napp.listen(process.env.PORT, () => {\n  console.log('App listening on port ' + process.env.PORT);\n});"
+      ]
+    },
+    "mtime": 1506785492047
+  },
+  "{\"filename\":\"/app/torrent.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}],[[],{\"spec\":false,\"loose\":false}],[[],{\"spec\":false,\"loose\":false}],[[],{\"spec\":false,\"loose\":false}],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "lodash/fp",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "fp"
+              }
+            ]
+          },
+          {
+            "source": "lodash",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "_"
+              }
+            ]
+          },
+          {
+            "source": "torrent-search-api",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "TorrentSearchApi"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/torrent.js",
+      "filenameRelative": "/app/torrent.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "spec": false,
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "spec": false,
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "spec": false,
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "torrent.js",
+      "sourceFileName": "torrent.js",
+      "sourceRoot": "/app",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "torrent"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _fp = require('lodash/fp');\n\nvar _fp2 = _interopRequireDefault(_fp);\n\nvar _lodash = require('lodash');\n\nvar _lodash2 = _interopRequireDefault(_lodash);\n\nvar _torrentSearchApi = require('torrent-search-api');\n\nvar _torrentSearchApi2 = _interopRequireDefault(_torrentSearchApi);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconst filter = ['xxx', 'porn'];\n\nconst notIncludes = _fp2.default.negate(_fp2.default.includes);\nconst searchClient = new _torrentSearchApi2.default();\n\nconst enablePublic = _fp2.default.compose(_fp2.default.forEach(p => searchClient.enableProvider(p)), _fp2.default.map(_fp2.default.get('name')), _fp2.default.filter(_fp2.default.get('public')));\n\nenablePublic(searchClient.getProviders());\n\nconst getCategories = _fp2.default.compose(_fp2.default.filter(c => notIncludes(_lodash2.default.lowerCase(c), filter)), _fp2.default.sortedUniqBy(_fp2.default.lowerCase), _fp2.default.sortBy(_fp2.default.lowerCase), _fp2.default.flatten, _fp2.default.map(_fp2.default.get('categories')));\n\nconst categories = getCategories(searchClient.getActiveProviders());\n\nfunction search(keyword, topic) {\n  return searchClient.search(keyword, topic, 20);\n}\n\nexports.default = {\n  categories,\n  search\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRvcnJlbnQuanMiXSwibmFtZXMiOlsiZmlsdGVyIiwibm90SW5jbHVkZXMiLCJuZWdhdGUiLCJpbmNsdWRlcyIsInNlYXJjaENsaWVudCIsImVuYWJsZVB1YmxpYyIsImNvbXBvc2UiLCJmb3JFYWNoIiwicCIsImVuYWJsZVByb3ZpZGVyIiwibWFwIiwiZ2V0IiwiZ2V0UHJvdmlkZXJzIiwiZ2V0Q2F0ZWdvcmllcyIsImMiLCJsb3dlckNhc2UiLCJzb3J0ZWRVbmlxQnkiLCJzb3J0QnkiLCJmbGF0dGVuIiwiY2F0ZWdvcmllcyIsImdldEFjdGl2ZVByb3ZpZGVycyIsInNlYXJjaCIsImtleXdvcmQiLCJ0b3BpYyJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUE7Ozs7QUFDQTs7OztBQUNBOzs7Ozs7QUFFQSxNQUFNQSxTQUFTLENBQUMsS0FBRCxFQUFRLE1BQVIsQ0FBZjs7QUFFQSxNQUFNQyxjQUFjLGFBQUdDLE1BQUgsQ0FBVSxhQUFHQyxRQUFiLENBQXBCO0FBQ0EsTUFBTUMsZUFBZSxnQ0FBckI7O0FBRUEsTUFBTUMsZUFBZSxhQUFHQyxPQUFILENBQ25CLGFBQUdDLE9BQUgsQ0FBV0MsS0FBS0osYUFBYUssY0FBYixDQUE0QkQsQ0FBNUIsQ0FBaEIsQ0FEbUIsRUFFbkIsYUFBR0UsR0FBSCxDQUFPLGFBQUdDLEdBQUgsQ0FBTyxNQUFQLENBQVAsQ0FGbUIsRUFHbkIsYUFBR1gsTUFBSCxDQUFVLGFBQUdXLEdBQUgsQ0FBTyxRQUFQLENBQVYsQ0FIbUIsQ0FBckI7O0FBTUFOLGFBQWFELGFBQWFRLFlBQWIsRUFBYjs7QUFFQSxNQUFNQyxnQkFBZ0IsYUFBR1AsT0FBSCxDQUNwQixhQUFHTixNQUFILENBQVVjLEtBQUtiLFlBQVksaUJBQUVjLFNBQUYsQ0FBWUQsQ0FBWixDQUFaLEVBQTRCZCxNQUE1QixDQUFmLENBRG9CLEVBRXBCLGFBQUdnQixZQUFILENBQWdCLGFBQUdELFNBQW5CLENBRm9CLEVBR3BCLGFBQUdFLE1BQUgsQ0FBVSxhQUFHRixTQUFiLENBSG9CLEVBSXBCLGFBQUdHLE9BSmlCLEVBS3BCLGFBQUdSLEdBQUgsQ0FBTyxhQUFHQyxHQUFILENBQU8sWUFBUCxDQUFQLENBTG9CLENBQXRCOztBQVFBLE1BQU1RLGFBQWFOLGNBQWNULGFBQWFnQixrQkFBYixFQUFkLENBQW5COztBQUVBLFNBQVNDLE1BQVQsQ0FBZ0JDLE9BQWhCLEVBQXlCQyxLQUF6QixFQUFnQztBQUM5QixTQUFPbkIsYUFBYWlCLE1BQWIsQ0FBb0JDLE9BQXBCLEVBQTZCQyxLQUE3QixFQUFvQyxFQUFwQyxDQUFQO0FBQ0Q7O2tCQUVjO0FBQ2JKLFlBRGE7QUFFYkU7QUFGYSxDIiwiZmlsZSI6InRvcnJlbnQuanMiLCJzb3VyY2VSb290IjoiL2FwcCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBmcCBmcm9tICdsb2Rhc2gvZnAnO1xuaW1wb3J0IF8gZnJvbSAnbG9kYXNoJztcbmltcG9ydCBUb3JyZW50U2VhcmNoQXBpIGZyb20gJ3RvcnJlbnQtc2VhcmNoLWFwaSc7XG5cbmNvbnN0IGZpbHRlciA9IFsneHh4JywgJ3Bvcm4nXTtcblxuY29uc3Qgbm90SW5jbHVkZXMgPSBmcC5uZWdhdGUoZnAuaW5jbHVkZXMpO1xuY29uc3Qgc2VhcmNoQ2xpZW50ID0gbmV3IFRvcnJlbnRTZWFyY2hBcGkoKTtcblxuY29uc3QgZW5hYmxlUHVibGljID0gZnAuY29tcG9zZShcbiAgZnAuZm9yRWFjaChwID0+IHNlYXJjaENsaWVudC5lbmFibGVQcm92aWRlcihwKSksXG4gIGZwLm1hcChmcC5nZXQoJ25hbWUnKSksXG4gIGZwLmZpbHRlcihmcC5nZXQoJ3B1YmxpYycpKSxcbik7XG5cbmVuYWJsZVB1YmxpYyhzZWFyY2hDbGllbnQuZ2V0UHJvdmlkZXJzKCkpO1xuXG5jb25zdCBnZXRDYXRlZ29yaWVzID0gZnAuY29tcG9zZShcbiAgZnAuZmlsdGVyKGMgPT4gbm90SW5jbHVkZXMoXy5sb3dlckNhc2UoYyksIGZpbHRlcikpLFxuICBmcC5zb3J0ZWRVbmlxQnkoZnAubG93ZXJDYXNlKSxcbiAgZnAuc29ydEJ5KGZwLmxvd2VyQ2FzZSksXG4gIGZwLmZsYXR0ZW4sXG4gIGZwLm1hcChmcC5nZXQoJ2NhdGVnb3JpZXMnKSksXG4pO1xuXG5jb25zdCBjYXRlZ29yaWVzID0gZ2V0Q2F0ZWdvcmllcyhzZWFyY2hDbGllbnQuZ2V0QWN0aXZlUHJvdmlkZXJzKCkpO1xuXG5mdW5jdGlvbiBzZWFyY2goa2V5d29yZCwgdG9waWMpIHtcbiAgcmV0dXJuIHNlYXJjaENsaWVudC5zZWFyY2goa2V5d29yZCwgdG9waWMsIDIwKTtcbn1cblxuZXhwb3J0IGRlZmF1bHQge1xuICBjYXRlZ29yaWVzLFxuICBzZWFyY2gsXG59Il19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "torrent.js"
+      ],
+      "names": [
+        "filter",
+        "notIncludes",
+        "negate",
+        "includes",
+        "searchClient",
+        "enablePublic",
+        "compose",
+        "forEach",
+        "p",
+        "enableProvider",
+        "map",
+        "get",
+        "getProviders",
+        "getCategories",
+        "c",
+        "lowerCase",
+        "sortedUniqBy",
+        "sortBy",
+        "flatten",
+        "categories",
+        "getActiveProviders",
+        "search",
+        "keyword",
+        "topic"
+      ],
+      "mappings": ";;;;;;AAAA;;;;AACA;;;;AACA;;;;;;AAEA,MAAMA,SAAS,CAAC,KAAD,EAAQ,MAAR,CAAf;;AAEA,MAAMC,cAAc,aAAGC,MAAH,CAAU,aAAGC,QAAb,CAApB;AACA,MAAMC,eAAe,gCAArB;;AAEA,MAAMC,eAAe,aAAGC,OAAH,CACnB,aAAGC,OAAH,CAAWC,KAAKJ,aAAaK,cAAb,CAA4BD,CAA5B,CAAhB,CADmB,EAEnB,aAAGE,GAAH,CAAO,aAAGC,GAAH,CAAO,MAAP,CAAP,CAFmB,EAGnB,aAAGX,MAAH,CAAU,aAAGW,GAAH,CAAO,QAAP,CAAV,CAHmB,CAArB;;AAMAN,aAAaD,aAAaQ,YAAb,EAAb;;AAEA,MAAMC,gBAAgB,aAAGP,OAAH,CACpB,aAAGN,MAAH,CAAUc,KAAKb,YAAY,iBAAEc,SAAF,CAAYD,CAAZ,CAAZ,EAA4Bd,MAA5B,CAAf,CADoB,EAEpB,aAAGgB,YAAH,CAAgB,aAAGD,SAAnB,CAFoB,EAGpB,aAAGE,MAAH,CAAU,aAAGF,SAAb,CAHoB,EAIpB,aAAGG,OAJiB,EAKpB,aAAGR,GAAH,CAAO,aAAGC,GAAH,CAAO,YAAP,CAAP,CALoB,CAAtB;;AAQA,MAAMQ,aAAaN,cAAcT,aAAagB,kBAAb,EAAd,CAAnB;;AAEA,SAASC,MAAT,CAAgBC,OAAhB,EAAyBC,KAAzB,EAAgC;AAC9B,SAAOnB,aAAaiB,MAAb,CAAoBC,OAApB,EAA6BC,KAA7B,EAAoC,EAApC,CAAP;AACD;;kBAEc;AACbJ,YADa;AAEbE;AAFa,C",
+      "file": "torrent.js",
+      "sourceRoot": "/app",
+      "sourcesContent": [
+        "import fp from 'lodash/fp';\nimport _ from 'lodash';\nimport TorrentSearchApi from 'torrent-search-api';\n\nconst filter = ['xxx', 'porn'];\n\nconst notIncludes = fp.negate(fp.includes);\nconst searchClient = new TorrentSearchApi();\n\nconst enablePublic = fp.compose(\n  fp.forEach(p => searchClient.enableProvider(p)),\n  fp.map(fp.get('name')),\n  fp.filter(fp.get('public')),\n);\n\nenablePublic(searchClient.getProviders());\n\nconst getCategories = fp.compose(\n  fp.filter(c => notIncludes(_.lowerCase(c), filter)),\n  fp.sortedUniqBy(fp.lowerCase),\n  fp.sortBy(fp.lowerCase),\n  fp.flatten,\n  fp.map(fp.get('categories')),\n);\n\nconst categories = getCategories(searchClient.getActiveProviders());\n\nfunction search(keyword, topic) {\n  return searchClient.search(keyword, topic, 20);\n}\n\nexport default {\n  categories,\n  search,\n}"
+      ]
+    },
+    "mtime": 1506784010063
+  },
+  "{\"filename\":\"/app/server.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [
+        "asyncToGenerator",
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "babel-polyfill",
+            "imported": [],
+            "specifiers": []
+          },
+          {
+            "source": "lodash",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "_"
+              }
+            ]
+          },
+          {
+            "source": "path",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "path"
+              }
+            ]
+          },
+          {
+            "source": "express",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "express"
+              }
+            ]
+          },
+          {
+            "source": "helmet",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "helmet"
+              }
+            ]
+          },
+          {
+            "source": "compression",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "compression"
+              }
+            ]
+          },
+          {
+            "source": "body-parser",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "bodyParser"
+              }
+            ]
+          },
+          {
+            "source": "./torrent",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "torrent"
+              }
+            ]
+          },
+          {
+            "source": "./video",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "video"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server.js",
+      "filenameRelative": "/app/server.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "server.js",
+      "sourceFileName": "server.js",
+      "sourceRoot": "/app",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "server"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nrequire('babel-polyfill');\n\nvar _lodash = require('lodash');\n\nvar _lodash2 = _interopRequireDefault(_lodash);\n\nvar _path = require('path');\n\nvar _path2 = _interopRequireDefault(_path);\n\nvar _express = require('express');\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _helmet = require('helmet');\n\nvar _helmet2 = _interopRequireDefault(_helmet);\n\nvar _compression = require('compression');\n\nvar _compression2 = _interopRequireDefault(_compression);\n\nvar _bodyParser = require('body-parser');\n\nvar _bodyParser2 = _interopRequireDefault(_bodyParser);\n\nvar _torrent = require('./torrent');\n\nvar _torrent2 = _interopRequireDefault(_torrent);\n\nvar _video = require('./video');\n\nvar _video2 = _interopRequireDefault(_video);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); }); }; }\n\nconst app = (0, _express2.default)();\napp.use((0, _helmet2.default)());\napp.use((0, _compression2.default)());\napp.use(_bodyParser2.default.json());\napp.use(_bodyParser2.default.urlencoded({ extended: true }));\napp.use(_express2.default.static('dist'));\n\napp.get('/categories', (req, res) => res.json(_torrent2.default.categories));\n\napp.get('/search', (() => {\n  var _ref = _asyncToGenerator(function* (req, res) {\n    const {\n      keyword,\n      topic\n    } = req.query;\n    try {\n      const results = yield _torrent2.default.search(keyword, topic);\n      res.json(_torrent2.default.filterMagnets(results));\n    } catch (e) {\n      console.log(e);\n      res.json({});\n    }\n    // https://torrent.glitch.me/search?keyword=ricky%20and%20morty&topic=TV\n  });\n\n  return function (_x, _x2) {\n    return _ref.apply(this, arguments);\n  };\n})());\n\napp.post('/play', (() => {\n  var _ref2 = _asyncToGenerator(function* (req, res) {\n    try {\n      const results = yield (0, _video2.default)(req.body);\n      res.send(results);\n    } catch (e) {\n      console.error(e);\n      return res.send('Unable to play video!');\n    }\n  });\n\n  return function (_x3, _x4) {\n    return _ref2.apply(this, arguments);\n  };\n})());\n\napp.get('/', (req, res) => res.sendFile(_path2.default.resolve('./views/index.html')));\n\napp.listen(process.env.PORT, () => {\n  console.log('App listening on port ' + process.env.PORT);\n});\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlcnZlci5qcyJdLCJuYW1lcyI6WyJhcHAiLCJ1c2UiLCJqc29uIiwidXJsZW5jb2RlZCIsImV4dGVuZGVkIiwic3RhdGljIiwiZ2V0IiwicmVxIiwicmVzIiwiY2F0ZWdvcmllcyIsImtleXdvcmQiLCJ0b3BpYyIsInF1ZXJ5IiwicmVzdWx0cyIsInNlYXJjaCIsImZpbHRlck1hZ25ldHMiLCJlIiwiY29uc29sZSIsImxvZyIsInBvc3QiLCJib2R5Iiwic2VuZCIsImVycm9yIiwic2VuZEZpbGUiLCJyZXNvbHZlIiwibGlzdGVuIiwicHJvY2VzcyIsImVudiIsIlBPUlQiXSwibWFwcGluZ3MiOiI7O0FBQUE7O0FBQ0E7Ozs7QUFDQTs7OztBQUNBOzs7O0FBQ0E7Ozs7QUFDQTs7OztBQUNBOzs7O0FBQ0E7Ozs7QUFDQTs7Ozs7Ozs7QUFFQSxNQUFNQSxNQUFNLHdCQUFaO0FBQ0FBLElBQUlDLEdBQUosQ0FBUSx1QkFBUjtBQUNBRCxJQUFJQyxHQUFKLENBQVEsNEJBQVI7QUFDQUQsSUFBSUMsR0FBSixDQUFRLHFCQUFXQyxJQUFYLEVBQVI7QUFDQUYsSUFBSUMsR0FBSixDQUFRLHFCQUFXRSxVQUFYLENBQXNCLEVBQUVDLFVBQVUsSUFBWixFQUF0QixDQUFSO0FBQ0FKLElBQUlDLEdBQUosQ0FBUSxrQkFBUUksTUFBUixDQUFlLE1BQWYsQ0FBUjs7QUFFQUwsSUFBSU0sR0FBSixDQUFRLGFBQVIsRUFBdUIsQ0FBQ0MsR0FBRCxFQUFNQyxHQUFOLEtBQWNBLElBQUlOLElBQUosQ0FBUyxrQkFBUU8sVUFBakIsQ0FBckM7O0FBRUFULElBQUlNLEdBQUosQ0FBUSxTQUFSO0FBQUEsK0JBQW1CLFdBQU9DLEdBQVAsRUFBWUMsR0FBWixFQUFvQjtBQUNyQyxVQUFNO0FBQ0pFLGFBREk7QUFFSkM7QUFGSSxRQUdGSixJQUFJSyxLQUhSO0FBSUEsUUFBSTtBQUNGLFlBQU1DLFVBQVUsTUFBTSxrQkFBUUMsTUFBUixDQUFlSixPQUFmLEVBQXdCQyxLQUF4QixDQUF0QjtBQUNBSCxVQUFJTixJQUFKLENBQVMsa0JBQVFhLGFBQVIsQ0FBc0JGLE9BQXRCLENBQVQ7QUFDRCxLQUhELENBR0UsT0FBT0csQ0FBUCxFQUFVO0FBQ1ZDLGNBQVFDLEdBQVIsQ0FBWUYsQ0FBWjtBQUNBUixVQUFJTixJQUFKLENBQVMsRUFBVDtBQUNEO0FBQ0Q7QUFDRCxHQWJEOztBQUFBO0FBQUE7QUFBQTtBQUFBOztBQWVBRixJQUFJbUIsSUFBSixDQUFTLE9BQVQ7QUFBQSxnQ0FBa0IsV0FBT1osR0FBUCxFQUFZQyxHQUFaLEVBQW9CO0FBQ3BDLFFBQUk7QUFDRixZQUFNSyxVQUFVLE1BQU0scUJBQU1OLElBQUlhLElBQVYsQ0FBdEI7QUFDQVosVUFBSWEsSUFBSixDQUFTUixPQUFUO0FBQ0QsS0FIRCxDQUdFLE9BQU9HLENBQVAsRUFBVTtBQUNWQyxjQUFRSyxLQUFSLENBQWNOLENBQWQ7QUFDQSxhQUFPUixJQUFJYSxJQUFKLENBQVMsdUJBQVQsQ0FBUDtBQUNEO0FBQ0YsR0FSRDs7QUFBQTtBQUFBO0FBQUE7QUFBQTs7QUFVQXJCLElBQUlNLEdBQUosQ0FBUSxHQUFSLEVBQWEsQ0FBQ0MsR0FBRCxFQUFNQyxHQUFOLEtBQWNBLElBQUllLFFBQUosQ0FBYSxlQUFLQyxPQUFMLENBQWEsb0JBQWIsQ0FBYixDQUEzQjs7QUFFQXhCLElBQUl5QixNQUFKLENBQVdDLFFBQVFDLEdBQVIsQ0FBWUMsSUFBdkIsRUFBNkIsTUFBTTtBQUNqQ1gsVUFBUUMsR0FBUixDQUFZLDJCQUEyQlEsUUFBUUMsR0FBUixDQUFZQyxJQUFuRDtBQUNELENBRkQiLCJmaWxlIjoic2VydmVyLmpzIiwic291cmNlUm9vdCI6Ii9hcHAiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgJ2JhYmVsLXBvbHlmaWxsJztcbmltcG9ydCBfIGZyb20gJ2xvZGFzaCc7XG5pbXBvcnQgcGF0aCBmcm9tICdwYXRoJztcbmltcG9ydCBleHByZXNzIGZyb20gJ2V4cHJlc3MnO1xuaW1wb3J0IGhlbG1ldCBmcm9tICdoZWxtZXQnO1xuaW1wb3J0IGNvbXByZXNzaW9uIGZyb20gJ2NvbXByZXNzaW9uJztcbmltcG9ydCBib2R5UGFyc2VyIGZyb20gJ2JvZHktcGFyc2VyJztcbmltcG9ydCB0b3JyZW50IGZyb20gJy4vdG9ycmVudCc7XG5pbXBvcnQgdmlkZW8gZnJvbSAnLi92aWRlbyc7XG5cbmNvbnN0IGFwcCA9IGV4cHJlc3MoKTtcbmFwcC51c2UoaGVsbWV0KCkpO1xuYXBwLnVzZShjb21wcmVzc2lvbigpKTtcbmFwcC51c2UoYm9keVBhcnNlci5qc29uKCkpO1xuYXBwLnVzZShib2R5UGFyc2VyLnVybGVuY29kZWQoeyBleHRlbmRlZDogdHJ1ZSB9KSk7XG5hcHAudXNlKGV4cHJlc3Muc3RhdGljKCdkaXN0JykpO1xuXG5hcHAuZ2V0KCcvY2F0ZWdvcmllcycsIChyZXEsIHJlcykgPT4gcmVzLmpzb24odG9ycmVudC5jYXRlZ29yaWVzKSlcblxuYXBwLmdldCgnL3NlYXJjaCcsIGFzeW5jIChyZXEsIHJlcykgPT4ge1xuICBjb25zdCB7IFxuICAgIGtleXdvcmQsXG4gICAgdG9waWMsXG4gIH0gPSByZXEucXVlcnk7XG4gIHRyeSB7XG4gICAgY29uc3QgcmVzdWx0cyA9IGF3YWl0IHRvcnJlbnQuc2VhcmNoKGtleXdvcmQsIHRvcGljKTtcbiAgICByZXMuanNvbih0b3JyZW50LmZpbHRlck1hZ25ldHMocmVzdWx0cykpO1xuICB9IGNhdGNoIChlKSB7XG4gICAgY29uc29sZS5sb2coZSk7XG4gICAgcmVzLmpzb24oe30pO1xuICB9XG4gIC8vIGh0dHBzOi8vdG9ycmVudC5nbGl0Y2gubWUvc2VhcmNoP2tleXdvcmQ9cmlja3klMjBhbmQlMjBtb3J0eSZ0b3BpYz1UVlxufSk7XG5cbmFwcC5wb3N0KCcvcGxheScsIGFzeW5jIChyZXEsIHJlcykgPT4ge1xuICB0cnkge1xuICAgIGNvbnN0IHJlc3VsdHMgPSBhd2FpdCB2aWRlbyhyZXEuYm9keSk7XG4gICAgcmVzLnNlbmQocmVzdWx0cyk7XG4gIH0gY2F0Y2ggKGUpIHtcbiAgICBjb25zb2xlLmVycm9yKGUpO1xuICAgIHJldHVybiByZXMuc2VuZCgnVW5hYmxlIHRvIHBsYXkgdmlkZW8hJyk7XG4gIH1cbn0pO1xuXG5hcHAuZ2V0KCcvJywgKHJlcSwgcmVzKSA9PiByZXMuc2VuZEZpbGUocGF0aC5yZXNvbHZlKCcuL3ZpZXdzL2luZGV4Lmh0bWwnKSkpO1xuXG5hcHAubGlzdGVuKHByb2Nlc3MuZW52LlBPUlQsICgpID0+IHtcbiAgY29uc29sZS5sb2coJ0FwcCBsaXN0ZW5pbmcgb24gcG9ydCAnICsgcHJvY2Vzcy5lbnYuUE9SVCk7XG59KTsiXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "server.js"
+      ],
+      "names": [
+        "app",
+        "use",
+        "json",
+        "urlencoded",
+        "extended",
+        "static",
+        "get",
+        "req",
+        "res",
+        "categories",
+        "keyword",
+        "topic",
+        "query",
+        "results",
+        "search",
+        "filterMagnets",
+        "e",
+        "console",
+        "log",
+        "post",
+        "body",
+        "send",
+        "error",
+        "sendFile",
+        "resolve",
+        "listen",
+        "process",
+        "env",
+        "PORT"
+      ],
+      "mappings": ";;AAAA;;AACA;;;;AACA;;;;AACA;;;;AACA;;;;AACA;;;;AACA;;;;AACA;;;;AACA;;;;;;;;AAEA,MAAMA,MAAM,wBAAZ;AACAA,IAAIC,GAAJ,CAAQ,uBAAR;AACAD,IAAIC,GAAJ,CAAQ,4BAAR;AACAD,IAAIC,GAAJ,CAAQ,qBAAWC,IAAX,EAAR;AACAF,IAAIC,GAAJ,CAAQ,qBAAWE,UAAX,CAAsB,EAAEC,UAAU,IAAZ,EAAtB,CAAR;AACAJ,IAAIC,GAAJ,CAAQ,kBAAQI,MAAR,CAAe,MAAf,CAAR;;AAEAL,IAAIM,GAAJ,CAAQ,aAAR,EAAuB,CAACC,GAAD,EAAMC,GAAN,KAAcA,IAAIN,IAAJ,CAAS,kBAAQO,UAAjB,CAArC;;AAEAT,IAAIM,GAAJ,CAAQ,SAAR;AAAA,+BAAmB,WAAOC,GAAP,EAAYC,GAAZ,EAAoB;AACrC,UAAM;AACJE,aADI;AAEJC;AAFI,QAGFJ,IAAIK,KAHR;AAIA,QAAI;AACF,YAAMC,UAAU,MAAM,kBAAQC,MAAR,CAAeJ,OAAf,EAAwBC,KAAxB,CAAtB;AACAH,UAAIN,IAAJ,CAAS,kBAAQa,aAAR,CAAsBF,OAAtB,CAAT;AACD,KAHD,CAGE,OAAOG,CAAP,EAAU;AACVC,cAAQC,GAAR,CAAYF,CAAZ;AACAR,UAAIN,IAAJ,CAAS,EAAT;AACD;AACD;AACD,GAbD;;AAAA;AAAA;AAAA;AAAA;;AAeAF,IAAImB,IAAJ,CAAS,OAAT;AAAA,gCAAkB,WAAOZ,GAAP,EAAYC,GAAZ,EAAoB;AACpC,QAAI;AACF,YAAMK,UAAU,MAAM,qBAAMN,IAAIa,IAAV,CAAtB;AACAZ,UAAIa,IAAJ,CAASR,OAAT;AACD,KAHD,CAGE,OAAOG,CAAP,EAAU;AACVC,cAAQK,KAAR,CAAcN,CAAd;AACA,aAAOR,IAAIa,IAAJ,CAAS,uBAAT,CAAP;AACD;AACF,GARD;;AAAA;AAAA;AAAA;AAAA;;AAUArB,IAAIM,GAAJ,CAAQ,GAAR,EAAa,CAACC,GAAD,EAAMC,GAAN,KAAcA,IAAIe,QAAJ,CAAa,eAAKC,OAAL,CAAa,oBAAb,CAAb,CAA3B;;AAEAxB,IAAIyB,MAAJ,CAAWC,QAAQC,GAAR,CAAYC,IAAvB,EAA6B,MAAM;AACjCX,UAAQC,GAAR,CAAY,2BAA2BQ,QAAQC,GAAR,CAAYC,IAAnD;AACD,CAFD",
+      "file": "server.js",
+      "sourceRoot": "/app",
+      "sourcesContent": [
+        "import 'babel-polyfill';\nimport _ from 'lodash';\nimport path from 'path';\nimport express from 'express';\nimport helmet from 'helmet';\nimport compression from 'compression';\nimport bodyParser from 'body-parser';\nimport torrent from './torrent';\nimport video from './video';\n\nconst app = express();\napp.use(helmet());\napp.use(compression());\napp.use(bodyParser.json());\napp.use(bodyParser.urlencoded({ extended: true }));\napp.use(express.static('dist'));\n\napp.get('/categories', (req, res) => res.json(torrent.categories))\n\napp.get('/search', async (req, res) => {\n  const { \n    keyword,\n    topic,\n  } = req.query;\n  try {\n    const results = await torrent.search(keyword, topic);\n    res.json(torrent.filterMagnets(results));\n  } catch (e) {\n    console.log(e);\n    res.json({});\n  }\n  // https://torrent.glitch.me/search?keyword=ricky%20and%20morty&topic=TV\n});\n\napp.post('/play', async (req, res) => {\n  try {\n    const results = await video(req.body);\n    res.send(results);\n  } catch (e) {\n    console.error(e);\n    return res.send('Unable to play video!');\n  }\n});\n\napp.get('/', (req, res) => res.sendFile(path.resolve('./views/index.html')));\n\napp.listen(process.env.PORT, () => {\n  console.log('App listening on port ' + process.env.PORT);\n});"
+      ]
+    },
+    "mtime": 1507321846413
+  },
+  "{\"filename\":\"/app/torrent.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "lodash/fp",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "fp"
+              }
+            ]
+          },
+          {
+            "source": "lodash",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "_"
+              }
+            ]
+          },
+          {
+            "source": "torrent-search-api",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "TorrentSearchApi"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/torrent.js",
+      "filenameRelative": "/app/torrent.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "torrent.js",
+      "sourceFileName": "torrent.js",
+      "sourceRoot": "/app",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "torrent"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _fp = require('lodash/fp');\n\nvar _fp2 = _interopRequireDefault(_fp);\n\nvar _lodash = require('lodash');\n\nvar _lodash2 = _interopRequireDefault(_lodash);\n\nvar _torrentSearchApi = require('torrent-search-api');\n\nvar _torrentSearchApi2 = _interopRequireDefault(_torrentSearchApi);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconst filter = ['xxx', 'porn'];\n\nconst notIncludes = _fp2.default.negate(_fp2.default.includes);\nconst searchClient = new _torrentSearchApi2.default();\n\nconst enablePublic = _fp2.default.compose(_fp2.default.forEach(p => searchClient.enableProvider(p)), _fp2.default.filter(n => n === 'ThePirateBay'), _fp2.default.map(_fp2.default.get('name')), _fp2.default.filter(_fp2.default.get('public')));\n\nenablePublic(searchClient.getProviders());\n\nconst getCategories = _fp2.default.compose(_fp2.default.filter(c => notIncludes(_lodash2.default.lowerCase(c), filter)), _fp2.default.sortedUniqBy(_fp2.default.lowerCase), _fp2.default.sortBy(_fp2.default.lowerCase), _fp2.default.flatten, _fp2.default.map(_fp2.default.get('categories')));\n\nconst categories = getCategories(searchClient.getActiveProviders());\n\nconst search = (search, category) => {\n  console.log(decodeURIComponent(search), encodeURIComponent(search), category);\n  return searchClient.search(decodeURIComponent(search), category);\n};\n\nconst filterMagnets = _fp2.default.compose(_fp2.default.filter('magnet'), _fp2.default.compact);\n\nexports.default = {\n  categories,\n  search,\n  filterMagnets\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRvcnJlbnQuanMiXSwibmFtZXMiOlsiZmlsdGVyIiwibm90SW5jbHVkZXMiLCJuZWdhdGUiLCJpbmNsdWRlcyIsInNlYXJjaENsaWVudCIsImVuYWJsZVB1YmxpYyIsImNvbXBvc2UiLCJmb3JFYWNoIiwicCIsImVuYWJsZVByb3ZpZGVyIiwibiIsIm1hcCIsImdldCIsImdldFByb3ZpZGVycyIsImdldENhdGVnb3JpZXMiLCJjIiwibG93ZXJDYXNlIiwic29ydGVkVW5pcUJ5Iiwic29ydEJ5IiwiZmxhdHRlbiIsImNhdGVnb3JpZXMiLCJnZXRBY3RpdmVQcm92aWRlcnMiLCJzZWFyY2giLCJjYXRlZ29yeSIsImNvbnNvbGUiLCJsb2ciLCJkZWNvZGVVUklDb21wb25lbnQiLCJlbmNvZGVVUklDb21wb25lbnQiLCJmaWx0ZXJNYWduZXRzIiwiY29tcGFjdCJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUE7Ozs7QUFDQTs7OztBQUNBOzs7Ozs7QUFFQSxNQUFNQSxTQUFTLENBQUMsS0FBRCxFQUFRLE1BQVIsQ0FBZjs7QUFFQSxNQUFNQyxjQUFjLGFBQUdDLE1BQUgsQ0FBVSxhQUFHQyxRQUFiLENBQXBCO0FBQ0EsTUFBTUMsZUFBZSxnQ0FBckI7O0FBRUEsTUFBTUMsZUFBZSxhQUFHQyxPQUFILENBQ25CLGFBQUdDLE9BQUgsQ0FBV0MsS0FBS0osYUFBYUssY0FBYixDQUE0QkQsQ0FBNUIsQ0FBaEIsQ0FEbUIsRUFFbkIsYUFBR1IsTUFBSCxDQUFVVSxLQUFLQSxNQUFNLGNBQXJCLENBRm1CLEVBR25CLGFBQUdDLEdBQUgsQ0FBTyxhQUFHQyxHQUFILENBQU8sTUFBUCxDQUFQLENBSG1CLEVBSW5CLGFBQUdaLE1BQUgsQ0FBVSxhQUFHWSxHQUFILENBQU8sUUFBUCxDQUFWLENBSm1CLENBQXJCOztBQU9BUCxhQUFhRCxhQUFhUyxZQUFiLEVBQWI7O0FBRUEsTUFBTUMsZ0JBQWdCLGFBQUdSLE9BQUgsQ0FDcEIsYUFBR04sTUFBSCxDQUFVZSxLQUFLZCxZQUFZLGlCQUFFZSxTQUFGLENBQVlELENBQVosQ0FBWixFQUE0QmYsTUFBNUIsQ0FBZixDQURvQixFQUVwQixhQUFHaUIsWUFBSCxDQUFnQixhQUFHRCxTQUFuQixDQUZvQixFQUdwQixhQUFHRSxNQUFILENBQVUsYUFBR0YsU0FBYixDQUhvQixFQUlwQixhQUFHRyxPQUppQixFQUtwQixhQUFHUixHQUFILENBQU8sYUFBR0MsR0FBSCxDQUFPLFlBQVAsQ0FBUCxDQUxvQixDQUF0Qjs7QUFRQSxNQUFNUSxhQUFhTixjQUFjVixhQUFhaUIsa0JBQWIsRUFBZCxDQUFuQjs7QUFFQSxNQUFNQyxTQUFTLENBQUNBLE1BQUQsRUFBU0MsUUFBVCxLQUFzQjtBQUNuQ0MsVUFBUUMsR0FBUixDQUFZQyxtQkFBbUJKLE1BQW5CLENBQVosRUFBd0NLLG1CQUFtQkwsTUFBbkIsQ0FBeEMsRUFBb0VDLFFBQXBFO0FBQ0EsU0FBT25CLGFBQWFrQixNQUFiLENBQW9CSSxtQkFBbUJKLE1BQW5CLENBQXBCLEVBQWdEQyxRQUFoRCxDQUFQO0FBQ0QsQ0FIRDs7QUFLQSxNQUFNSyxnQkFBZ0IsYUFBR3RCLE9BQUgsQ0FDcEIsYUFBR04sTUFBSCxDQUFVLFFBQVYsQ0FEb0IsRUFFcEIsYUFBRzZCLE9BRmlCLENBQXRCOztrQkFLZTtBQUNiVCxZQURhO0FBRWJFLFFBRmE7QUFHYk07QUFIYSxDIiwiZmlsZSI6InRvcnJlbnQuanMiLCJzb3VyY2VSb290IjoiL2FwcCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBmcCBmcm9tICdsb2Rhc2gvZnAnO1xuaW1wb3J0IF8gZnJvbSAnbG9kYXNoJztcbmltcG9ydCBUb3JyZW50U2VhcmNoQXBpIGZyb20gJ3RvcnJlbnQtc2VhcmNoLWFwaSc7XG5cbmNvbnN0IGZpbHRlciA9IFsneHh4JywgJ3Bvcm4nXTtcblxuY29uc3Qgbm90SW5jbHVkZXMgPSBmcC5uZWdhdGUoZnAuaW5jbHVkZXMpO1xuY29uc3Qgc2VhcmNoQ2xpZW50ID0gbmV3IFRvcnJlbnRTZWFyY2hBcGkoKTtcblxuY29uc3QgZW5hYmxlUHVibGljID0gZnAuY29tcG9zZShcbiAgZnAuZm9yRWFjaChwID0+IHNlYXJjaENsaWVudC5lbmFibGVQcm92aWRlcihwKSksXG4gIGZwLmZpbHRlcihuID0+IG4gPT09ICdUaGVQaXJhdGVCYXknKSxcbiAgZnAubWFwKGZwLmdldCgnbmFtZScpKSxcbiAgZnAuZmlsdGVyKGZwLmdldCgncHVibGljJykpLFxuKTtcblxuZW5hYmxlUHVibGljKHNlYXJjaENsaWVudC5nZXRQcm92aWRlcnMoKSk7XG5cbmNvbnN0IGdldENhdGVnb3JpZXMgPSBmcC5jb21wb3NlKFxuICBmcC5maWx0ZXIoYyA9PiBub3RJbmNsdWRlcyhfLmxvd2VyQ2FzZShjKSwgZmlsdGVyKSksXG4gIGZwLnNvcnRlZFVuaXFCeShmcC5sb3dlckNhc2UpLFxuICBmcC5zb3J0QnkoZnAubG93ZXJDYXNlKSxcbiAgZnAuZmxhdHRlbixcbiAgZnAubWFwKGZwLmdldCgnY2F0ZWdvcmllcycpKSxcbik7XG5cbmNvbnN0IGNhdGVnb3JpZXMgPSBnZXRDYXRlZ29yaWVzKHNlYXJjaENsaWVudC5nZXRBY3RpdmVQcm92aWRlcnMoKSk7XG5cbmNvbnN0IHNlYXJjaCA9IChzZWFyY2gsIGNhdGVnb3J5KSA9PiB7XG4gIGNvbnNvbGUubG9nKGRlY29kZVVSSUNvbXBvbmVudChzZWFyY2gpLCBlbmNvZGVVUklDb21wb25lbnQoc2VhcmNoKSwgY2F0ZWdvcnkpO1xuICByZXR1cm4gc2VhcmNoQ2xpZW50LnNlYXJjaChkZWNvZGVVUklDb21wb25lbnQoc2VhcmNoKSwgY2F0ZWdvcnkpO1xufVxuXG5jb25zdCBmaWx0ZXJNYWduZXRzID0gZnAuY29tcG9zZShcbiAgZnAuZmlsdGVyKCdtYWduZXQnKSxcbiAgZnAuY29tcGFjdCxcbik7XG5cbmV4cG9ydCBkZWZhdWx0IHtcbiAgY2F0ZWdvcmllcyxcbiAgc2VhcmNoLFxuICBmaWx0ZXJNYWduZXRzLFxufSJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "torrent.js"
+      ],
+      "names": [
+        "filter",
+        "notIncludes",
+        "negate",
+        "includes",
+        "searchClient",
+        "enablePublic",
+        "compose",
+        "forEach",
+        "p",
+        "enableProvider",
+        "n",
+        "map",
+        "get",
+        "getProviders",
+        "getCategories",
+        "c",
+        "lowerCase",
+        "sortedUniqBy",
+        "sortBy",
+        "flatten",
+        "categories",
+        "getActiveProviders",
+        "search",
+        "category",
+        "console",
+        "log",
+        "decodeURIComponent",
+        "encodeURIComponent",
+        "filterMagnets",
+        "compact"
+      ],
+      "mappings": ";;;;;;AAAA;;;;AACA;;;;AACA;;;;;;AAEA,MAAMA,SAAS,CAAC,KAAD,EAAQ,MAAR,CAAf;;AAEA,MAAMC,cAAc,aAAGC,MAAH,CAAU,aAAGC,QAAb,CAApB;AACA,MAAMC,eAAe,gCAArB;;AAEA,MAAMC,eAAe,aAAGC,OAAH,CACnB,aAAGC,OAAH,CAAWC,KAAKJ,aAAaK,cAAb,CAA4BD,CAA5B,CAAhB,CADmB,EAEnB,aAAGR,MAAH,CAAUU,KAAKA,MAAM,cAArB,CAFmB,EAGnB,aAAGC,GAAH,CAAO,aAAGC,GAAH,CAAO,MAAP,CAAP,CAHmB,EAInB,aAAGZ,MAAH,CAAU,aAAGY,GAAH,CAAO,QAAP,CAAV,CAJmB,CAArB;;AAOAP,aAAaD,aAAaS,YAAb,EAAb;;AAEA,MAAMC,gBAAgB,aAAGR,OAAH,CACpB,aAAGN,MAAH,CAAUe,KAAKd,YAAY,iBAAEe,SAAF,CAAYD,CAAZ,CAAZ,EAA4Bf,MAA5B,CAAf,CADoB,EAEpB,aAAGiB,YAAH,CAAgB,aAAGD,SAAnB,CAFoB,EAGpB,aAAGE,MAAH,CAAU,aAAGF,SAAb,CAHoB,EAIpB,aAAGG,OAJiB,EAKpB,aAAGR,GAAH,CAAO,aAAGC,GAAH,CAAO,YAAP,CAAP,CALoB,CAAtB;;AAQA,MAAMQ,aAAaN,cAAcV,aAAaiB,kBAAb,EAAd,CAAnB;;AAEA,MAAMC,SAAS,CAACA,MAAD,EAASC,QAAT,KAAsB;AACnCC,UAAQC,GAAR,CAAYC,mBAAmBJ,MAAnB,CAAZ,EAAwCK,mBAAmBL,MAAnB,CAAxC,EAAoEC,QAApE;AACA,SAAOnB,aAAakB,MAAb,CAAoBI,mBAAmBJ,MAAnB,CAApB,EAAgDC,QAAhD,CAAP;AACD,CAHD;;AAKA,MAAMK,gBAAgB,aAAGtB,OAAH,CACpB,aAAGN,MAAH,CAAU,QAAV,CADoB,EAEpB,aAAG6B,OAFiB,CAAtB;;kBAKe;AACbT,YADa;AAEbE,QAFa;AAGbM;AAHa,C",
+      "file": "torrent.js",
+      "sourceRoot": "/app",
+      "sourcesContent": [
+        "import fp from 'lodash/fp';\nimport _ from 'lodash';\nimport TorrentSearchApi from 'torrent-search-api';\n\nconst filter = ['xxx', 'porn'];\n\nconst notIncludes = fp.negate(fp.includes);\nconst searchClient = new TorrentSearchApi();\n\nconst enablePublic = fp.compose(\n  fp.forEach(p => searchClient.enableProvider(p)),\n  fp.filter(n => n === 'ThePirateBay'),\n  fp.map(fp.get('name')),\n  fp.filter(fp.get('public')),\n);\n\nenablePublic(searchClient.getProviders());\n\nconst getCategories = fp.compose(\n  fp.filter(c => notIncludes(_.lowerCase(c), filter)),\n  fp.sortedUniqBy(fp.lowerCase),\n  fp.sortBy(fp.lowerCase),\n  fp.flatten,\n  fp.map(fp.get('categories')),\n);\n\nconst categories = getCategories(searchClient.getActiveProviders());\n\nconst search = (search, category) => {\n  console.log(decodeURIComponent(search), encodeURIComponent(search), category);\n  return searchClient.search(decodeURIComponent(search), category);\n}\n\nconst filterMagnets = fp.compose(\n  fp.filter('magnet'),\n  fp.compact,\n);\n\nexport default {\n  categories,\n  search,\n  filterMagnets,\n}"
+      ]
+    },
+    "mtime": 1507321846421
+  },
+  "{\"filename\":\"/app/video.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [
+        "asyncToGenerator",
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "lodash",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "_"
+              }
+            ]
+          },
+          {
+            "source": "webtorrent",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "WebTorrent"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [
+            "video",
+            "magnet"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "video",
+              "exported": "video"
+            },
+            {
+              "kind": "local",
+              "local": "magnet",
+              "exported": "magnet"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/video.js",
+      "filenameRelative": "/app/video.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "video.js",
+      "sourceFileName": "video.js",
+      "sourceRoot": "/app",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "video"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.video = undefined;\n\nlet video = exports.video = (() => {\n  var _ref = _asyncToGenerator(function* ({ magnet }) {\n    console.log('video');\n    const client = new _webtorrent2.default();\n    console.log('new client');\n    return new Promise(function (resolve, reject) {\n      console.log('promise');\n      client.add(magnet, function (torrent) {\n        console.log('callback');\n        console.log(torrent.files);\n\n        const file = torrent.files.find(function (file) {\n          console.log('file name');\n          console.log(file.name);\n          return file.name.endsWith('.mp4');\n        });\n\n        //       console.log(file);\n\n        //       if (file) {\n        //         return resolve(file.createReadStream());\n        //       }\n\n        return reject('No file found!');\n      });\n\n      client.on('error', function (err) {\n        console.error('Client error', err);\n        reject(err);\n      });\n    });\n  });\n\n  return function video(_x) {\n    return _ref.apply(this, arguments);\n  };\n})();\n\nvar _lodash = require('lodash');\n\nvar _lodash2 = _interopRequireDefault(_lodash);\n\nvar _webtorrent = require('webtorrent');\n\nvar _webtorrent2 = _interopRequireDefault(_webtorrent);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); }); }; }\n\nexports.default = video;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInZpZGVvLmpzIl0sIm5hbWVzIjpbIm1hZ25ldCIsImNvbnNvbGUiLCJsb2ciLCJjbGllbnQiLCJQcm9taXNlIiwicmVzb2x2ZSIsInJlamVjdCIsImFkZCIsInRvcnJlbnQiLCJmaWxlcyIsImZpbGUiLCJmaW5kIiwibmFtZSIsImVuZHNXaXRoIiwib24iLCJlcnIiLCJlcnJvciIsInZpZGVvIl0sIm1hcHBpbmdzIjoiOzs7Ozs7OzsrQkFHTyxXQUFxQixFQUFFQSxNQUFGLEVBQXJCLEVBQWlDO0FBQ3RDQyxZQUFRQyxHQUFSLENBQVksT0FBWjtBQUNBLFVBQU1DLFNBQVMsMEJBQWY7QUFDQUYsWUFBUUMsR0FBUixDQUFZLFlBQVo7QUFDQSxXQUFPLElBQUlFLE9BQUosQ0FBWSxVQUFDQyxPQUFELEVBQVVDLE1BQVYsRUFBcUI7QUFDdENMLGNBQVFDLEdBQVIsQ0FBWSxTQUFaO0FBQ0FDLGFBQU9JLEdBQVAsQ0FBV1AsTUFBWCxFQUFtQixVQUFVUSxPQUFWLEVBQW1CO0FBQ3BDUCxnQkFBUUMsR0FBUixDQUFZLFVBQVo7QUFDQUQsZ0JBQVFDLEdBQVIsQ0FBWU0sUUFBUUMsS0FBcEI7O0FBRUEsY0FBTUMsT0FBT0YsUUFBUUMsS0FBUixDQUFjRSxJQUFkLENBQW1CLFVBQVVELElBQVYsRUFBZ0I7QUFDOUNULGtCQUFRQyxHQUFSLENBQVksV0FBWjtBQUNBRCxrQkFBUUMsR0FBUixDQUFZUSxLQUFLRSxJQUFqQjtBQUNBLGlCQUFPRixLQUFLRSxJQUFMLENBQVVDLFFBQVYsQ0FBbUIsTUFBbkIsQ0FBUDtBQUNELFNBSlksQ0FBYjs7QUFNTjs7QUFFQTtBQUNBO0FBQ0E7O0FBRU0sZUFBT1AsT0FBTyxnQkFBUCxDQUFQO0FBQ0QsT0FqQkQ7O0FBbUJBSCxhQUFPVyxFQUFQLENBQVUsT0FBVixFQUFtQixVQUFTQyxHQUFULEVBQWM7QUFDL0JkLGdCQUFRZSxLQUFSLENBQWMsY0FBZCxFQUE4QkQsR0FBOUI7QUFDQVQsZUFBT1MsR0FBUDtBQUNELE9BSEQ7QUFJRCxLQXpCTSxDQUFQO0FBMEJELEc7O2tCQTlCcUJFLEs7Ozs7O0FBSHRCOzs7O0FBQ0E7Ozs7Ozs7O2tCQWtDZUEsSyIsImZpbGUiOiJ2aWRlby5qcyIsInNvdXJjZVJvb3QiOiIvYXBwIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IF8gZnJvbSAnbG9kYXNoJztcbmltcG9ydCBXZWJUb3JyZW50IGZyb20gJ3dlYnRvcnJlbnQnO1xuXG5leHBvcnQgYXN5bmMgZnVuY3Rpb24gdmlkZW8oeyBtYWduZXQgfSkgeyAgXG4gIGNvbnNvbGUubG9nKCd2aWRlbycpO1xuICBjb25zdCBjbGllbnQgPSBuZXcgV2ViVG9ycmVudCgpO1xuICBjb25zb2xlLmxvZygnbmV3IGNsaWVudCcpXG4gIHJldHVybiBuZXcgUHJvbWlzZSgocmVzb2x2ZSwgcmVqZWN0KSA9PiB7XG4gICAgY29uc29sZS5sb2coJ3Byb21pc2UnKTtcbiAgICBjbGllbnQuYWRkKG1hZ25ldCwgZnVuY3Rpb24gKHRvcnJlbnQpIHtcbiAgICAgIGNvbnNvbGUubG9nKCdjYWxsYmFjaycpO1xuICAgICAgY29uc29sZS5sb2codG9ycmVudC5maWxlcyk7XG4gICAgICBcbiAgICAgIGNvbnN0IGZpbGUgPSB0b3JyZW50LmZpbGVzLmZpbmQoZnVuY3Rpb24gKGZpbGUpIHtcbiAgICAgICAgY29uc29sZS5sb2coJ2ZpbGUgbmFtZScpO1xuICAgICAgICBjb25zb2xlLmxvZyhmaWxlLm5hbWUpO1xuICAgICAgICByZXR1cm4gZmlsZS5uYW1lLmVuZHNXaXRoKCcubXA0JylcbiAgICAgIH0pO1xuICAgICAgXG4vLyAgICAgICBjb25zb2xlLmxvZyhmaWxlKTtcblxuLy8gICAgICAgaWYgKGZpbGUpIHtcbi8vICAgICAgICAgcmV0dXJuIHJlc29sdmUoZmlsZS5jcmVhdGVSZWFkU3RyZWFtKCkpO1xuLy8gICAgICAgfVxuICAgICAgXG4gICAgICByZXR1cm4gcmVqZWN0KCdObyBmaWxlIGZvdW5kIScpO1xuICAgIH0pO1xuICAgIFxuICAgIGNsaWVudC5vbignZXJyb3InLCBmdW5jdGlvbihlcnIpIHtcbiAgICAgIGNvbnNvbGUuZXJyb3IoJ0NsaWVudCBlcnJvcicsIGVycik7XG4gICAgICByZWplY3QoZXJyKTtcbiAgICB9KVxuICB9KTtcbn1cblxuZXhwb3J0IGRlZmF1bHQgdmlkZW87XG4iXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "video.js"
+      ],
+      "names": [
+        "magnet",
+        "console",
+        "log",
+        "client",
+        "Promise",
+        "resolve",
+        "reject",
+        "add",
+        "torrent",
+        "files",
+        "file",
+        "find",
+        "name",
+        "endsWith",
+        "on",
+        "err",
+        "error",
+        "video"
+      ],
+      "mappings": ";;;;;;;;+BAGO,WAAqB,EAAEA,MAAF,EAArB,EAAiC;AACtCC,YAAQC,GAAR,CAAY,OAAZ;AACA,UAAMC,SAAS,0BAAf;AACAF,YAAQC,GAAR,CAAY,YAAZ;AACA,WAAO,IAAIE,OAAJ,CAAY,UAACC,OAAD,EAAUC,MAAV,EAAqB;AACtCL,cAAQC,GAAR,CAAY,SAAZ;AACAC,aAAOI,GAAP,CAAWP,MAAX,EAAmB,UAAUQ,OAAV,EAAmB;AACpCP,gBAAQC,GAAR,CAAY,UAAZ;AACAD,gBAAQC,GAAR,CAAYM,QAAQC,KAApB;;AAEA,cAAMC,OAAOF,QAAQC,KAAR,CAAcE,IAAd,CAAmB,UAAUD,IAAV,EAAgB;AAC9CT,kBAAQC,GAAR,CAAY,WAAZ;AACAD,kBAAQC,GAAR,CAAYQ,KAAKE,IAAjB;AACA,iBAAOF,KAAKE,IAAL,CAAUC,QAAV,CAAmB,MAAnB,CAAP;AACD,SAJY,CAAb;;AAMN;;AAEA;AACA;AACA;;AAEM,eAAOP,OAAO,gBAAP,CAAP;AACD,OAjBD;;AAmBAH,aAAOW,EAAP,CAAU,OAAV,EAAmB,UAASC,GAAT,EAAc;AAC/Bd,gBAAQe,KAAR,CAAc,cAAd,EAA8BD,GAA9B;AACAT,eAAOS,GAAP;AACD,OAHD;AAID,KAzBM,CAAP;AA0BD,G;;kBA9BqBE,K;;;;;AAHtB;;;;AACA;;;;;;;;kBAkCeA,K",
+      "file": "video.js",
+      "sourceRoot": "/app",
+      "sourcesContent": [
+        "import _ from 'lodash';\nimport WebTorrent from 'webtorrent';\n\nexport async function video({ magnet }) {  \n  console.log('video');\n  const client = new WebTorrent();\n  console.log('new client')\n  return new Promise((resolve, reject) => {\n    console.log('promise');\n    client.add(magnet, function (torrent) {\n      console.log('callback');\n      console.log(torrent.files);\n      \n      const file = torrent.files.find(function (file) {\n        console.log('file name');\n        console.log(file.name);\n        return file.name.endsWith('.mp4')\n      });\n      \n//       console.log(file);\n\n//       if (file) {\n//         return resolve(file.createReadStream());\n//       }\n      \n      return reject('No file found!');\n    });\n    \n    client.on('error', function(err) {\n      console.error('Client error', err);\n      reject(err);\n    })\n  });\n}\n\nexport default video;\n"
+      ]
+    },
+    "mtime": 1507321846429
+  }
+}
