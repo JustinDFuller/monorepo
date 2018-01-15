@@ -1,0 +1,1 @@
+export { githubController as default } from './github-controller';

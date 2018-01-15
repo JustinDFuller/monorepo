@@ -1,0 +1,33 @@
+{
+  "name": "create-monorepo",
+  "version": "1.0.0",
+  "description": "get all repos and turn them into a single monoreop",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava",
+    "start": "babel-node index.js"
+  },
+  "keywords": [
+    "monorepo"
+  ],
+  "author": "Justin Fuller <justindanielfuller@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "node-fetch": "^1.7.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "stage-0"
+    ]
+  },
+  "ava": {
+    "babel": "inherit"
+  }
+}
