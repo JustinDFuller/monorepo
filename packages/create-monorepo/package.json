@@ -11,6 +11,10 @@
   "keywords": [
     "monorepo"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JustinDFuller/monorepo/blob/master/packages/create-monorepo"
+  },
   "author": "Justin Fuller <justindanielfuller@gmail.com>",
   "license": "ISC",
   "dependencies": {
