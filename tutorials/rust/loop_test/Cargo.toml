@@ -1,0 +1,8 @@
+[package]
+name = "loop_test"
+version = "0.1.0"
+authors = ["Justin Fuller <justindanielfuller@gmail.com>"]
+
+[dependencies]
+time = "*"
+log = "*"

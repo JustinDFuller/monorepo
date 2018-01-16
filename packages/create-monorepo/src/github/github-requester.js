@@ -17,8 +17,6 @@ const githubRequester = data => ({
     return fetch(API_URL).then(res => res.json()).then(githubRequester);
   },
   fetchRepos() {
-    console.log('Fetching from', data);
-
     return fetch(data).then(res => res.json()).then(githubRequester);
   },
   downloadRepos(commandFormatter) {
@@ -45,8 +43,6 @@ const githubRequester = data => ({
     if (!repoResponseMapper) {
       throw new Error('Repo response mapper is not defined.', repoResponseMapper);
     }
-
-    console.log(data);
 
     return githubRequester(repoResponseMapper(data));
   }

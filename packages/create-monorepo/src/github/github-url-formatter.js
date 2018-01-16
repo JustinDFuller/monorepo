@@ -4,7 +4,8 @@ const urlFormatter = url => ({
   },
   formatUserRepoUrl(username) {
     const ending = url.indexOf('/repos');
-    return urlFormatter(url.slice(0, ending + 6).replace('{user}', username));
+    const urlWithUsername = url.slice(0, ending + 6).replace('{user}', username);
+    return urlFormatter(`${urlWithUsername}?per_page=100`);
   },
 });
 

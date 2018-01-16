@@ -1,0 +1,6 @@
+[package]
+name = "rust binarySearch"
+version = "0.1.0"
+authors = ["Justin Fuller <justindanielfuller@gmail.com>"]
+
+[dependencies]

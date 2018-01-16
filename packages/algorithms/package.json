@@ -1,0 +1,29 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "description": "Algorithms playground",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava **/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustinDFuller/algorithms.git"
+  },
+  "keywords": [
+    "algorithms",
+    "javascript"
+  ],
+  "author": "Justin Fuller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustinDFuller/algorithms/issues"
+  },
+  "homepage": "https://github.com/JustinDFuller/algorithms#readme",
+  "devDependencies": {
+    "ava": "^0.16.0"
+  },
+  "dependencies": {
+    "@types/node": "^6.0.42"
+  }
+}
