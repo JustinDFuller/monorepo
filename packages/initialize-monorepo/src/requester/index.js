@@ -14,10 +14,10 @@ const requester = data => ({
 
     console.log('Fetching from', API_URL);
 
-    return fetch(API_URL).then(res => res.json()).then(githubRequester);
+    return fetch(API_URL).then(res => res.json()).then(requester);
   },
   fetchRepos() {
-    return fetch(data).then(res => res.json()).then(githubRequester);
+    return fetch(data).then(res => res.json()).then(requester);
   },
   downloadRepos(commandFormatter) {
     if (!commandFormatter) {
@@ -26,7 +26,7 @@ const requester = data => ({
 
     const commands = data.map(repoData => execPromise(commandFormatter(repoData)));
 
-    return Promise.all(commands).then(githubRequester);
+    return Promise.all(commands).then(requester);
   },
   formatUserRepoUrl(urlFormatter, USER_REPO_URL_KEY) {
     if (!urlFormatter) {
@@ -37,14 +37,14 @@ const requester = data => ({
       throw new Error('User repo url key is not defined.', USER_REPO_URL_KEY);
     }
 
-    return githubRequester(urlFormatter(data[USER_REPO_URL_KEY]));
+    return requester(urlFormatter(data[USER_REPO_URL_KEY]));
   },
   formatRepoResponse(repoResponseMapper) {
     if (!repoResponseMapper) {
       throw new Error('Repo response mapper is not defined.', repoResponseMapper);
     }
 
-    return githubRequester(repoResponseMapper(data));
+    return requester(repoResponseMapper(data));
   }
 });
 
