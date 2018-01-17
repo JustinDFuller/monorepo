@@ -1,5 +1,5 @@
 {
-  "name": "create-monorepo",
+  "name": "initialize-monorepo",
   "version": "1.0.0",
   "description": "get all repos and turn them into a single monoreop",
   "main": "src/index.js",
@@ -24,15 +24,23 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "babel-preset-stage-0": "^6.24.1"
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0"
   },
   "babel": {
     "presets": [
-      ["env", {
-        "targets": {
-          "node": "6.10"
+      [
+        "env",
+        {
+          "targets": {
+            "node": "6.10"
+          }
         }
-      }],
+      ],
       "stage-0"
     ]
   },

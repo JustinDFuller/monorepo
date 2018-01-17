@@ -3,7 +3,7 @@ import Promise from 'bluebird';
 import child_process from 'child_process';
 const execPromise = Promise.promisify(child_process.exec);
 
-const githubRequester = data => ({
+const requester = data => ({
   value() {
     return data;
   },
@@ -48,4 +48,4 @@ const githubRequester = data => ({
   }
 });
 
-export default githubRequester;
+export default requester;
