@@ -27,4 +27,4 @@ TODO:
 
 ## Packages
 
-All packages are scope to `@justindfuller` on [NPM](https://www.npmjs.com/search?q=scope:justindfuller&page=1&ranking=optimal).
+All packages are scoped to `@justindfuller` on [NPM](https://www.npmjs.com/search?q=scope:justindfuller&page=1&ranking=optimal).
