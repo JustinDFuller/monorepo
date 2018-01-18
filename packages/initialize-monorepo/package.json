@@ -1,5 +1,5 @@
 {
-  "name": "initialize-monorepo",
+  "name": "@justindfuller/initialize-monorepo",
   "version": "1.0.0",
   "description": "get all repos and turn them into a single monoreop",
   "main": "src/index.js",

@@ -1,5 +1,5 @@
 {
-    "name": "immutable-functional-react",
+    "name": "@justindfuller/immutable-functional-react",
     "version": "1.0.0",
     "description": "React.. but immutable and functional. No classes.",
     "main": "index.js",

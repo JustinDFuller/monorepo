@@ -1,0 +1,11 @@
+{
+  "name": "@justindfuller/javascript-snippets",
+  "version": "1.0.0",
+  "description": "I will just keep all my random javascript snippets here",
+  "main": "animations.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

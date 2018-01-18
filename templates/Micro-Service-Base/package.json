@@ -1,5 +1,5 @@
 {
-  "name": "Micro-Service-Base",
+  "name": "@justindfuller/Micro-Service-Base",
   "version": "1.0.2",
   "description": "Base repo used to clone and make new micro services.",
   "main": "src/index.js",
