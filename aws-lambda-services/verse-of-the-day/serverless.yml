@@ -1,0 +1,17 @@
+service: portfolio
+
+plugins:
+  - serverless-webpack
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+
+functions:
+  placeholder:
+    handler: index.placeholder
+    events:
+      - http:
+          path: placeholder
+          method: get
+          cors: true
