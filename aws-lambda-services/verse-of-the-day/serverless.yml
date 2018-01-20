@@ -1,4 +1,4 @@
-service: portfolio
+ service: portfolio
 
 plugins:
   - serverless-webpack
@@ -8,10 +8,38 @@ provider:
   runtime: nodejs6.10
 
 functions:
-  placeholder:
-    handler: index.placeholder
+  dailyVerse:
+    handler: index.dailyVerse
     events:
       - http:
-          path: placeholder
+          path: dailyVerse
+          method: get
+          cors: true
+  proverb:
+    handler: index.proverb
+    events:
+      - http:
+          path: proverb
+          method: get
+          cors: true
+  psalm:
+    handler: index.psalm
+    events:
+      - http:
+          path: psalm
+          method: get
+          cors: true
+  random:
+    handler: index.random
+    events:
+      - http:
+          path: random
+          method: get
+          cors: true
+  versions:
+    handler: index.versions
+    events:
+      - http:
+          path: versions
           method: get
           cors: true
