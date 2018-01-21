@@ -1,4 +1,3 @@
-import btoa from 'btoa';
 import fetch from 'node-fetch';
 import cache from './../cache';
 
@@ -21,7 +20,7 @@ async function fetchFromApi(url: string): Promise<any> {
   const response: { body: string } = cached || await fetch(url, headers);
   const json = await response.json();
   const data = json.response;
-  await cache().setHash(cacheKey, { response: JSON.stringify(data) });
+  await cache().setHash(cacheKey, { response: JSON.stringify(data) }).catchReturn();
   return data;
 }
 

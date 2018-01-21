@@ -9,8 +9,14 @@ function handleError(...args: any[]): void {
   $log().error('Redis Error', ...args);
 }
 
+let client;
+
 export default () => {
-  const client = redis.createClient(config());
+  if (client) {
+    return client;
+  }
+  
+  client = redis.createClient(config());
   client.on('error', handleError);
   client.on('warning', handleError);
   bluebird.promisifyAll(redis.RedisClient.prototype);

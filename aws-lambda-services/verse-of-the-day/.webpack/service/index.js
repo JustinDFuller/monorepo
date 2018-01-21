@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 12);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -100,7 +100,7 @@ var _lodash = __webpack_require__(1);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _client = __webpack_require__(19);
+var _client = __webpack_require__(11);
 
 var _client2 = _interopRequireDefault(_client);
 
@@ -164,6 +164,12 @@ exports.default = cache;
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports) {
+
+module.exports = require("bluebird");
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -187,7 +193,7 @@ function getCacheKey(props = {}) {
 exports.default = getCacheKey;
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -208,13 +214,13 @@ function endpoint(props = {}) {
 module.exports = endpoint;
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _stringify = __webpack_require__(8);
+var _stringify = __webpack_require__(9);
 
 var _stringify2 = _interopRequireDefault(_stringify);
 
@@ -242,7 +248,7 @@ let fetchFromApi = (() => {
     const response = cached || (yield (0, _nodeFetch2.default)(url, headers));
     const json = yield response.json();
     const data = json.response;
-    yield (0, _cache2.default)().setHash(cacheKey, { response: (0, _stringify2.default)(data) });
+    yield (0, _cache2.default)().setHash(cacheKey, { response: (0, _stringify2.default)(data) }).catchReturn();
     return data;
   });
 
@@ -251,11 +257,7 @@ let fetchFromApi = (() => {
   };
 })();
 
-var _btoa = __webpack_require__(17);
-
-var _btoa2 = _interopRequireDefault(_btoa);
-
-var _nodeFetch = __webpack_require__(18);
+var _nodeFetch = __webpack_require__(17);
 
 var _nodeFetch2 = _interopRequireDefault(_nodeFetch);
 
@@ -268,7 +270,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 module.exports = fetchFromApi;
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -283,22 +285,16 @@ function getRandomInt(max) {
 module.exports = getRandomInt;
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports) {
 
 module.exports = require("babel-runtime/core-js/json/stringify");
 
 /***/ }),
-/* 9 */
-/***/ (function(module, exports) {
-
-module.exports = require("babel-runtime/core-js/number/is-integer");
-
-/***/ }),
 /* 10 */
 /***/ (function(module, exports) {
 
-module.exports = require("bluebird");
+module.exports = require("babel-runtime/core-js/number/is-integer");
 
 /***/ }),
 /* 11 */
@@ -310,62 +306,41 @@ module.exports = require("bluebird");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.versions = exports.random = exports.psalm = exports.proverb = exports.dailyVerse = undefined;
 
-var _dailyVerse = __webpack_require__(12);
+var _redis = __webpack_require__(18);
 
-Object.defineProperty(exports, 'dailyVerse', {
-  enumerable: true,
-  get: function () {
-    return _dailyVerse.dailyVerse;
-  }
-});
+var _redis2 = _interopRequireDefault(_redis);
 
-var _proverb = __webpack_require__(28);
-
-Object.defineProperty(exports, 'proverb', {
-  enumerable: true,
-  get: function () {
-    return _proverb.proverb;
-  }
-});
-
-var _psalm = __webpack_require__(29);
-
-Object.defineProperty(exports, 'psalm', {
-  enumerable: true,
-  get: function () {
-    return _psalm.psalm;
-  }
-});
-
-var _random = __webpack_require__(30);
-
-Object.defineProperty(exports, 'random', {
-  enumerable: true,
-  get: function () {
-    return _random.random;
-  }
-});
-
-var _versions = __webpack_require__(31);
-
-Object.defineProperty(exports, 'versions', {
-  enumerable: true,
-  get: function () {
-    return _versions.versions;
-  }
-});
-
-__webpack_require__(32);
-
-var _bluebird = __webpack_require__(10);
+var _bluebird = __webpack_require__(4);
 
 var _bluebird2 = _interopRequireDefault(_bluebird);
 
+var _config = __webpack_require__(19);
+
+var _config2 = _interopRequireDefault(_config);
+
+var _logging = __webpack_require__(20);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-global.Promise = _bluebird2.default;
+function handleError(...args) {
+  (0, _logging.$log)().error('Redis Error', ...args);
+}
+
+let client;
+
+exports.default = () => {
+  if (client) {
+    return client;
+  }
+
+  client = _redis2.default.createClient((0, _config2.default)());
+  client.on('error', handleError);
+  client.on('warning', handleError);
+  _bluebird2.default.promisifyAll(_redis2.default.RedisClient.prototype);
+  _bluebird2.default.promisifyAll(_redis2.default.Multi.prototype);
+  return client;
+};
 
 /***/ }),
 /* 12 */
@@ -377,9 +352,76 @@ global.Promise = _bluebird2.default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.versions = exports.random = exports.psalm = exports.proverb = exports.dailyVerse = undefined;
+
+var _dailyVerse = __webpack_require__(13);
+
+Object.defineProperty(exports, 'dailyVerse', {
+  enumerable: true,
+  get: function () {
+    return _dailyVerse.dailyVerse;
+  }
+});
+
+var _proverb = __webpack_require__(26);
+
+Object.defineProperty(exports, 'proverb', {
+  enumerable: true,
+  get: function () {
+    return _proverb.proverb;
+  }
+});
+
+var _psalm = __webpack_require__(27);
+
+Object.defineProperty(exports, 'psalm', {
+  enumerable: true,
+  get: function () {
+    return _psalm.psalm;
+  }
+});
+
+var _random = __webpack_require__(28);
+
+Object.defineProperty(exports, 'random', {
+  enumerable: true,
+  get: function () {
+    return _random.random;
+  }
+});
+
+var _versions = __webpack_require__(29);
+
+Object.defineProperty(exports, 'versions', {
+  enumerable: true,
+  get: function () {
+    return _versions.versions;
+  }
+});
+
+__webpack_require__(30);
+
+var _bluebird = __webpack_require__(4);
+
+var _bluebird2 = _interopRequireDefault(_bluebird);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+global.Promise = _bluebird2.default;
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.dailyVerse = undefined;
 
-var _stringify = __webpack_require__(8);
+var _stringify = __webpack_require__(9);
 
 var _stringify2 = _interopRequireDefault(_stringify);
 
@@ -392,6 +434,7 @@ let dailyVerse = exports.dailyVerse = (() => {
     const queryStringParams = _lodash2.default.get(event, 'queryStringParameters');
     const query = queryStringParams ? JSON.parse(queryStringParams) : {};
     const version = _lodash2.default.get(query, 'version');
+    throw new Error('test');
     const result = yield (0, _dailyVerse2.default)(version);
     const response = {
       statusCode: 200,
@@ -401,7 +444,6 @@ let dailyVerse = exports.dailyVerse = (() => {
       },
       body: (0, _stringify2.default)(result)
     };
-    console.log('RESULT', result);
 
     return callback(null, response);
   });
@@ -415,7 +457,7 @@ var _lodash = __webpack_require__(1);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _dailyVerse = __webpack_require__(13);
+var _dailyVerse = __webpack_require__(14);
 
 var _dailyVerse2 = _interopRequireDefault(_dailyVerse);
 
@@ -424,7 +466,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = exports;
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -434,10 +476,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.getVerseOfTheDay = undefined;
-
-var _promise = __webpack_require__(14);
-
-var _promise2 = _interopRequireDefault(_promise);
 
 var _assign = __webpack_require__(2);
 
@@ -452,13 +490,19 @@ let getVerseOfTheDay = (() => {
     const addBibleID = function (v) {
       return (0, _assign2.default)({}, v, { bibleID });
     };
-    return _promise2.default.all(views.map(addBibleID).map(getBook));
+    return _bluebird2.default.all(views.map(addBibleID).map(getBook)).tap(function () {
+      return (0, _client2.default)().quit();
+    });
   });
 
   return function getVerseOfTheDay() {
     return _ref.apply(this, arguments);
   };
 })();
+
+var _bluebird = __webpack_require__(4);
+
+var _bluebird2 = _interopRequireDefault(_bluebird);
 
 var _promiseCompose = __webpack_require__(15);
 
@@ -468,13 +512,17 @@ var _books = __webpack_require__(16);
 
 var _books2 = _interopRequireDefault(_books);
 
-var _chapter = __webpack_require__(25);
+var _chapter = __webpack_require__(23);
 
 var _chapter2 = _interopRequireDefault(_chapter);
 
-var _verse = __webpack_require__(26);
+var _verse = __webpack_require__(24);
 
 var _verse2 = _interopRequireDefault(_verse);
+
+var _client = __webpack_require__(11);
+
+var _client2 = _interopRequireDefault(_client);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -498,12 +546,6 @@ exports.getVerseOfTheDay = getVerseOfTheDay;
 exports.default = getVerseOfTheDay;
 
 /***/ }),
-/* 14 */
-/***/ (function(module, exports) {
-
-module.exports = require("babel-runtime/core-js/promise");
-
-/***/ }),
 /* 15 */
 /***/ (function(module, exports) {
 
@@ -516,7 +558,7 @@ module.exports = require("promise-compose");
 "use strict";
 
 
-var _isInteger = __webpack_require__(9);
+var _isInteger = __webpack_require__(10);
 
 var _isInteger2 = _interopRequireDefault(_isInteger);
 
@@ -574,19 +616,19 @@ let getBook = (() => {
 
 var _lodash = __webpack_require__(1);
 
-var _cacheKeys = __webpack_require__(4);
+var _cacheKeys = __webpack_require__(5);
 
 var _cacheKeys2 = _interopRequireDefault(_cacheKeys);
 
-var _endpoints = __webpack_require__(5);
+var _endpoints = __webpack_require__(6);
 
 var _endpoints2 = _interopRequireDefault(_endpoints);
 
-var _fetch = __webpack_require__(6);
+var _fetch = __webpack_require__(7);
 
 var _fetch2 = _interopRequireDefault(_fetch);
 
-var _math = __webpack_require__(7);
+var _math = __webpack_require__(8);
 
 var _math2 = _interopRequireDefault(_math);
 
@@ -621,62 +663,16 @@ module.exports = getBook;
 /* 17 */
 /***/ (function(module, exports) {
 
-module.exports = require("btoa");
+module.exports = require("node-fetch");
 
 /***/ }),
 /* 18 */
 /***/ (function(module, exports) {
 
-module.exports = require("node-fetch");
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _redis = __webpack_require__(20);
-
-var _redis2 = _interopRequireDefault(_redis);
-
-var _bluebird = __webpack_require__(10);
-
-var _bluebird2 = _interopRequireDefault(_bluebird);
-
-var _config = __webpack_require__(21);
-
-var _config2 = _interopRequireDefault(_config);
-
-var _logging = __webpack_require__(22);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function handleError(...args) {
-  (0, _logging.$log)().error('Redis Error', ...args);
-}
-
-exports.default = () => {
-  const client = _redis2.default.createClient((0, _config2.default)());
-  client.on('error', handleError);
-  client.on('warning', handleError);
-  _bluebird2.default.promisifyAll(_redis2.default.RedisClient.prototype);
-  _bluebird2.default.promisifyAll(_redis2.default.Multi.prototype);
-  return client;
-};
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports) {
-
 module.exports = require("redis");
 
 /***/ }),
-/* 21 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -706,7 +702,7 @@ function config(environment = process.env) {
 exports.default = config;
 
 /***/ }),
-/* 22 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -717,11 +713,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.$log = undefined;
 
-var _appRootPath = __webpack_require__(23);
+var _appRootPath = __webpack_require__(21);
 
 var _appRootPath2 = _interopRequireDefault(_appRootPath);
 
-var _bunyan = __webpack_require__(24);
+var _bunyan = __webpack_require__(22);
 
 var _bunyan2 = _interopRequireDefault(_bunyan);
 
@@ -754,19 +750,19 @@ exports.$log = $log;
 exports.default = $log;
 
 /***/ }),
-/* 23 */
+/* 21 */
 /***/ (function(module, exports) {
 
 module.exports = require("app-root-path");
 
 /***/ }),
-/* 24 */
+/* 22 */
 /***/ (function(module, exports) {
 
 module.exports = require("bunyan");
 
 /***/ }),
-/* 25 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -782,19 +778,19 @@ var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
 
 var _lodash = __webpack_require__(1);
 
-var _cacheKeys = __webpack_require__(4);
+var _cacheKeys = __webpack_require__(5);
 
 var _cacheKeys2 = _interopRequireDefault(_cacheKeys);
 
-var _endpoints = __webpack_require__(5);
+var _endpoints = __webpack_require__(6);
 
 var _endpoints2 = _interopRequireDefault(_endpoints);
 
-var _math = __webpack_require__(7);
+var _math = __webpack_require__(8);
 
 var _math2 = _interopRequireDefault(_math);
 
-var _fetch = __webpack_require__(6);
+var _fetch = __webpack_require__(7);
 
 var _fetch2 = _interopRequireDefault(_fetch);
 
@@ -857,7 +853,7 @@ function chapter(cache = _cache2.default) {
 module.exports = chapter;
 
 /***/ }),
-/* 26 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -867,7 +863,7 @@ var _assign = __webpack_require__(2);
 
 var _assign2 = _interopRequireDefault(_assign);
 
-var _isInteger = __webpack_require__(9);
+var _isInteger = __webpack_require__(10);
 
 var _isInteger2 = _interopRequireDefault(_isInteger);
 
@@ -877,23 +873,23 @@ var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
 
 var _lodash = __webpack_require__(1);
 
-var _cacheKeys = __webpack_require__(4);
+var _cacheKeys = __webpack_require__(5);
 
 var _cacheKeys2 = _interopRequireDefault(_cacheKeys);
 
-var _endpoints = __webpack_require__(5);
+var _endpoints = __webpack_require__(6);
 
 var _endpoints2 = _interopRequireDefault(_endpoints);
 
-var _text = __webpack_require__(27);
+var _text = __webpack_require__(25);
 
 var _text2 = _interopRequireDefault(_text);
 
-var _fetch = __webpack_require__(6);
+var _fetch = __webpack_require__(7);
 
 var _fetch2 = _interopRequireDefault(_fetch);
 
-var _math = __webpack_require__(7);
+var _math = __webpack_require__(8);
 
 var _math2 = _interopRequireDefault(_math);
 
@@ -992,7 +988,7 @@ function verse(cache = _cache2.default) {
 module.exports = verse;
 
 /***/ }),
-/* 27 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1007,7 +1003,7 @@ function normalizeText(text = '') {
 module.exports = normalizeText;
 
 /***/ }),
-/* 28 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1025,7 +1021,7 @@ const proverb = exports.proverb = () => {};
 exports.default = exports;
 
 /***/ }),
-/* 29 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1043,7 +1039,7 @@ const psalm = exports.psalm = () => {};
 exports.default = exports;
 
 /***/ }),
-/* 30 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1061,7 +1057,7 @@ const random = exports.random = () => {};
 exports.default = exports;
 
 /***/ }),
-/* 31 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1079,7 +1075,7 @@ const versions = exports.versions = () => {};
 exports.default = exports;
 
 /***/ }),
-/* 32 */
+/* 30 */
 /***/ (function(module, exports) {
 
 module.exports = require("babel-polyfill");

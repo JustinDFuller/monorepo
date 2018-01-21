@@ -1,8 +1,10 @@
+import Promise from 'bluebird';
 import compose from 'promise-compose';
 import book from './books/books';
 import chapter from './chapter/chapter';
 import verse from './verse/verse';
 import type { Verse } from './../../types/Verse.type';
+import client from './../../utility/cache/client';
 
 const views = [
   {
@@ -26,7 +28,7 @@ const getBook = compose(book, chapter().getRandomChapter, chapter().getFullChapt
 
 async function getVerseOfTheDay(bibleID: string = 'eng-ESV'): Promise<Verse[]> {
   const addBibleID = v => Object.assign({}, v, { bibleID });
-  return Promise.all(views.map(addBibleID).map(getBook));
+  return Promise.all(views.map(addBibleID).map(getBook)).tap(() => client().quit());
 }
 
 export { getVerseOfTheDay };

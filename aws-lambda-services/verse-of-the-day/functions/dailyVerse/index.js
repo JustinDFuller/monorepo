@@ -14,7 +14,6 @@ export async function dailyVerse(event, context, callback) {
     },
     body: JSON.stringify(result),
   };
-  console.log('RESULT', result);
 
   return callback(null, response);
 }
