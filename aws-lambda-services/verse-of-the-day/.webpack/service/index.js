@@ -100,7 +100,7 @@ var _lodash = __webpack_require__(1);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _client = __webpack_require__(18);
+var _client = __webpack_require__(19);
 
 var _client2 = _interopRequireDefault(_client);
 
@@ -235,18 +235,15 @@ let fetchFromApi = (() => {
       resolveWithFullResponse: true
     };
 
-    try {
-      if (cached) {
-        return JSON.parse(cached.response);
-      }
-
-      const response = cached || (yield (0, _requestPromise2.default)(headers));
-      const data = JSON.parse(response.body).response;
-      yield (0, _cache2.default)().setHash(cacheKey, { response: (0, _stringify2.default)(data) });
-      return data;
-    } catch (e) {
-      throw new TypeError('An error occured while retrieving the verse data.');
+    if (cached) {
+      return JSON.parse(cached.response);
     }
+
+    const response = cached || (yield (0, _nodeFetch2.default)(url, headers));
+    const json = yield response.json();
+    const data = json.response;
+    yield (0, _cache2.default)().setHash(cacheKey, { response: (0, _stringify2.default)(data) });
+    return data;
   });
 
   return function fetchFromApi(_x) {
@@ -254,9 +251,13 @@ let fetchFromApi = (() => {
   };
 })();
 
-var _requestPromise = __webpack_require__(17);
+var _btoa = __webpack_require__(17);
 
-var _requestPromise2 = _interopRequireDefault(_requestPromise);
+var _btoa2 = _interopRequireDefault(_btoa);
+
+var _nodeFetch = __webpack_require__(18);
+
+var _nodeFetch2 = _interopRequireDefault(_nodeFetch);
 
 var _cache = __webpack_require__(3);
 
@@ -320,7 +321,7 @@ Object.defineProperty(exports, 'dailyVerse', {
   }
 });
 
-var _proverb = __webpack_require__(27);
+var _proverb = __webpack_require__(28);
 
 Object.defineProperty(exports, 'proverb', {
   enumerable: true,
@@ -329,7 +330,7 @@ Object.defineProperty(exports, 'proverb', {
   }
 });
 
-var _psalm = __webpack_require__(28);
+var _psalm = __webpack_require__(29);
 
 Object.defineProperty(exports, 'psalm', {
   enumerable: true,
@@ -338,7 +339,7 @@ Object.defineProperty(exports, 'psalm', {
   }
 });
 
-var _random = __webpack_require__(29);
+var _random = __webpack_require__(30);
 
 Object.defineProperty(exports, 'random', {
   enumerable: true,
@@ -347,7 +348,7 @@ Object.defineProperty(exports, 'random', {
   }
 });
 
-var _versions = __webpack_require__(30);
+var _versions = __webpack_require__(31);
 
 Object.defineProperty(exports, 'versions', {
   enumerable: true,
@@ -356,7 +357,7 @@ Object.defineProperty(exports, 'versions', {
   }
 });
 
-__webpack_require__(31);
+__webpack_require__(32);
 
 var _bluebird = __webpack_require__(10);
 
@@ -388,23 +389,21 @@ var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
 
 let dailyVerse = exports.dailyVerse = (() => {
   var _ref = (0, _asyncToGenerator3.default)(function* (event, context, callback) {
-    try {
-      const query = JSON.parse(_lodash2.default.get(event, 'queryStringParameters'));
-      const version = _lodash2.default.get(query, 'version');
-      const result = yield (0, _dailyVerse2.default)(version);
-      const response = {
-        statusCode: 200,
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Credentials": true
-        },
-        body: (0, _stringify2.default)(result)
-      };
+    const queryStringParams = _lodash2.default.get(event, 'queryStringParameters');
+    const query = queryStringParams ? JSON.parse(queryStringParams) : {};
+    const version = _lodash2.default.get(query, 'version');
+    const result = yield (0, _dailyVerse2.default)(version);
+    const response = {
+      statusCode: 200,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Credentials": true
+      },
+      body: (0, _stringify2.default)(result)
+    };
+    console.log('RESULT', result);
 
-      return callback(null, response);
-    } catch (e) {
-      return callback(e);
-    }
+    return callback(null, response);
   });
 
   return function dailyVerse(_x, _x2, _x3) {
@@ -469,11 +468,11 @@ var _books = __webpack_require__(16);
 
 var _books2 = _interopRequireDefault(_books);
 
-var _chapter = __webpack_require__(24);
+var _chapter = __webpack_require__(25);
 
 var _chapter2 = _interopRequireDefault(_chapter);
 
-var _verse = __webpack_require__(25);
+var _verse = __webpack_require__(26);
 
 var _verse2 = _interopRequireDefault(_verse);
 
@@ -622,10 +621,16 @@ module.exports = getBook;
 /* 17 */
 /***/ (function(module, exports) {
 
-module.exports = require("request-promise");
+module.exports = require("btoa");
 
 /***/ }),
 /* 18 */
+/***/ (function(module, exports) {
+
+module.exports = require("node-fetch");
+
+/***/ }),
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -635,7 +640,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redis = __webpack_require__(19);
+var _redis = __webpack_require__(20);
 
 var _redis2 = _interopRequireDefault(_redis);
 
@@ -643,11 +648,11 @@ var _bluebird = __webpack_require__(10);
 
 var _bluebird2 = _interopRequireDefault(_bluebird);
 
-var _config = __webpack_require__(20);
+var _config = __webpack_require__(21);
 
 var _config2 = _interopRequireDefault(_config);
 
-var _logging = __webpack_require__(21);
+var _logging = __webpack_require__(22);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -665,13 +670,13 @@ exports.default = () => {
 };
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports) {
 
 module.exports = require("redis");
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -686,16 +691,22 @@ function config(environment = process.env) {
   const isProd = environment.NODE_ENV === 'production';
 
   return {
+    retry_strategy(options) {
+      if (options.error) {
+        console.error('CONNECTION ERROR', options.error);
+        return new Error('An error occured while connecting to Redis.');
+      }
+    },
     host: isProd ? environment.REDISHOST : '127.0.0.1',
     port: isProd ? environment.REDISPORT : '6379',
-    password: isProd ? environment.REDISAUTH : ''
+    password: isProd ? environment.REDISAUTH : undefined
   };
 }
 
 exports.default = config;
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -706,11 +717,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.$log = undefined;
 
-var _appRootPath = __webpack_require__(22);
+var _appRootPath = __webpack_require__(23);
 
 var _appRootPath2 = _interopRequireDefault(_appRootPath);
 
-var _bunyan = __webpack_require__(23);
+var _bunyan = __webpack_require__(24);
 
 var _bunyan2 = _interopRequireDefault(_bunyan);
 
@@ -743,19 +754,19 @@ exports.$log = $log;
 exports.default = $log;
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports) {
 
 module.exports = require("app-root-path");
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports) {
 
 module.exports = require("bunyan");
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -846,7 +857,7 @@ function chapter(cache = _cache2.default) {
 module.exports = chapter;
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -874,7 +885,7 @@ var _endpoints = __webpack_require__(5);
 
 var _endpoints2 = _interopRequireDefault(_endpoints);
 
-var _text = __webpack_require__(26);
+var _text = __webpack_require__(27);
 
 var _text2 = _interopRequireDefault(_text);
 
@@ -981,7 +992,7 @@ function verse(cache = _cache2.default) {
 module.exports = verse;
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -996,7 +1007,7 @@ function normalizeText(text = '') {
 module.exports = normalizeText;
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1014,7 +1025,7 @@ const proverb = exports.proverb = () => {};
 exports.default = exports;
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1032,7 +1043,7 @@ const psalm = exports.psalm = () => {};
 exports.default = exports;
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1050,7 +1061,7 @@ const random = exports.random = () => {};
 exports.default = exports;
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1068,7 +1079,7 @@ const versions = exports.versions = () => {};
 exports.default = exports;
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports) {
 
 module.exports = require("babel-polyfill");

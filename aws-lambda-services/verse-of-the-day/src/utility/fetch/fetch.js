@@ -1,4 +1,5 @@
-import request from 'request-promise';
+import btoa from 'btoa';
+import fetch from 'node-fetch';
 import cache from './../cache';
 
 async function fetchFromApi(url: string): Promise<any> {
@@ -13,18 +14,15 @@ async function fetchFromApi(url: string): Promise<any> {
     resolveWithFullResponse: true,
   };
 
-  try {
-    if (cached) {
-      return JSON.parse(cached.response);
-    }
-
-    const response: { body: string } = cached || await request(headers);
-    const data: any = JSON.parse(response.body).response;
-    await cache().setHash(cacheKey, { response: JSON.stringify(data) });
-    return data;
-  } catch (e) {
-    throw new TypeError('An error occured while retrieving the verse data.');
+  if (cached) {
+    return JSON.parse(cached.response);
   }
+
+  const response: { body: string } = cached || await fetch(url, headers);
+  const json = await response.json();
+  const data = json.response;
+  await cache().setHash(cacheKey, { response: JSON.stringify(data) });
+  return data;
 }
 
 module.exports = fetchFromApi;
