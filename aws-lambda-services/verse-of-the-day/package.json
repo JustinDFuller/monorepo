@@ -9,22 +9,31 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "app-root-path": "^2.0.1",
     "babel-polyfill": "^6.26.0",
     "bluebird": "^3.5.1",
+    "bunyan": "^1.8.12",
     "lodash": "^4.17.4",
-    "request": "^2.83.0",
+    "nodemailer": "^4.4.1",
+    "promise-compose": "^1.1.2",
+    "redis": "^2.7.1",
+    "request": "^2.80.0",
+    "request-promise": "^4.1.1",
     "request-promise-native": "^1.0.5",
-    "xml2js": "^0.4.19",
-    "nodemailer": "^4.4.1"
+    "xml2js": "^0.4.19"
   },
   "devDependencies": {
     "ava": "^0.24.0",
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1",
+    "serverless-offline": "^3.16.0",
     "serverless-webpack": "^4.2.0",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-node-externals": "^1.6.0"
   },
   "ava": {
     "require": [

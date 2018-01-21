@@ -1,8 +1,11 @@
+import _ from 'lodash';
 import defaultClient from './client';
 import type { Verse } from './../../types/Verse.type';
 import type { Client } from './../../types/Redis.type';
 
 function cache(client: Client = defaultClient): * {
+  const redisClient = _.isFunction(client) ? client() : client;
+
   function getSecondsUntilMidnight(): number {
     const midnight: Date = new Date();
     midnight.setHours(24, 0, 0, 0);
@@ -11,15 +14,15 @@ function cache(client: Client = defaultClient): * {
   }
 
   function expireAtMidnight(key: string): Promise<any> {
-    return client.expireAsync(key, getSecondsUntilMidnight());
+    return redisClient.expireAsync(key, getSecondsUntilMidnight());
   }
 
   async function getHash(key: string): Promise<any> {
-    return client.hgetallAsync(key);
+    return redisClient.hgetallAsync(key);
   }
 
   async function setHash(key: string, value: any): Promise<void> {
-    const result = await client.HMSETAsync(key, value);
+    const result = await redisClient.HMSETAsync(key, value);
 
     if (result) {
       expireAtMidnight(key);

@@ -1,4 +1,6 @@
 import 'babel-polyfill';
+import Promise from 'bluebird';
+global.Promise = Promise;
 
 export { dailyVerse } from './functions/dailyVerse';
 export { proverb } from './functions/proverb';

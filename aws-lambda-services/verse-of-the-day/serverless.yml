@@ -1,7 +1,11 @@
- service: portfolio
+service: verse-of-the-day
+
+custom:
+  webpackIncludeModules: true
 
 plugins:
   - serverless-webpack
+  - serverless-offline
 
 provider:
   name: aws
