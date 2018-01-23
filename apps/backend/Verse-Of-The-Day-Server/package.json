@@ -1,8 +1,8 @@
 {
-    "name": "Verse-Of-The-Day-Server",
+    "name": "@justindfuller/verse-of-the-day",
     "version": "1.0.0",
     "description": "Backend for verse of the day app.",
-    "main": "src/index.js",
+    "main": "dist/index.js",
     "repository": "git@github.com:JustinDFuller/Verse-Of-The-Day-Server.git",
     "author": "Justin Fuller <justindanielfuller@gmail.com>",
     "license": "MIT",
@@ -80,7 +80,8 @@
         "thirdpartytypes": "flow-typed install",
         "types": "flow",
         "unittests": "nyc ava dist/**/*.spec.js",
-        "version": "npm run changelog && git add package.json && git commit -m \"Update app version.\""
+        "version": "npm run changelog && git add package.json && git commit -m \"Update app version.\"",
+        "prepublish": "npm run build"
     },
     "babel": {
         "presets": [

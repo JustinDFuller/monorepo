@@ -1,5 +1,4 @@
-import dotenv from 'dotenv';
-import init from './utility/server/init';
+export { getVerseOfTheDay } from './feature/dailyVerse/dailyVerse';
+export { getListOfVersions } from './feature/versions/versions';
 
-dotenv.config();
-init();
+export default exports;
