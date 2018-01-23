@@ -16,10 +16,15 @@ export default () => {
     return client;
   }
   
-  client = redis.createClient(config());
-  client.on('error', handleError);
-  client.on('warning', handleError);
-  bluebird.promisifyAll(redis.RedisClient.prototype);
-  bluebird.promisifyAll(redis.Multi.prototype);
+  try {
+    client = redis.createClient(config());
+    client.on('error', handleError);
+    client.on('warning', handleError);
+    bluebird.promisifyAll(redis.RedisClient.prototype);
+    bluebird.promisifyAll(redis.Multi.prototype);
+  } catch (e) {
+    console.error('Unable to start up redis client.');
+  }
+
   return client;
 };

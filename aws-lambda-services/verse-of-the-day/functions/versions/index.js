@@ -1,6 +1,4 @@
-// import routes from './../../../../apps/backend/Verse-Of-The-Day-Server/utility/routes/routes';
-
-// export const { versions } = routes();
+// import { getListOfVersions } from '@justindfuller/verse-of-the-day';
 
 export const versions = () => {};
 

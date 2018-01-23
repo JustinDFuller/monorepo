@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import getVerseOfTheDay from './../../src/feature/dailyVerse/dailyVerse';
+import { getVerseOfTheDay } from '@justindfuller/verse-of-the-day';
 
 export async function dailyVerse(event, context, callback) {
   const queryStringParams = _.get(event, 'queryStringParameters');

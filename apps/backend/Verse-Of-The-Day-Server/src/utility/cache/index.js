@@ -1,27 +1,25 @@
 import _ from 'lodash';
 import defaultClient from './client';
-import type { Verse } from './../../types/Verse.type';
-import type { Client } from './../../types/Redis.type';
 
-function cache(client: Client = defaultClient): * {
+function cache(client = defaultClient) {
   const redisClient = _.isFunction(client) ? client() : client;
 
-  function getSecondsUntilMidnight(): number {
-    const midnight: Date = new Date();
+  function getSecondsUntilMidnight() {
+    const midnight = new Date();
     midnight.setHours(24, 0, 0, 0);
-    const seconds: number = (midnight - Date.now()) / 1000;
+    const seconds = (midnight - Date.now()) / 1000;
     return Number(seconds.toFixed());
   }
 
-  function expireAtMidnight(key: string): Promise<any> {
+  function expireAtMidnight(key) {
     return redisClient.expireAsync(key, getSecondsUntilMidnight());
   }
 
-  async function getHash(key: string): Promise<any> {
+  async function getHash(key) {
     return redisClient.hgetallAsync(key);
   }
 
-  async function setHash(key: string, value: any): Promise<void> {
+  async function setHash(key, value) {
     const result = await redisClient.HMSETAsync(key, value);
 
     if (result) {
@@ -29,11 +27,11 @@ function cache(client: Client = defaultClient): * {
     }
   }
 
-  function get(bibleID: string, key: string): Promise<Verse> {
+  function get(bibleID, key) {
     return getHash(`${bibleID}:${key}`);
   }
 
-  function set(bibleID: string, key: string, value: Verse): Promise<void> {
+  function set(bibleID, key, value) {
     return setHash(`${bibleID}:${key}`, value);
   }
 
