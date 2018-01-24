@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@justindfuller/verse-of-the-day": "^1.0.2",
+    "@justindfuller/verse-of-the-day": "^1.0.3",
     "app-root-path": "^2.0.1",
     "babel-polyfill": "^6.26.0",
     "bluebird": "^3.5.1",

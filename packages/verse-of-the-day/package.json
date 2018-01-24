@@ -1,6 +1,6 @@
 {
     "name": "@justindfuller/verse-of-the-day",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Backend for verse of the day app.",
     "main": "dist/index.js",
     "repository": "git@github.com:JustinDFuller/Verse-Of-The-Day-Server.git",
@@ -56,7 +56,7 @@
         "flow-typed": "^2.0.0",
         "husky": "^0.13.1",
         "nyc": "^10.1.2",
-        "sinon": "^1.17.7"
+        "sinon": "^4.2.0"
     },
     "scripts": {
         "build": "babel src --out-dir=dist --source-maps",
@@ -64,7 +64,7 @@
         "lint": "eslint \"src/**/*.js\" -c ./.eslintrc.js --fix",
         "pretest": "cross-env NODE_ENV=test npm run build",
         "report": "nyc report --reporter=html --produce-source-map",
-        "unittests": "nyc ava dist/**/*.spec.js",
+        "test": "nyc ava dist/**/*.spec.js",
         "prepublish": "npm run build"
     },
     "babel": {

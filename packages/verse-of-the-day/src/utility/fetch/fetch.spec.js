@@ -3,9 +3,13 @@ import sinon from 'sinon';
 import proxyquire from 'proxyquire';
 
 const response = {
-  body: '{ "response": "test response" }',
+  json() {
+    return Promise.resolve({ 
+      response: "test response",
+    });
+  },
 };
-const request = sinon.stub().returns(response);
+const request = sinon.stub.resolves(response);
 const cacheObj = {
   getHash: sinon.stub(),
   setHash: sinon.stub(),
@@ -14,7 +18,7 @@ const cache = sinon.stub();
 cache.returns(cacheObj);
 
 const fetch = proxyquire('./fetch', {
-  'request-promise': request,
+  'node-fetch': request,
   './../cache': cache,
 });
 
@@ -30,9 +34,10 @@ test('It returns the response from the body', async (t) => {
 });
 
 test('It throws an error if response is invalid', async (t) => {
-  const invalid = sinon.stub().returns('');
+  const invalid = sinon.stub().resolves('');
   const fetchError = proxyquire('./fetch', {
-    'request-promise': invalid,
+    'node-fetch': invalid,
+    './../cache': cache,
   });
   try {
     await fetchError();

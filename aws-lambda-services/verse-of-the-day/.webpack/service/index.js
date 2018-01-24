@@ -84,7 +84,7 @@ Object.defineProperty(exports, 'dailyVerse', {
   }
 });
 
-var _proverb = __webpack_require__(5);
+var _proverb = __webpack_require__(6);
 
 Object.defineProperty(exports, 'proverb', {
   enumerable: true,
@@ -93,7 +93,7 @@ Object.defineProperty(exports, 'proverb', {
   }
 });
 
-var _psalm = __webpack_require__(6);
+var _psalm = __webpack_require__(7);
 
 Object.defineProperty(exports, 'psalm', {
   enumerable: true,
@@ -102,7 +102,7 @@ Object.defineProperty(exports, 'psalm', {
   }
 });
 
-var _random = __webpack_require__(7);
+var _random = __webpack_require__(8);
 
 Object.defineProperty(exports, 'random', {
   enumerable: true,
@@ -111,7 +111,7 @@ Object.defineProperty(exports, 'random', {
   }
 });
 
-var _versions = __webpack_require__(8);
+var _versions = __webpack_require__(9);
 
 Object.defineProperty(exports, 'versions', {
   enumerable: true,
@@ -120,9 +120,9 @@ Object.defineProperty(exports, 'versions', {
   }
 });
 
-__webpack_require__(9);
+__webpack_require__(10);
 
-var _bluebird = __webpack_require__(10);
+var _bluebird = __webpack_require__(11);
 
 var _bluebird2 = _interopRequireDefault(_bluebird);
 
@@ -177,7 +177,7 @@ var _lodash = __webpack_require__(4);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _verseOfTheDay = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"@justindfuller/verse-of-the-day\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+var _verseOfTheDay = __webpack_require__(5);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -203,6 +203,12 @@ module.exports = require("lodash");
 
 /***/ }),
 /* 5 */
+/***/ (function(module, exports) {
+
+module.exports = require("@justindfuller/verse-of-the-day");
+
+/***/ }),
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -220,7 +226,7 @@ const proverb = exports.proverb = () => {};
 exports.default = exports;
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -238,7 +244,7 @@ const psalm = exports.psalm = () => {};
 exports.default = exports;
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -256,7 +262,7 @@ const random = exports.random = () => {};
 exports.default = exports;
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -272,13 +278,13 @@ const versions = exports.versions = () => {};
 exports.default = exports;
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports) {
 
 module.exports = require("babel-polyfill");
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports) {
 
 module.exports = require("bluebird");

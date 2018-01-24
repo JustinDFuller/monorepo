@@ -17,7 +17,7 @@ async function fetchFromApi(url: string): Promise<any> {
     return JSON.parse(cached.response);
   }
 
-  const response: { body: string } = cached || await fetch(url, headers);
+  const response = cached || await fetch(url, headers);
   const json = await response.json();
   const data = json.response;
   await cache().setHash(cacheKey, { response: JSON.stringify(data) });

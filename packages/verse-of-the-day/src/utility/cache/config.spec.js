@@ -13,7 +13,7 @@ test('It provides a port', (t) => {
 
 test('It provides an empty password', (t) => {
   const configData = config({ NODE_ENV: 'development' });
-  t.is(configData.password, '');
+  t.is(configData.password);
 });
 
 test('It provides a host based off environment variables in production', (t) => {
