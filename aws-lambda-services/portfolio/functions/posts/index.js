@@ -1,16 +1,26 @@
 import 'babel-polyfill';
-import { get } from 'lodash';
-import { Parser } from 'xml2js';
-import { promisify } from 'bluebird';
+import _ from 'lodash';
+import Promise, { promisify } from 'bluebird';
 import request from 'request-promise-native';
 
-const { parseString } = new Parser();
-const parseStringPromise = promisify(parseString);
+function formatUrl(url) {
+  return {
+    uri: `${url}?client_id=${process.env.client_id}&client_secret=${process.env.client_secret}`,
+    headers: {
+      'User-Agent': 'Request-Promise',
+    },
+  };
+}
+
+async function requestJson(url) {
+  return JSON.parse(await request(formatUrl(url)));
+}
 
 async function getPosts(resolve, reject) {
-  const resultXML = await request('https://medium.com/feed/@justindanielfuller');
-  const resultJSON = await parseStringPromise(resultXML);
-  return get(resultJSON, 'rss.channel[0].item');
+  const fileMeta = await requestJson('https://api.github.com/repos/JustinDFuller/medium-stories/contents');
+  const filesWithDownloadUrls = _.filter(fileMeta, file => file['download_url'] && file.name !== 'README.md');
+  
+  return Promise.map(filesWithDownloadUrls, file => request(formatUrl(file.download_url)));
 }
 
 export const posts = async (event, context, callback) => {
