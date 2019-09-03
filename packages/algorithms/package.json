@@ -21,9 +21,9 @@
   },
   "homepage": "https://github.com/JustinDFuller/algorithms#readme",
   "devDependencies": {
-    "ava": "^0.16.0"
+    "ava": "^2.3.0"
   },
   "dependencies": {
-    "@types/node": "^6.0.42"
+    "@types/node": "^12.7.3"
   }
 }
