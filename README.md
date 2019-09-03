@@ -1,5 +1,7 @@
 # monorepo
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/JustinDFuller/monorepo.svg)](https://greenkeeper.io/)
+
 I've moved all my recent projects into this repo in order to organize my code (share it, publish it, etc.) from one central location and without recreating things all the time.
 
 ## Apps
