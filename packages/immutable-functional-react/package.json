@@ -30,22 +30,22 @@
     "dependencies": {
         "babel-polyfill": "^6.26.0",
         "immutable": "^3.8.2",
-        "ramda": "^0.25.0",
+        "ramda": "^0.26.1",
         "virtual-dom": "^2.1.1"
     },
     "devDependencies": {
-        "ava": "^0.24.0",
+        "ava": "^2.3.0",
         "babel-cli": "^6.26.0",
         "babel-plugin-syntax-jsx": "^6.18.0",
         "babel-plugin-transform-react-jsx": "^6.24.1",
         "babel-preset-env": "^1.6.1",
         "babel-preset-stage-0": "^6.24.1",
-        "eslint": "^4.9.0",
-        "eslint-config-airbnb": "^16.1.0",
-        "eslint-plugin-ava": "^4.4.0",
-        "eslint-plugin-import": "^2.7.0",
-        "eslint-plugin-jsx-a11y": "^6.0.2",
-        "eslint-plugin-react": "^7.4.0"
+        "eslint": "6.3.0",
+        "eslint-config-airbnb": "18.0.1",
+        "eslint-plugin-ava": "^8.0.0",
+        "eslint-plugin-import": "2.18.2",
+        "eslint-plugin-jsx-a11y": "6.2.3",
+        "eslint-plugin-react": "7.14.3"
     },
     "ava": {
         "babel": {
