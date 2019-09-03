@@ -7,11 +7,11 @@
   "author": "Justin Fuller <justindanielfuller@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "apicache": "^0.8.3",
+    "apicache": "^1.5.2",
     "compression": "^1.6.2",
-    "dotenv": "^4.0.0",
+    "dotenv": "^8.1.0",
     "express": "^4.14.1",
-    "forever": "^0.15.3",
+    "forever": "^1.0.0",
     "helmet": "^3.4.1",
     "nodemon": "^1.11.0"
   },
