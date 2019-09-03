@@ -1,0 +1,36 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "apps/IOS/Verse-Of-The-Day-IOS/package.json",
+        "apps/WEB/gas-station-prototype/package.json",
+        "apps/WEB/peerflix/package.json",
+        "apps/WEB/video-host/VideoHost/package.json",
+        "apps/WEB/video-host/VideoPlayer/package.json",
+        "apps/WEB/video-host/video-host-data-service/package.json",
+        "apps/WEB/writing-assistant/package.json",
+        "apps/backend/article-server/package.json",
+        "apps/backend/blog-email-server/package.json",
+        "apps/backend/blog-github-server/package.json",
+        "apps/backend/blog-medium-server/package.json",
+        "aws-lambda-services/portfolio/package.json",
+        "aws-lambda-services/verse-of-the-day/package.json",
+        "components/package.json",
+        "packages/Async-Lodash/package.json",
+        "packages/CSS-Snippets/package.json",
+        "packages/Javascript-Snippets/package.json",
+        "packages/algorithms/package.json",
+        "packages/immutable-functional-react/package.json",
+        "packages/initialize-monorepo/package.json",
+        "packages/verse-of-the-day/package.json",
+        "templates/Micro-Service-Base/package.json",
+        "templates/compose-app/package.json",
+        "templates/compose-graphql/package.json",
+        "tutorials/graphql-tutorial/package.json",
+        "tutorials/messing-with-three-js/creating-text/package.json",
+        "tutorials/messing-with-three-js/making-lines/package.json",
+        "tutorials/messing-with-three-js/spinning-box/package.json"
+      ]
+    }
+  }
+}
